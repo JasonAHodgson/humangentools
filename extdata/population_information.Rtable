@@ -1,0 +1,195 @@
+population	region	lat	lon	data_set	reference
+Brahui	Central_Asia	30.5	66.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Balochi	Central_Asia	50.5	66.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Hazara	East_Asia	33.5	70	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Makrani	Central_Asia	26	64	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Sindhi	Central_Asia	25.5	69	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Pathan	Central_Asia	33.5	70.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Kalash	Central_Asia	36	71.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Burusho	Central_Asia	36.5	74	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mbuti_Pygmy	Africa	1	29	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Biaka_Pygmy	Africa	4	17	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Melanesian	Oceania	-6	155	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+French	Europe	46	2	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Papuan	Oceania	-4	143	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Druze	Mid_East	32	35	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bedouin	Mid_East	31	35	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Sardinia	Europe	40	9	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Palestinian	Mid_East	32	35	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Piapoco_and_Curripaco	America	3	-68	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Cambodian	East_Asia	12	105	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Japanese	East_Asia	38	138	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Han	East_Asia	32.5	114	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Orcadian	Europe	59	-3	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Surui	America	-11	-62	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Maya	America	19	-91	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Russia	Europe	61	40	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mandenka	Africa	12	-12	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Yoruba	Africa	8	5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Yakut	East_Asia	63	129.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+San	Africa	-21	20	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bantu_South	Africa	-33	20	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Karitiana	America	-10	-63	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Pima	America	29	-108	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Tujia	East_Asia	29	109	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bergamo	Europe	46	10	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Tuscan	Europe	43	11	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Yizu	East_Asia	28	103	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Miaozu	East_Asia	28	109	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Oroqen	East_Asia	50.5	126.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Daur	East_Asia	48.5	124	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mongolia	East_Asia	48.5	119	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Hezhen	East_Asia	47.5	133.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Xibo	East_Asia	43.5	81.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mozabite	North_Africa	32	3	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Uygur	East_Asia	44	81	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Dai	East_Asia	21	100	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Lahu	East_Asia	22	100	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+She	East_Asia	27	119	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Naxi	East_Asia	26	100	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Tu	East_Asia	36	101	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Basque	Europe	43	NA	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Adygei	Europe	44	39	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bantu_North	Africa	-3	7	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+African_American	Africa	34.5	-111.5	TKG	NA
+CEPH_Europeans	Europe	40.5	-111.5	TKG	NA
+Han_Chinese	East_Asia	39.5	116	TKG	NA
+Chinese_Denver	East_Asia	39	-104.5	TKG	NA
+Gujarati	Central_Asia	29.5	-95	TKG	NA
+Luhya	Africa	NA	34.5	TKG	NA
+Mexican_LA	America	34	-118	TKG	NA
+Maasai	Africa	-1	35	TKG	NA
+Merina	Madagascar	NA	NA	NA	NA
+Mozanbique	Africa	NA	NA	NA	NA
+China_Japan	East_Asian	NA	NA	TKG	NA
+European	Europe	NA	NA	TKG	NA
+Burunge	Africa	NA	NA	NA	NA
+Brahmin	Central_Asia	NA	NA	NA	NA
+Mala	Central_Asia	NA	NA	NA	NA
+Bantu	Africa	NA	NA	NA	NA
+Yemeni	Mid_East	15	47	NA	NA
+Temoro	Madagascar	NA	NA	NA	NA
+Mikea	Madagascar	NA	NA	NA	NA
+Vezo	Madagascar	NA	NA	NA	NA
+Betsimisaraka	Madagascar	NA	NA	NA	NA
+Diego	Madagascar	NA	NA	NA	NA
+Sakalava_Tsimihety	Madagascar	NA	NA	NA	NA
+Betsileo	Madagascar	NA	NA	NA	NA
+British	Europe	NA	NA	TKG	NA
+Finish	Europe	NA	NA	TKG	NA
+China_South	East_Asia	NA	NA	TKG	NA
+Puerto_Rican	America	NA	NA	TKG	NA
+Colombian	America	NA	NA	TKG	NA
+Iberian	Europe	NA	NA	TKG	NA
+Peruvian	America	NA	NA	TKG	NA
+Punjabi	Central_Asia	NA	NA	TKG	NA
+Kinh	East_Asia	NA	NA	TKG	NA
+Barbados	Caribbean	NA	NA	TKG	NA
+Gambian	Africa	NA	NA	TKG	NA
+Esan	Africa	NA	NA	TKG	NA
+Bengali	Central_Asia	NA	NA	TKG	NA
+Mende	Africa	NA	NA	TKG	NA
+Tamil	Central_Asia	NA	NA	TKG	NA
+Telugu	Central_Asia	NA	NA	TKG	NA
+Mexican_American	America	NA	NA	TKG	NA
+Kiga	Africa	NA	NA	NA	NA
+Batwa	Africa	NA	NA	NA	NA
+Borneo	East_Asia	NA	NA	NA	NA
+Australian	Oceania	-13	143	NA	NA
+Crete	Europe	35.166668	25.166666	NA	NA
+Dinka	Africa	8.783333333	27.4	NA	NA
+Ju_hoan_North	Africa	-18.93725689	21.45244764	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mbuti	Africa	1	29	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mixe	America	16.95	-96.58	NA	NA
+Sardinian	Europe	40	9	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Albanian	Europe	41.3	19.8	NA	NA
+Altaian	Central_Asia	50.840	85.654	NA	NA
+Atayal	East_Asia	24.611712	121.296444	TKG	NA
+Chane	America	-22.53	-63.82	NA	NA
+Chechen	Europe	43.333	45.650	NA	NA
+Chukchi	Central_Asia	69	169	NA	NA
+Czech	Europe	50.1	14.4	TKG	NA
+Eskimo_Chaplin	Central_Asia	64.48	172.86	NA	NA
+Hawaiian	Oceania	21.3	-157.8	TKG	NA
+Itelman	Central_Asia	57	157	NA	NA
+Khonda_Dora	Central_Asia	18.3	82.9	NA	NA
+Maori	Oceania	-41.3	174.5	TKG	NA
+Norwegian	Europe	60.4	5.4	NA	NA
+Polish	Europe	52.2	21.0	NA	NA
+Samaritan	Europe	32.203	35.270	NA	NA
+Somali	Africa	5.6	48.3	NA	NA
+Armenian	Europe	39.815	46.752	NA	NA
+Masai	Africa	-1.5	35.2	TKG	NA
+Russian	Europe	61.0	40.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Jordanian	Europe	32.055	35.914	NA	NA
+Abkhasian	Europe	43.003	41.015	NA	NA
+Aleut	Central_Asia	55.18	166	NA	NA
+Ami	East_Asia	22.843145	121.185356	TKG	NA
+BantuHerero	Africa	-22.0	19.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+BantuKenya	Africa	-3.0	37.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+BantuTswana	Africa	-28.0	24.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+BedouinB	Europe	31.0	35.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Biaka	Africa	4.0	17.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bougainville	Oceania	-6.0	155.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Bulgarian	Europe	42.163	24.741	NA	NA
+Burmese	East_Asia	17.0	96.7	NA	NA
+Dusun	Oceania	4.7	114.7	NA	NA
+English	Europe	51.2	0.7	TKG	NA
+Eskimo_Naukan	Central_Asia	66.02	169.71	NA	NA
+Eskimo_Sireniki	Central_Asia	64.4	173.9	NA	NA
+Estonian	Europe	58.386	24.502	NA	NA
+Georgian	Europe	42.500	41.850	NA	NA
+Greek	Europe	38.0	23.7	TKG	NA
+Hungarian	Europe	47.5	19.1	TKG	NA
+Icelandic	Europe	64.1	-21.9	TKG	NA
+Igorot	Oceania	17.1	121.0	NA	NA
+Iranian	Europe	35.586	51.460	NA	NA
+Iraqi_Jew	Europe	33.3	44.4	NA	NA
+Irula	Central_Asia	13.5	80.0	NA	NA
+Kapu	Central_Asia	17.7	83.3	NA	NA
+Khomani_San	Africa	-27.0	20.8	NA	NA
+Korean	East_Asia	37.6	127.0	NA	NA
+Kusunda	Central_Asia	28.07245287	82.48778	NA	NA
+Kyrgyz	Central_Asia	42.9	74.6	NA	NA
+Lezgin	Europe	42.117	48.183	NA	NA
+Luo	Africa	-0.1	34.3	NA	NA
+Madiga	Central_Asia	17.7	83.3	NA	NA
+Mansi	Central_Asia	63.8	61.45	NA	NA
+Mayan	America	19.0	-91.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Miao	East_Asia	28.0	109.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Mixtec	America	17.0	-97.0	NA	NA
+Mongola	Central_Asia	45.0	111.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+North_Ossetian	Europe	43.017	44.650	NA	NA
+Piapoco	America	3.0	-68.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Relli	Central_Asia	17.7	83.3	NA	NA
+Saami	Europe	69.9	27.0	NA	NA
+Saharawi	Africa	27.3	-8.9	NA	NA
+Spanish	Europe	39.9	-4.0	TKG	NA
+Tajik	Europe	37.508	71.568	NA	NA
+Thai	East_Asia	13.8	100.5	NA	NA
+Tlingit	Central_Asia	53	158.65	NA	NA
+Tubalar	Central_Asia	51.13333333	87	NA	NA
+Turkish	Europe	38.7	35.5	NA	NA
+Ulchi	Central_Asia	52.43	140.42	NA	NA
+Yadava	Central_Asia	17.7	83.3	NA	NA
+Yemenite_Jew	Europe	15.4	44.2	NA	NA
+Yi	East_Asia	28.0	103.0	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+Zapotec	America	16.5	-97.2	NA	NA
+Even	Central_Asia	57.53	135.88	NA	NA
+Finnish	Europe	60.2	24.9	TKG	NA
+Quechua	America	-13.5	-72.0	TKG	NA
+Kashmiri_Pandit	Central_Asia	34.43333333	75.75	NA	NA
+Kharia	Central_Asia	22.5	83.95	NA	NA
+Kurumba	Central_Asia	10.78333333	76.65	NA	NA
+Onge	Central_Asia	11.66666667	92.65	NA	NA
+Kongo	Africa	2.5	11.8	NA	NA
+Nahua	America	19.01	-99.06	NA	NA
+Chipewyan	America	59.6	-107.3	TKG	NA
+Cree	America	50.3	-102.5	NA	NA
+Igbo	Africa	6.0	7.0	NA	NA
+Lemande	Africa	4.5	11.1	NA	NA
+Sherpa	Central_Asia	27.8	86.7	NA	NA
+Tibetan	Central_Asia	28.9	84.3	NA	NA
+Malay	East_Asia	NA	NA	NA	NA
+Murut	East_Asia	NA	NA	NA	NA
+Vietnamese	East_Asia	NA	NA	NA	NA
