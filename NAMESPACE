@@ -2,3 +2,4 @@
 
 export(get_axiom_snps)
 export(get_panel_information)
+export(get_sample_information)
