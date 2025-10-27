@@ -20,11 +20,11 @@ get_axiom_snps <- function(panel) {
 
   valid_factors <- panel[panel %in% unique(d$panel)]
 
-  result <- lapply(valid_factors, function(f) {
+  result <- unlist(lapply(valid_factors, function(f) {
     d$RS[d$panel == f]
-  })
+  }))
 
-  names(result) <- valid_factors
   return(result)
 }
+
 
