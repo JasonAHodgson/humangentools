@@ -1,5 +1,5 @@
 Package: humangentools
-Title: What the Package Does (One Line, Title Case)
+Title: Provides tools for conducting `tidypopgen` analyses using common human SNP datasets.
 Version: 0.0.0.9000
 Authors@R: 
     person("Jason", "Hodgson", , "jason.hodgson@aru.ac.uk", role = c("aut", "cre"))
