@@ -13,5 +13,5 @@ get_axiom_snps(panel)
 a list of SNP RS ids.
 }
 \description{
-\code{get_axiom_snps} returns a list of snps corresponding to requested Human Origins ascertainment panels
+\code{get_axiom_snps} returns a vector of snps corresponding to requested Human Origins ascertainment panels
 }
