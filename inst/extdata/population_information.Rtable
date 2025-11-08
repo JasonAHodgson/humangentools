@@ -1,4 +1,4 @@
-population	region	lat	lon	data_set	reference
+population	region	lat	lon	dataset	reference
 Brahui	Central_Asia	30.5	66.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
 Balochi	Central_Asia	50.5	66.5	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
 Hazara	East_Asia	33.5	70	HGDP	"Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
