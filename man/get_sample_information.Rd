@@ -8,10 +8,14 @@ get_sample_information(ID, na.fill = TRUE)
 }
 \arguments{
 \item{ID}{a list of sample IDs}
+
+\item{na.fill}{a boolean indicating whether to fill missing data with NA
+(default TRUE)}
 }
 \value{
 a data frame of sample id, population, and region
 }
 \description{
-\code{get_sample_information} takes a list of sample IDs and returns population and region information for each sample
+\code{get_sample_information} takes a list of sample IDs and returns population
+and region information for each sample
 }

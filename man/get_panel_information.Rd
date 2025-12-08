@@ -13,5 +13,6 @@ get_panel_information(panel = "all")
 a table of ascertainment information
 }
 \description{
-\code{get_panel_information} returns ascertainment information for the various SNP panels.
+\code{get_panel_information} returns ascertainment information for the various SNP
+panels.
 }

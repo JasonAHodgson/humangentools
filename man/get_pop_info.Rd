@@ -14,21 +14,28 @@ get_pop_info(
 )
 }
 \arguments{
-\item{samples}{A gen_tibble object, or a string with sample id. Default is to return all populations in the package dataset.}
+\item{samples}{A gen_tibble object, or a string with sample id. Default is to
+return all populations in the package dataset.}
 
-\item{region}{A character vector specifying regions to filter populations by. Default is NULL (no filtering).}
+\item{region}{A character vector specifying regions to filter populations by.
+Default is NULL (no filtering).}
 
-\item{population}{A character vector specifying populations to filter by. Default is NULL (no filtering).}
+\item{population}{A character vector specifying populations to filter by.
+Default is NULL (no filtering).}
 
-\item{dataset}{A string specifying the dataset to include. Default is all datasets in the package.}
+\item{dataset}{A string specifying the dataset to include. Default is all
+datasets in the package.}
 
-\item{include}{A charcter vector specifying which columns to include in the output. Default is all columns.}
+\item{include}{A charcter vector specifying which columns to include in the
+output. Default is all columns.}
 
-\item{exclude}{A character vector specifying which columns to exclude from the output. Default is no columns excluded.}
+\item{exclude}{A character vector specifying which columns to exclude from
+the output. Default is no columns excluded.}
 }
 \value{
 A data frame with population information.
 }
 \description{
-\code{get_pop_info} returns a data frame containing information about populations in the specified dataset.
+\code{get_pop_info} returns a data frame containing information about populations
+in the specified dataset.
 }

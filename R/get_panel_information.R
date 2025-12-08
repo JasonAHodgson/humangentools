@@ -1,18 +1,19 @@
 #' Provides Axiom Human Origins panel ascertainment information
 #'
-#' `get_panel_information` returns ascertainment information for the various SNP panels.
+#' `get_panel_information` returns ascertainment information for the various SNP
+#' panels.
 #' @param panel A list of panels for which ascertainment information is desired
 #' @return a table of ascertainment information
 #' @export
 
 get_panel_information <- function(panel = "all") {
-  file_path <- system.file("extdata", "Axiom_Panel_info.Rtable", package = "tidypopgenTools")
+  file_path <- system.file("extdata", "Axiom_Panel_info.Rtable", package = "humangentools")
 
   if (file_path == "") {
     stop("Data file not found in package. Make sure it is in inst/extdata/ before building the package.")
   }
 
-  d <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+  d <- utils::read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
 
   if (!("all" %in% panel)) {
     panel <- as.character(panel)

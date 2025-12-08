@@ -1,11 +1,10 @@
 Package: humangentools
-Title: Provides tools for conducting `tidypopgen` analyses using common human SNP datasets.
+Title: Provides tools for conducting `tidypopgen` analyses using common human SNP datasets
 Version: 0.0.0.9000
 Authors@R: 
     person("Jason", "Hodgson", , "jason.hodgson@aru.ac.uk", role = c("aut", "cre"))
 Description: This package provides a suite of tools to facilitate `tidypopgen` analyses with common human genomics data sets including HGDP and 1000 Genomes.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
