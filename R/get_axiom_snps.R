@@ -1,19 +1,19 @@
-#' Get a list of SNP RS ids from desired Axiom Human Origins ascertainment Panels
+#' Get a list of SNP RS ids from desired Axiom Human Origins ascertainment
+#' Panels
 #'
-#' `get_axiom_snps` returns a vector of snps corresponding to requested Human Origins ascertainment panels
+#' `get_axiom_snps` returns a vector of snps corresponding to requested Human
+#' Origins ascertainment panels
 #' @param panel a list of panels to be included.
 #' @return a list of SNP RS ids.
 #' @export
 
 
-
-
 get_axiom_snps <- function(panel) {
 
-  file_path <- system.file("extdata", "Axiom_Human_Origins_Panels_10-2025.Rtable", package = "tidypopgenTools")
+  file_path <- system.file("extdata", "Axiom_Human_Origins_Panels_10-2025.Rtable", package = "humangentools")
 
   # read in the data
-  d <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+  d <- utils::read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
 
   # filter d for the requested panels in the input panel list
   if (!("all" %in% panel)) {

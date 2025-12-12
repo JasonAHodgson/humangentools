@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_axiom_snps.R
 \name{get_axiom_snps}
 \alias{get_axiom_snps}
-\title{Get a list of SNP RS ids from desired Axiom Human Origins ascertainment Panels}
+\title{Get a list of SNP RS ids from desired Axiom Human Origins ascertainment
+Panels}
 \usage{
 get_axiom_snps(panel)
 }
@@ -13,5 +14,6 @@ get_axiom_snps(panel)
 a list of SNP RS ids.
 }
 \description{
-\code{get_axiom_snps} returns a vector of snps corresponding to requested Human Origins ascertainment panels
+\code{get_axiom_snps} returns a vector of snps corresponding to requested Human
+Origins ascertainment panels
 }

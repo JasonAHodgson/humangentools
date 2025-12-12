@@ -1,12 +1,19 @@
 #' Returns a table of information about populations in a given dataset.
 #'
-#' `get_pop_info` returns a data frame containing information about populations in the specified dataset.
-#' @param samples A gen_tibble object, or a string with sample id. Default is to return all populations in the package dataset.
-#' @param region A character vector specifying regions to filter populations by. Default is NULL (no filtering).
-#' @param population A character vector specifying populations to filter by. Default is NULL (no filtering).
-#' @param dataset A string specifying the dataset to include. Default is all datasets in the package.
-#' @param include A charcter vector specifying which columns to include in the output. Default is all columns.
-#' @param exclude A character vector specifying which columns to exclude from the output. Default is no columns excluded.
+#' `get_pop_info` returns a data frame containing information about populations
+#' in the specified dataset.
+#' @param samples A gen_tibble object, or a string with sample id. Default is to
+#'   return all populations in the package dataset.
+#' @param region A character vector specifying regions to filter populations by.
+#'   Default is NULL (no filtering).
+#' @param population A character vector specifying populations to filter by.
+#'   Default is NULL (no filtering).
+#' @param dataset A string specifying the dataset to include. Default is all
+#'   datasets in the package.
+#' @param include A charcter vector specifying which columns to include in the
+#'   output. Default is all columns.
+#' @param exclude A character vector specifying which columns to exclude from
+#'   the output. Default is no columns excluded.
 #' @return A data frame with population information.
 #' @export
 
@@ -23,7 +30,7 @@ get_pop_info <- function(
   file_path <- system.file("extdata", "population_information.Rtable", package = "humangentools")
 
   # read in the data
-  pop_info <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+  pop_info <- utils::read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
 
   # filter by samples if provided
   if (!is.null(samples)) {

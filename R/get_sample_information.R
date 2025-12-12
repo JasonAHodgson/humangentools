@@ -1,14 +1,17 @@
 #' Gets sample information for a list of sample IDs
 #'
-#' `get_sample_information` takes a list of sample IDs and returns population and region information for each sample
+#' `get_sample_information` takes a list of sample IDs and returns population
+#' and region information for each sample
 #' @param ID a list of sample IDs
+#' @param na.fill a boolean indicating whether to fill missing data with NA
+#'   (default TRUE)
 #' @return a data frame of sample id, population, and region
 #' @export
 
 
 get_sample_information <- function(ID, na.fill = TRUE){
-  file_path <- system.file("extdata", "sample_information.Rtable",package = "tidypopgenTools")
-  d <- read.table(file_path, header=TRUE)
+  file_path <- system.file("extdata", "sample_information.Rtable", package = "humangentools")
+  d <- utils::read.table(file_path, header=TRUE)
 
   # check if all ID are present in d$id
   missing_ID <- ID[!(ID %in% d$id)]
