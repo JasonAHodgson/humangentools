@@ -1,0 +1,213 @@
+pop	population	reg	region	regcolor	lat	lng	dataset
+GWW	Gambian in Western Division, The Gambia - Wolof	AFR	Africa	#ffd845	13.454876	-16.579032	ggvp
+GWF	Gambian in Western Division, The Gambia - Fula	AFR	Africa	#ffd845	13.454876	-16.579032	ggvp
+GWJ	Gambian in Western Division, The Gambia - Jola	AFR	Africa	#ffd845	13.454876	-16.579032	ggvp
+BantuKenyaHGDP	Bantu in Kenya (HGDP)	AFR	Africa	#ffd845	-3	37	hgdp
+BantuSouthAfricaHGDP	Bantu in South Africa (HGDP)	AFR	Africa	#ffd845	-25.6	24.25	hgdp
+SanHGDP	San in Namibia (HGDP)	AFR	Africa	#ffd845	-21	20	hgdp
+MbutiHGDP	Mbuti in Democratic Republic of Congo (HGDP)	AFR	Africa	#ffd845	1	29	hgdp
+YorubaHGDP	Yoruba in Nigeria (HGDP)	AFR	Africa	#ffd845	8	5	hgdp
+BiakaHGDP	Biaka in Central African Republic (HGDP)	AFR	Africa	#ffd845	4	17	hgdp
+MandenkaHGDP	Mandenka in Senegal (HGDP)	AFR	Africa	#ffd845	12	-12	hgdp
+ColombianHGDP	Colombian in Colombia (HGDP)	AMR	America	#710027	3	-68	hgdp
+SuruiHGDP	Surui in Brazil (HGDP)	AMR	America	#710027	-11	-62	hgdp
+KaritianaHGDP	Karitiana in Brazil (HGDP)	AMR	America	#710027	-10	-63	hgdp
+MayaHGDP	Maya in Mexico (HGDP)	AMR	America	#710027	19	-91	hgdp
+PimaHGDP	Pima in Mexico (HGDP)	AMR	America	#710027	29	-108	hgdp
+BalochiHGDP	Balochi in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	30.5	66.5	hgdp
+BurushoHGDP	Burusho in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	36.5	74	hgdp
+KalashHGDP	Kalash in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	36	71.5	hgdp
+SindhiHGDP	Sindhi in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	25.5	69	hgdp
+MakraniHGDP	Makrani in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	26	64	hgdp
+PathanHGDP	Pathan in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	33.5	70.5	hgdp
+UygurHGDP	Uygur in China (HGDP)	CSA	Central South Asia	#d8ffdf	44	81	hgdp
+HazaraHGDP	Hazara in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	33.5	70	hgdp
+BrahuiHGDP	Brahui in Pakistan (HGDP)	CSA	Central South Asia	#d8ffdf	30.5	66.5	hgdp
+DaurHGDP	Daur in China (HGDP)	EAS	East Asia	#778500	48.5	124	hgdp
+OroqenHGDP	Oroqen in China (HGDP)	EAS	East Asia	#778500	50.4	126.5	hgdp
+TuHGDP	Tu in China (HGDP)	EAS	East Asia	#778500	36	101	hgdp
+TujiaHGDP	Tujia in China (HGDP)	EAS	East Asia	#778500	29	109	hgdp
+XiboHGDP	Xibo in China (HGDP)	EAS	East Asia	#778500	43.5	81.5	hgdp
+YakutHGDP	Yakut in Siberia (HGDP)	EAS	East Asia	#778500	63	129.5	hgdp
+LahuHGDP	Lahu in China (HGDP)	EAS	East Asia	#778500	22	100	hgdp
+NaxiHGDP	Naxi in China (HGDP)	EAS	East Asia	#778500	26	100	hgdp
+MiaoHGDP	Miao in China (HGDP)	EAS	East Asia	#778500	28	109	hgdp
+HanHGDP	Han in China (HGDP)	EAS	East Asia	#778500	32.3	114	hgdp
+NorthernHanHGDP	Northern Han in China (HGDP)	EAS	East Asia	#778500	32.3	114	hgdp
+JapaneseHGDP	Japanese in Japan (HGDP)	EAS	East Asia	#778500	38	138	hgdp
+SheHGDP	She in China (HGDP)	EAS	East Asia	#778500	27	119	hgdp
+CambodianHGDP	Cambodian in Cambodia (HGDP)	EAS	East Asia	#778500	12	105	hgdp
+DaiHGDP	Dai in China (HGDP)	EAS	East Asia	#778500	21	100	hgdp
+HezhenHGDP	Hezhen in China (HGDP)	EAS	East Asia	#778500	47.5	133.5	hgdp
+MongolianHGDP	Mongolian in China (HGDP)	EAS	East Asia	#778500	48.5	119	hgdp
+YiHGDP	Yi in China (HGDP)	EAS	East Asia	#778500	28	103	hgdp
+BergamoItalianHGDP	Bergamo Italian in Bergamo, Italy (HGDP)	EUR	Europe	#018ead	46	10	hgdp
+AdygeiHGDP	Adygei in Caucasus, Russia (HGDP)	EUR	Europe	#018ead	44	39	hgdp
+BasqueHGDP	Basque in France (HGDP)	EUR	Europe	#018ead	43	0	hgdp
+SardinianHGDP	Sardinian in Italy (HGDP)	EUR	Europe	#018ead	40	9	hgdp
+TuscanHGDP	Tuscan in Italy (HGDP)	EUR	Europe	#018ead	43	11	hgdp
+FrenchHGDP	French in France (HGDP)	EUR	Europe	#018ead	46	2	hgdp
+OrcadianHGDP	Orcadian in Orkney (HGDP)	EUR	Europe	#018ead	59	-3	hgdp
+RussianHGDP	Russian in Russia (HGDP)	EUR	Europe	#018ead	61	40	hgdp
+BedouinHGDP	Bedouin in Negev, Israel (HGDP)	MDE	Middle East	#4e2100	31	35	hgdp
+MozabiteHGDP	Mozabite in Mzab, Algeria (HGDP)	MDE	Middle East	#4e2100	32	3	hgdp
+PalestinianHGDP	Palestinian in Central, Israel (HGDP)	MDE	Middle East	#4e2100	32	35	hgdp
+DruzeHGDP	Druze in Carmel, Israel (HGDP)	MDE	Middle East	#4e2100	32	35	hgdp
+PapuanSepikHGDP	Papuan Sepik in New Guinea (HGDP)	OCE	Oceania	#001991	-4	143	hgdp
+BougainvilleHGDP	Bougainville in Bougainville (HGDP)	OCE	Oceania	#001991	-6	155	hgdp
+PapuanHighlandsHGDP	Papuan Highlands in New Guinea (HGDP)	OCE	Oceania	#001991	-4	143	hgdp
+ACB	African Caribbean in Barbados	AFR	Africa	#ffd845	13.1	-59.62	kgp
+ASW	African Ancestry in Southwest US	AFR	Africa	#ffd845	35.483	-97.53333	kgp
+YRI	Yoruba in Ibadan, Nigeria	AFR	Africa	#ffd845	7.4	3.92	kgp
+GWD	Gambian in Western Division, The Gambia	AFR	Africa	#ffd845	13.454876	-16.579032	kgp
+MSL	Mende in Sierra Leone	AFR	Africa	#ffd845	8.48	-13.23	kgp
+ESN	Esan in Nigeria	AFR	Africa	#ffd845	9.06666	7.483333	kgp
+LWK	Luhya in Webuye, Kenya	AFR	Africa	#ffd845	-1.27	36.61	kgp
+PUR	Puerto Rican in Puerto Rico	AMR	America	#710027	18.4	-66.1	kgp
+CLM	Colombian in Medellin, Colombia	AMR	America	#710027	4.58333	-74.066666	kgp
+PEL	Peruvian in Lima, Peru	AMR	America	#710027	-12.04	-77.03	kgp
+MXL	Mexican Ancestry in Los Angeles, California	AMR	America	#710027	34.0544	-118.2439	kgp
+CHS	Southern Han Chinese, China	EAS	East Asia	#778500	23.13333	113.266667	kgp
+KHV	Kinh in Ho Chi Minh City, Vietnam	EAS	East Asia	#778500	10.78	106.68	kgp
+JPT	Japanese in Tokyo, Japan	EAS	East Asia	#778500	35.68	139.68	kgp
+CHB	Han Chinese in Beijing, China	EAS	East Asia	#778500	39.916666	116.383333	kgp
+CDX	Chinese Dai in Xishuangbanna, China	EAS	East Asia	#778500	22	100.78	kgp
+FIN	Finnish in Finland	EUR	Europe	#018ead	60.17	24.93	kgp
+CEU	Utah residents with Northern and Western European ancestry	EUR	Europe	#018ead	40.767	-111.8904	kgp
+IBS	Iberian populations in Spain	EUR	Europe	#018ead	40.38	-3.72	kgp
+TSI	Toscani in Italy	EUR	Europe	#018ead	42.1	12	kgp
+GBR	British in England and Scotland	EUR	Europe	#018ead	52.486243	-1.890401	kgp
+BEB	Bengali in Bangladesh	SAS	South Asia	#c44cfd	23.7	90.35	kgp
+PJL	Punjabi in Lahore, Pakistan	SAS	South Asia	#c44cfd	31.554606	74.357158	kgp
+GIH	Gujarati Indian in Houston, TX	SAS	South Asia	#c44cfd	29.7589	-95.3677	kgp
+STU	Sri Lankan Tamil in the UK	SAS	South Asia	#c44cfd	52.486243	-1.890401	kgp
+ITU	Indian Telugu in the UK	SAS	South Asia	#c44cfd	52.486243	-1.890401	kgp
+BiakaSGDP	Biaka in Central African Republic (SGDP)	AFR	Africa	#ffd845	4	17	sgdp
+MozabiteSGDP	Mozabite in Algeria (SGDP)	AFR	Africa	#ffd845	32	3	sgdp
+LuhyaSGDP	Luhya in Kenya (SGDP)	AFR	Africa	#ffd845	1.3	36.8	sgdp
+JuhoanNorthSGDP	Ju|'hoan North in Namibia (SGDP)	AFR	Africa	#ffd845	-18.909314	21.488112	sgdp
+MbutiSGDP	Mbuti in Congo (SGDP)	AFR	Africa	#ffd845	1	29	sgdp
+GambianSGDP	Gambian in Gambia (SGDP)	AFR	Africa	#ffd845	13.4	-16.7	sgdp
+SaharawiSGDP	Saharawi in Western Sahara (Morocco) (SGDP)	AFR	Africa	#ffd845	27.3	-8.9	sgdp
+MandenkaSGDP	Mandenka in Senegal (SGDP)	AFR	Africa	#ffd845	12	-12	sgdp
+SomaliSGDP	Somali in Kenya (SGDP)	AFR	Africa	#ffd845	5.6	48.3	sgdp
+LuoSGDP	Luo in Kenya (SGDP)	AFR	Africa	#ffd845	-0.1	34.3	sgdp
+BantuHereroSGDP	Bantu Herero in Botswana Or Namibia (SGDP)	AFR	Africa	#ffd845	-22	19	sgdp
+YorubaSGDP	Yoruba in Nigeria (SGDP)	AFR	Africa	#ffd845	7.4	3.9	sgdp
+BantuTswanaSGDP	Bantu Tswana in Botswana Or Namibia (SGDP)	AFR	Africa	#ffd845	-28	24	sgdp
+MendeSGDP	Mende in Sierra Leone (SGDP)	AFR	Africa	#ffd845	8.5	-13.2	sgdp
+KhomaniSanSGDP	Khomani San in South Africa (SGDP)	AFR	Africa	#ffd845	-27	20.8	sgdp
+MKK	Masai in Kenya	AFR	Africa	#ffd845	-1.5	35.2	sgdp
+BantuKenyaSGDP	Bantu Kenya in Kenya (SGDP)	AFR	Africa	#ffd845	-3	37	sgdp
+DinkaSGDP	Dinka in Sudan (SGDP)	AFR	Africa	#ffd845	8.794444	27.4	sgdp
+EsanSGDP	Esan in Nigeria (SGDP)	AFR	Africa	#ffd845	6.5	6	sgdp
+MixtecSGDP	Mixtec in Mexico (SGDP)	AMR	America	#710027	17	-97	sgdp
+PimaSGDP	Pima in Mexico (SGDP)	AMR	America	#710027	29	-108	sgdp
+MixeSGDP	Mixe in Mexico (SGDP)	AMR	America	#710027	16.95	-96.58	sgdp
+QuechuaSGDP	Quechua in Peru (SGDP)	AMR	America	#710027	-13.5	-72	sgdp
+MayanSGDP	Mayan in Mexico (SGDP)	AMR	America	#710027	19	-91	sgdp
+KaritianaSGDP	Karitiana in Brazil (SGDP)	AMR	America	#710027	-10	-63	sgdp
+ChaneSGDP	Chane in Argentina (SGDP)	AMR	America	#710027	-25	-60	sgdp
+SuruiSGDP	Surui in Brazil (SGDP)	AMR	America	#710027	-11	-62	sgdp
+PiapocoSGDP	Piapoco in Colombia (SGDP)	AMR	America	#710027	3	-68	sgdp
+ZapotecSGDP	Zapotec in Mexico (SGDP)	AMR	America	#710027	16.5	-97.2	sgdp
+MansiSGDP	Mansi in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	63.725	61.775	sgdp
+EvenSGDP	Even in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	57.53	135.88	sgdp
+KyrgyzSGDP	Kyrgyz in Kyrgyzystan (SGDP)	CAS	Central Asia and Siberia	#01daa0	42.9	74.6	sgdp
+UlchiSGDP	Ulchi in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	52.4	140.435	sgdp
+ChukchiSGDP	Chukchi in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	69	169	sgdp
+EskimoNaukanSGDP	Eskimo Naukan in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	66.02	169.71	sgdp
+EskimoSirenikiSGDP	Eskimo Sireniki in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	64.4	173.9	sgdp
+AltaianSGDP	Altaian in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	51.9	86	sgdp
+TlingitSGDP	Tlingit in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	54.09	162.325	sgdp
+MongolaSGDP	Mongola in China (SGDP)	CAS	Central Asia and Siberia	#01daa0	45	111	sgdp
+YakutSGDP	Yakut in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	63	129.5	sgdp
+EskimoChaplinSGDP	Eskimo Chaplin in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	64.48	172.86	sgdp
+AleutSGDP	Aleut in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	55.18	166	sgdp
+TubalarSGDP	Tubalar in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	51.133333	87	sgdp
+ItelmanSGDP	Itelman in Russia (SGDP)	CAS	Central Asia and Siberia	#01daa0	57	157	sgdp
+ThaiSGDP	Thai in Thailand (SGDP)	EAS	East Asia	#778500	13.8	100.5	sgdp
+UygurSGDP	Uygur in China (SGDP)	EAS	East Asia	#778500	44	81	sgdp
+YiSGDP	Yi in China (SGDP)	EAS	East Asia	#778500	28	103	sgdp
+DaiSGDP	Dai in China (SGDP)	EAS	East Asia	#778500	21	100	sgdp
+BurmeseSGDP	Burmese in Myanmar (SGDP)	EAS	East Asia	#778500	17	96.7	sgdp
+CambodianSGDP	Cambodian in Cambodia (SGDP)	EAS	East Asia	#778500	12	105	sgdp
+JapaneseSGDP	Japanese in Japan (SGDP)	EAS	East Asia	#778500	38	138	sgdp
+MiaoSGDP	Miao in China (SGDP)	EAS	East Asia	#778500	28	109	sgdp
+HanSGDP	Han in China (SGDP)	EAS	East Asia	#778500	32.288556	114	sgdp
+AmiSGDP	Ami in Taiwan (SGDP)	EAS	East Asia	#778500	22.843145	121.185356	sgdp
+HezhenSGDP	Hezhen in China (SGDP)	EAS	East Asia	#778500	47.5	133.5	sgdp
+TuSGDP	Tu in China (SGDP)	EAS	East Asia	#778500	36	101	sgdp
+DaurSGDP	Daur in China (SGDP)	EAS	East Asia	#778500	48.5	124	sgdp
+KoreanSGDP	Korean in Korea (SGDP)	EAS	East Asia	#778500	37.6	127	sgdp
+XiboSGDP	Xibo in China (SGDP)	EAS	East Asia	#778500	43.5	81.5	sgdp
+TujiaSGDP	Tujia in China (SGDP)	EAS	East Asia	#778500	29	109	sgdp
+SheSGDP	She in China (SGDP)	EAS	East Asia	#778500	27	119	sgdp
+LahuSGDP	Lahu in China (SGDP)	EAS	East Asia	#778500	22	100	sgdp
+AtayalSGDP	Atayal in Taiwan (SGDP)	EAS	East Asia	#778500	24.611712	121.296444	sgdp
+NaxiSGDP	Naxi in China (SGDP)	EAS	East Asia	#778500	26	100	sgdp
+OroqenSGDP	Oroqen in China (SGDP)	EAS	East Asia	#778500	50.4	126.5	sgdp
+KinhSGDP	Kinh in Vietnam (SGDP)	EAS	East Asia	#778500	21	105.9	sgdp
+HawaiianSGDP	Hawaiian in USA (SGDP)	OCE	Oceania	#001991	21.3	-157.8	sgdp
+MaoriSGDP	Maori in New Zealand (SGDP)	OCE	Oceania	#001991	-41.3	174.5	sgdp
+IgorotSGDP	Igorot in Philippines (SGDP)	OCE	Oceania	#001991	17.1	121	sgdp
+AustralianSGDP	Australian in Australia (SGDP)	OCE	Oceania	#001991	-13	143	sgdp
+BougainvilleSGDP	Bougainville in Papua New Guinea (SGDP)	OCE	Oceania	#001991	-6	155	sgdp
+PapuanSGDP	Papuan in Papua New Guinea (SGDP)	OCE	Oceania	#001991	-4	143	sgdp
+DusunSGDP	Dusun in Brunei (SGDP)	OCE	Oceania	#001991	4.7	114.7	sgdp
+BengaliSGDP	Bengali in Bangladesh (SGDP)	SAS	South Asia	#c44cfd	23.7	90.4	sgdp
+HazaraSGDP	Hazara in Pakistan (SGDP)	SAS	South Asia	#c44cfd	33.5	70	sgdp
+KapuSGDP	Kapu in India (SGDP)	SAS	South Asia	#c44cfd	17.7	83.3	sgdp
+PunjabiSGDP	Punjabi in Pakistan (SGDP)	SAS	South Asia	#c44cfd	31.5	74.3	sgdp
+BrahuiSGDP	Brahui in Pakistan (SGDP)	SAS	South Asia	#c44cfd	30.5	66.5	sgdp
+YadavaSGDP	Yadava in India (SGDP)	SAS	South Asia	#c44cfd	17.7	83.3	sgdp
+BrahminSGDP	Brahmin in India (SGDP)	SAS	South Asia	#c44cfd	17.7	83.3	sgdp
+KusundaSGDP	Kusunda in Nepal (SGDP)	SAS	South Asia	#c44cfd	28.072453	83.373633	sgdp
+PathanSGDP	Pathan in Pakistan (SGDP)	SAS	South Asia	#c44cfd	33.5	70.5	sgdp
+MadigaSGDP	Madiga in India (SGDP)	SAS	South Asia	#c44cfd	17.7	83.3	sgdp
+KalashSGDP	Kalash in Pakistan (SGDP)	SAS	South Asia	#c44cfd	36	71.5	sgdp
+BalochiSGDP	Balochi in Pakistan (SGDP)	SAS	South Asia	#c44cfd	30.5	66.5	sgdp
+KhondaDoraSGDP	Khonda Dora in India (SGDP)	SAS	South Asia	#c44cfd	18.3	82.9	sgdp
+IrulaSGDP	Irula in India (SGDP)	SAS	South Asia	#c44cfd	13.5	80	sgdp
+RelliSGDP	Relli in India (SGDP)	SAS	South Asia	#c44cfd	17.7	83.3	sgdp
+BurushoSGDP	Burusho in Pakistan (SGDP)	SAS	South Asia	#c44cfd	36.5	74	sgdp
+MakraniSGDP	Makrani in Pakistan (SGDP)	SAS	South Asia	#c44cfd	26	64	sgdp
+SindhiSGDP	Sindhi in Pakistan (SGDP)	SAS	South Asia	#c44cfd	25.5	69	sgdp
+TurkishSGDP	Turkish in Turkey (SGDP)	WEU	West Eurasia	#001f54	38.7	35.5	sgdp
+ArmenianSGDP	Armenian in Armenia (SGDP)	WEU	West Eurasia	#001f54	40.2	44.5	sgdp
+RussianSGDP	Russian in Russia (SGDP)	WEU	West Eurasia	#001f54	61	40	sgdp
+GreekSGDP	Greek in Greece (SGDP)	WEU	West Eurasia	#001f54	38	23.7	sgdp
+BedouinBSGDP	Bedouin B in Israel(Negev) (SGDP)	WEU	West Eurasia	#001f54	31	35	sgdp
+AbkhasianSGDP	Abkhasian in Abkhazia or Russia (SGDP)	WEU	West Eurasia	#001f54	43	41	sgdp
+BulgarianSGDP	Bulgarian in Bulgaria (SGDP)	WEU	West Eurasia	#001f54	42.2	24.7	sgdp
+HungarianSGDP	Hungarian in Hungary (SGDP)	WEU	West Eurasia	#001f54	47.5	19.1	sgdp
+FinnishSGDP	Finnish in Finland (SGDP)	WEU	West Eurasia	#001f54	60.2	24.9	sgdp
+OrcadianSGDP	Orcadian in Orkney Islands (SGDP)	WEU	West Eurasia	#001f54	59	-3	sgdp
+IraqiJewSGDP	Iraqi Jew in Iraq (SGDP)	WEU	West Eurasia	#001f54	33.3	44.4	sgdp
+DruzeSGDP	Druze in Israel(Carmel) (SGDP)	WEU	West Eurasia	#001f54	32	35	sgdp
+NorwegianSGDP	Norwegian in Norway (SGDP)	WEU	West Eurasia	#001f54	60.3943	5.3258	sgdp
+AlbanianSGDP	Albanian in Albania (SGDP)	WEU	West Eurasia	#001f54	41.3	19.8	sgdp
+EnglishSGDP	English in England (SGDP)	WEU	West Eurasia	#001f54	51.2	0.7	sgdp
+TuscanSGDP	Tuscan in Italy(Tuscany) (SGDP)	WEU	West Eurasia	#001f54	43	11	sgdp
+PolishSGDP	Polish in Poland (SGDP)	WEU	West Eurasia	#001f54	52.2	21	sgdp
+ChechenSGDP	Chechen in Russia (SGDP)	WEU	West Eurasia	#001f54	43.3	45.7	sgdp
+GeorgianSGDP	Georgian in Georgia (SGDP)	WEU	West Eurasia	#001f54	42.5	41.9	sgdp
+PalestinianSGDP	Palestinian in Israel(Central) (SGDP)	WEU	West Eurasia	#001f54	32	35	sgdp
+TajikSGDP	Tajik in Tajikistan (SGDP)	WEU	West Eurasia	#001f54	37.6	71.5	sgdp
+SaamiSGDP	Saami in Finland (SGDP)	WEU	West Eurasia	#001f54	69.9	27	sgdp
+AdygeiSGDP	Adygei in Russia(Caucasus) (SGDP)	WEU	West Eurasia	#001f54	44	39	sgdp
+CreteSGDP	Crete in Greece (SGDP)	WEU	West Eurasia	#001f54	35.341846	25.148254	sgdp
+SamaritanSGDP	Samaritan in Israel (SGDP)	WEU	West Eurasia	#001f54	32.2	35.3	sgdp
+NorthOssetianSGDP	North Ossetian in Russia (SGDP)	WEU	West Eurasia	#001f54	43	44.7	sgdp
+LezginSGDP	Lezgin in Russia (SGDP)	WEU	West Eurasia	#001f54	42.1	48.2	sgdp
+CzechSGDP	Czech in Czechoslovakia(pre1989) (SGDP)	WEU	West Eurasia	#001f54	50.1	14.4	sgdp
+BasqueSGDP	Basque in France (SGDP)	WEU	West Eurasia	#001f54	43	0	sgdp
+EstonianSGDP	Estonian in Estonia (SGDP)	WEU	West Eurasia	#001f54	58.5	24.9	sgdp
+IcelandicSGDP	Icelandic in Iceland (SGDP)	WEU	West Eurasia	#001f54	64.1	-21.9	sgdp
+SardinianSGDP	Sardinian in Italy (SGDP)	WEU	West Eurasia	#001f54	40	9	sgdp
+SpanishSGDP	Spanish in Spain (SGDP)	WEU	West Eurasia	#001f54	39.9	-4	sgdp
+YemeniteJewSGDP	Yemenite Jew in Yemen (SGDP)	WEU	West Eurasia	#001f54	15.4	44.2	sgdp
+FrenchSGDP	French in France (SGDP)	WEU	West Eurasia	#001f54	46	2	sgdp
+JordanianSGDP	Jordanian in Jordan (SGDP)	WEU	West Eurasia	#001f54	32.1	35.9	sgdp
+IranianSGDP	Iranian in Iran (SGDP)	WEU	West Eurasia	#001f54	35.6	51.5	sgdp
+BergamoSGDP	Bergamo in Italy(Bergamo) (SGDP)	WEU	West Eurasia	#001f54	46	10	sgdp

@@ -1,2 +1,78 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # humangentools
-This package includes tools to facilitate `tidypopgen` analyses of common human genomic datasets including the HGDP and 1000 Genomes projects. There are tools for adding sample metadata and for choosing appropriate SNP sets.
+
+<!-- badges: start -->
+
+[![pkgdown](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://jasonahodgson.github.io/humangentools/)
+<!-- badges: end -->
+
+humangentools provides sample, population, and SNP ascertainment panel
+metadata for common human genomics reference datasets – currently HGDP
+and 1000 Genomes – to support
+[tidypopgen](https://cran.r-project.org/package=tidypopgen) analyses.
+It’s designed to work alongside
+[dplaceR](https://jasonahodgson.github.io/dplaceR/) for cross-cultural
+context on the same populations.
+
+## Installation
+
+You can install the development version of humangentools from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("jasonahodgson/humangentools")
+```
+
+## Example
+
+Look up population and region information for a set of sample IDs, and
+population-level metadata for a region or dataset:
+
+``` r
+library(humangentools)
+
+get_sample_information(c("HGDP00001", "HGDP00003"))
+#>          id population       region
+#> 1 HGDP00001     Brahui Central_Asia
+#> 2 HGDP00003     Brahui Central_Asia
+
+get_pop_info(dataset = "HGDP", region = "Central_Asia", exclude = "reference")
+#>     population       region  lat   lon dataset
+#> 1       Brahui Central_Asia 30.5  66.5    HGDP
+#> 2      Balochi Central_Asia 50.5  66.5    HGDP
+#> 4      Makrani Central_Asia 26.0  64.0    HGDP
+#> 5       Sindhi Central_Asia 25.5  69.0    HGDP
+#> 6       Pathan Central_Asia 33.5  70.5    HGDP
+#> 7       Kalash Central_Asia 36.0  71.5    HGDP
+#> 8      Burusho Central_Asia 36.5  74.0    HGDP
+#> 160    Mongola Central_Asia 45.0 111.0    HGDP
+```
+
+Browse the Axiom Human Origins array’s ascertainment panels, and get the
+SNP RS ids for one:
+
+``` r
+get_panel_information()
+#>      panel    population        sample   SNPs
+#> 1   panel1        French     HGDP00521 111970
+#> 2   panel2   Han_Chinese     HGDP00778  78253
+#> 3   panel3       Papuan1     HGDP00542  48531
+#> 4   panel4   San_Bushman     HGDP01029 163313
+#> 5   panel5        Yoruba     HGDP00927 124115
+#> 6   panel6 Mbuti_Pygmies     HGDP00456  12162
+#> 7   panel7     Karitiana     HGDP00998   2635
+#> 8   panel8     Sardinian     HGDP00665  12922
+#> 9   panel9    Melanesian     HGDP00491  14988
+#> 10 panel10     Cambodian     HGDP00711  16987
+#> 11 panel11     Mongolian     HGDP01224  10757
+#> 12 panel12       Papuan2     HGDP00551  12117
+#> 13 panel13  Denisova-San Den-HGDP01029 151435
+
+head(get_axiom_snps("panel1"))
+#> [1] "rs3843249" "rs3766176" "rs3766170" "rs6603791" "rs6687029" "rs7407"
+```
+
+See `vignette("humangentools")` for more.

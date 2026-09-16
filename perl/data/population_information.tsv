@@ -1,0 +1,213 @@
+dataset	population	population_name	description	reg	region	lat	lon
+KGP	CDX	Dai	"Chinese Dai in Xishuangbanna, China"	EAS	East_Asia	22	100.78
+KGP	CHB	Han_Beijing	"Han Chinese in Beijing, China"	EAS	East_Asia	39.916666	116.383333
+KGP	JPT	Japanese_Tokyo	"Japanese in Tokyo, Japan"	EAS	East_Asia	35.68	139.68
+KGP	KHV	Kinh	"Kinh in Ho Chi Minh City, Vietnam"	EAS	East_Asia	10.78	106.68
+KGP	CHS	Han_Southern	"Southern Han Chinese, China"	EAS	East_Asia	23.13333	113.266667
+KGP	BEB	Bengali	"Bengali in Bangladesh"	SAS	South_Asia	23.7	90.35
+KGP	GIH	Gujarati	"Gujarati Indian in Houston, TX"	SAS	South_Asia	29.7589	-95.3677
+KGP	ITU	Telugu_UK	"Indian Telugu in the UK"	SAS	South_Asia	52.486243	-1.890401
+KGP	PJL	Punjabi	"Punjabi in Lahore, Pakistan"	SAS	South_Asia	31.554606	74.357158
+KGP	STU	Tamil_UK	"Sri Lankan Tamil in the UK"	SAS	South_Asia	52.486243	-1.890401
+KGP	ASW	African_American	"African Ancestry in Southwest" US	AFR	Africa	35.483	-97.53333
+KGP	ACB	African_Caribbean	"African Caribbean in Barbados"	AFR	Africa	13.1	-59.62
+KGP	ESN	Esan	"Esan in Nigeria"	AFR	Africa	9.06666	7.483333
+KGP	GWD	Gambian	"Gambian in Western Division, The Gambia"	AFR	Africa	13.454876	-16.579032
+KGP	LWK	Luhya	"Luhya in Webuye, Kenya"	AFR	Africa	-1.27	36.61
+KGP	MSL	Mende	"Mende in Sierra Leone"	AFR	Africa	8.48	-13.23
+KGP	YRI	Yoruba_Ibdan	"Yoruba in Ibadan, Nigeria"	AFR	Africa	7.4	3.92
+KGP	British	GBR	"British in England and Scotland"	EUR	Europe	52.486243	-1.890401
+KGP	Finnish	FIN	"Finnish in Finland"	EUR	Europe	60.17	24.93
+KGP	IBS	Iberian	"Iberian populations in Spain"	EUR	Europe	40.38	-3.72
+KGP	TSI	Toscani	"Toscani in Italy"	EUR	Europe	42.1	12
+KGP	CEU	European_CEPH	"Utah residents with Northern and Western European ancestry"	EUR	Europe	40.767	-111.8904
+KGP	CLM	Colombian_Medellin	"Colombian in Medellin, Colombia"	AMR	America	4.58333	-74.066666
+KGP	MXL	Mexican_LA	"Mexican Ancestry in Los Angeles, California"	AMR	America	34.0544	-118.2439
+KGP	PEL	Peruvian	"Peruvian in Lima, Peru"	AMR	America	-12.04	-77.03
+KGP	PUR	Puerto_Rican	"Puerto Rican in Puerto Rico"	AMR	America	18.4	-66.1
+HGDP	BantuKenyaHGDP	Bantu_Kenya	"Bantu in Kenya"	AFR	Africa	-3	37
+HGDP	BantuSouthAfricaHGDP	Bantu_South_Africa	"Bantu in South Africa"	AFR	Africa	-25.6	24.25
+HGDP	SanHGDP	San	"San in Namibia"	AFR	Africa	-21	20
+HGDP	MbutiHGDP	Mbuti	"Mbuti in Democratic Republic of Congo"	AFR	Africa	1	29
+HGDP	YorubaHGDP	Yoruba	"Yoruba in Nigeria"	AFR	Africa	8	5
+HGDP	BiakaHGDP	Biaka	"Biaka in Central African Republic"	AFR	Africa	4	17
+HGDP	MandenkaHGDP	Mandenka	"Mandenka in Senegal"	AFR	Africa	12	-12
+HGDP	ColombianHGDP	Colombian	"Colombian in Colombia"	AMR	America	3	-68
+HGDP	SuruiHGDP	Surui	"Surui in Brazil"	AMR	America	-11	-62
+HGDP	KaritianaHGDP	Karitiana	"Karitiana in Brazil"	AMR	America	-10	-63
+HGDP	MayaHGDP	Maya	"Maya in Mexico"	AMR	America	19	-91
+HGDP	PimaHGDP	Pima	"Pima in Mexico"	AMR	America	29	-108
+HGDP	BalochiHGDP	Baloch	"Balochi in Pakistan"	CSA	Central_South_Asia	30.5	66.5
+HGDP	BurushoHGDP	Burusho	"Burusho in Pakistan"	CSA	Central_South_Asia	36.5	74
+HGDP	KalashHGDP	Kalash	"Kalash in Pakistan"	CSA	Central_South_Asia	36	71.5
+HGDP	SindhiHGDP	Sindhi	"Sindhi in Pakistan"	CSA	Central_South_Asia	25.5	69
+HGDP	MakraniHGDP	Makrani	"Makrani in Pakistan"	CSA	Central_South_Asia	26	64
+HGDP	PathanHGDP	Pathan	"Pathan in Pakistan"	CSA	Central_South_Asia	33.5	70.5
+HGDP	UygurHGDP	Uygur	"Uygur in China"	CSA	Central_South_Asia	44	81
+HGDP	HazaraHGDP	Hazara	"Hazara in Pakistan"	CSA	Central_South_Asia	33.5	70
+HGDP	BrahuiHGDP	Brahui	"Brahui in Pakistan"	CSA	Central_South_Asia	30.5	66.5
+HGDP	DaurHGDP	Daur	"Daur in China"	EAS	East_Asia	48.5	124
+HGDP	OroqenHGDP	Oroqen	"Oroqen in China"	EAS	East_Asia	50.4	126.5
+HGDP	TuHGDP	Tu	"Tu in China"	EAS	East_Asia	36	101
+HGDP	TujiaHGDP	Tujia	"Tujia in China"	EAS	East_Asia	29	109
+HGDP	XiboHGDP	Xibo	"Xibo in China"	EAS	East_Asia	43.5	81.5
+HGDP	YakutHGDP	Yakut	"Yakut in Siberia"	EAS	East_Asia	63	129.5
+HGDP	LahuHGDP	Lahu	"Lahu in China"	EAS	East_Asia	22	100
+HGDP	NaxiHGDP	Nxi	"Naxi in China"	EAS	East_Asia	26	100
+HGDP	MiaoHGDP	Miao	"Miao in China"	EAS	East_Asia	28	109
+HGDP	HanHGDP	Han	"Han in China"	EAS	East_Asia	32.3	114
+HGDP	NorthernHanHGDP	Han_Northern	"Northern Han in China"	EAS	East_Asia	32.3	114
+HGDP	JapaneseHGDP	Japanese	"Japanese in Japan"	EAS	East_Asia	38	138
+HGDP	SheHGDP	She	"She in China"	EAS	East_Asia	27	119
+HGDP	CambodianHGDP	Cambodian	"Cambodian in Cambodia"	EAS	East_Asia	12	105
+HGDP	DaiHGDP	Dai	"Dai in China"	EAS	East_Asia	21	100
+HGDP	HezhenHGDP	Hezhen	"Hezhen in China"	EAS	East_Asia	47.5	133.5
+HGDP	MongolianHGDP	Mongolian	"Mongolian in China"	EAS	East_Asia	48.5	119
+HGDP	YiHGDP	Yi	"Yi in China"	EAS	East_Asia	28	103
+HGDP	BergamoItalianHGDP	Bergamo	"Bergamo Italian in Bergamo, Italy"	EUR	Europe	46	10
+HGDP	AdygeiHGDP	Adygei	"Adygei in Caucasus, Russia"	EUR	Europe	44	39
+HGDP	BasqueHGDP	Basque	"Basque in France"	EUR	Europe	43	0
+HGDP	SardinianHGDP	Sardinian	"Sardinian in Italy"	EUR	Europe	40	9
+HGDP	TuscanHGDP	Tuscan	"Tuscan in Italy"	EUR	Europe	43	11
+HGDP	FrenchHGDP	French	"French in France"	EUR	Europe	46	2
+HGDP	OrcadianHGDP	Orcadian	"Orcadian in Orkney"	EUR	Europe	59	-3
+HGDP	RussianHGDP	Russian	"Russian in Russia"	EUR	Europe	61	40
+HGDP	BedouinHGDP	Bedouin	"Bedouin in Negev, Israel"	MENA	Middle_East_North_Africa	31	35
+HGDP	MozabiteHGDP	Mozabite	"Mozabite in Mzab, Algeria"	MENA	Middle_East_North_Africa	32	3
+HGDP	PalestinianHGDP	Palestinian	"Palestinian in Central, Israel"	MENA	Middle_East_North_Africa	32	35
+HGDP	DruzeHGDP	Druze	"Druze in Carmel, Israel"	MENA	Middle_East_North_Africa	32	35
+HGDP	PapuanSepikHGDP	Papuan_Sepik 	"Papuan Sepik in New Guinea"	OCE	Oceania	-4	143
+HGDP	BougainvilleHGDP	Bougainville	"Bougainville in Bougainville"	OCE	Oceania	-6	155
+HGDP	PapuanHighlandsHGDP	Papuan_Highlands	"Papuan Highlands in New Guinea"	OCE	Oceania	-4	143
+SGDP	BiakaSGDP	Biaka_SGDP	"Biaka in Central African Republic"	AFR	Africa	4	17
+SGDP	MozabiteSGDP	Mozabite_SGDP	"Mozabite in Algeria"	AFR	Africa	32	3
+SGDP	LuhyaSGDP	Luhya_SGDP	"Luhya in Kenya"	AFR	Africa	1.3	36.8
+SGDP	JuhoanNorthSGDP	Juhoan	"Ju|'hoan North in Namibia"	AFR	Africa	-18.909314	21.488112
+SGDP	MbutiSGDP	Mbuti_SGDP	"Mbuti in Congo"	AFR	Africa	1	29
+SGDP	GambianSGDP	Gambian_SGDP	"Gambian in Gambia"	AFR	Africa	13.4	-16.7
+SGDP	SaharawiSGDP	Saharawi	"Saharawi in Western Sahara (Morocco)"	AFR	Africa	27.3	-8.9
+SGDP	MandenkaSGDP Mandenka_SGDP	"Mandenka in Senegal"	AFR	Africa	12	-12
+SGDP	SomaliSGDP	Somali	"Somali in Kenya"	AFR	Africa	5.6	48.3
+SGDP	LuoSGDP	Luo	"Luo in Kenya"	AFR	Africa	-0.1	34.3
+SGDP	BantuHereroSGDP	Herero	"Bantu Herero in Botswana or Namibia"	AFR	Africa	-22	19
+SGDP	YorubaSGDP	Yoruba_SGDP	"Yoruba in Nigeria"	AFR	Africa	7.4	3.9
+SGDP	BantuTswanaSGDP	Tswana	"Bantu Tswana in Botswana or Namibia"	AFR	Africa	-28	24
+SGDP	MendeSGDP	Mende	"Mende in Sierra Leone"	AFR	Africa	8.5	-13.2
+SGDP	KhomaniSanSGDP	Khomani	"Khomani San in South Africa"	AFR	Africa	-27	20.8
+SGDP	MKK	Masai	"Masai in Kenya"	AFR	Africa	-1.5	35.2
+SGDP	BantuKenyaSGDP	Bantu_Kenya_SGDP	"Bantu Kenya in Kenya"	AFR	Africa	-3	37
+SGDP	DinkaSGDP	Dinka	"Dinka in Sudan"	AFR	Africa	8.794444	27.4
+SGDP	EsanSGDP	Esan_SGDP	"Esan in Nigeria"	AFR	Africa	6.5	6
+SGDP	MixtecSGDP	Mixtec	"Mixtec in Mexico"	AMR	America	17	-97
+SGDP	PimaSGDP	Pima_SGDP	"Pima in Mexico"	AMR	America	29	-108
+SGDP	MixeSGDP	Mixe	"Mixe in Mexico"	AMR	America	16.95	-96.58
+SGDP	QuechuaSGDP	Quechua	"Quechua in Peru"	AMR	America	-13.5	-72
+SGDP	MayanSGDP	Mayan_SGDP	"Mayan in Mexico"	AMR	America	19	-91
+SGDP	KaritianaSGDP	Karitiana_SGDP	"Karitiana in Brazil"	AMR	America	-10	-63
+SGDP	ChaneSGDP	Chane	"Chane in Argentina"	AMR	America	-25	-60
+SGDP	SuruiSGDP	Surui	"Surui in Brazil"	AMR	America	-11	-62
+SGDP	PiapocoSGDP	Pipapoco	"Piapoco in Colombia"	AMR	America	3	-68
+SGDP	ZapotecSGDP	Zapotec	"Zapotec in Mexico"	AMR	America	16.5	-97.2
+SGDP	MansiSGDP	Mansi	"Mansi in Russia"	CAS	Central_Asia_Siberia	63.725	61.775
+SGDP	EvenSGDP	Even	"Even in Russia"	CAS	Central_Asia_Siberia	57.53	135.88
+SGDP	KyrgyzSGDP	Kyrgyz	"Kyrgyz in Kyrgyzystan"	CAS	Central_Asia_Siberia	42.9	74.6
+SGDP	UlchiSGDP	Ulchi	"Ulchi in Russia"	CAS	Central_Asia_Siberia	52.4	140.435
+SGDP	ChukchiSGDP	Chukchi	"Chukchi in Russia"	CAS	Central_Asia_Siberia	69	169
+SGDP	EskimoNaukanSGDP	Eskimo_Naukan	"Eskimo Naukan in Russia"	CAS	Central_Asia_Siberia	66.02	169.71
+SGDP	EskimoSirenikiSGDP	Eskimo_Siren	"Eskimo Sireniki in Russia"	CAS	Central_Asia_Siberia	64.4	173.9
+SGDP	AltaianSGDP	Altaian	"Altaian in Russia"	CAS	Central_Asia_Siberia	51.9	86
+SGDP	TlingitSGDP	Tlingit	"Tlingit in Russia"	CAS	Central_Asia_Siberia	54.09	162.325
+SGDP	MongolaSGDP	Mongola	"Mongola in China"	CAS	Central_Asia_Siberia	45	111
+SGDP	YakutSGDP	Yakut_SGDP	"Yakut in Russia"	CAS	Central_Asia_Siberia	63	129.5
+SGDP	EskimoChaplinSGDP	Eskimo_Chaplin	"Eskimo Chaplin in Russia	CAS	Central_Asia_Siberia	64.48	172.86
+SGDP	AleutSGDP	Aleut	"Aleut in Russia"	CAS	Central_Asia_Siberia	55.18	166
+SGDP	TubalarSGDP	Tubalar	"Tubalar in Russia"	CAS	Central_Asia_Siberia	51.133333	87
+SGDP	ItelmanSGDP	Itelman	"Itelman in Russia"	CAS	Central_Asia_Siberia	57	157
+SGDP	ThaiSGDP	Thai	"Thai in Thailand"	EAS	East_Asia	13.8	100.5
+SGDP	UygurSGDP	Uyugur_SGDP	"Uygur in China"	EAS	East_Asia	44	81
+SGDP	YiSGDP	Yi_SGDP	"Yi in China"	EAS	East_Asia	28	103
+SGDP	DaiSGDP	Dai_SGDP	"Dai in China"	EAS	East_Asia	21	100
+SGDP	BurmeseSGDP	Burmese	"Burmese in Myanmar"	EAS	East_Asia	17	96.7
+SGDP	CambodianSGDP	Cambodian_SGDP	"Cambodian in Cambodia"	EAS	East_Asia	12	105
+SGDP	JapaneseSGDP	Japanese_SGDP	"Japanese in Japan"	EAS	East_Asia	38	138
+SGDP	MiaoSGDP	Miao	"Miao in China"	EAS	East_Asia	28	109
+SGDP	HanSGDP	Han_SGDP	"Han in China"	EAS	East_Asia	32.288556	114
+SGDP	AmiSGDP	Ami	"Ami in Taiwan"	EAS	East_Asia	22.843145	121.185356
+SGDP	HezhenSGDP	Hezhen_SGDP	"Hezhen in China"	EAS	East_Asia	47.5	133.5
+SGDP	TuSGDP	Tu_SGDP	"Tu in China"	EAS	East_Asia	36	101
+SGDP	DaurSGDP	Daur_SGDP	"Daur in China"	EAS	East_Asia	48.5	124
+SGDP	KoreanSGDP	Korean	"Korean in Korea"	EAS	East_Asia	37.6	127
+SGDP	XiboSGDP	Xibo_SGDP	"Xibo in China"	EAS	East_Asia	43.5	81.5
+SGDP	TujiaSGDP	Tujia_SGDP	"Tujia in China"	EAS	East_Asia	29	109
+SGDP	SheSGDP	She_SGDP	"She in China"	EAS	East_Asia	27	119
+SGDP	LahuSGDP	Lahu_SGDP	"Lahu in China"	EAS	East_Asia	22	100
+SGDP	AtayalSGDP	Atayal	"Atayal in Taiwan"	EAS	East_Asia	24.611712	121.296444
+SGDP	NaxiSGDP	Nxi_SGDP	"Naxi in China"	EAS	East_Asia	26	100
+SGDP	OroqenSGDP	Oroqen_SGDP	"Oroqen in China"	EAS	East_Asia	50.4	126.5
+SGDP	KinhSGDP	Kinh	"Kinh in Vietnam"	EAS	East_Asia	21	105.9
+SGDP	HawaiianSGDP	Hawaiian	"Hawaiian in USA"	OCE	Oceania	21.3	-157.8
+SGDP	MaoriSGDP	Maori	"Maori in New Zealand"	OCE	Oceania	-41.3	174.5
+SGDP	IgorotSGDP	Igorot	"Igorot in Philippines"	OCE	Oceania	17.1	121
+SGDP	AustralianSGDP	Australian	"Australian in Australia"	OCE	Oceania	-13	143
+SGDP	BougainvilleSGDP	Bougainville_SGDP	"Bougainville in Papua New Guinea"	OCE	Oceania	-6	155
+SGDP	PapuanSGDP	Papuan	"Papuan in Papua New Guinea"	OCE	Oceania	-4	143
+SGDP	DusunSGDP	Dusun	"Dusun in Brunei"	OCE	Oceania	4.7	114.7
+SGDP	BengaliSGDP	Bengali_SGDP	"Bengali in Bangladesh"	SAS	South_Asia	23.7	90.4
+SGDP	HazaraSGDP	Hazara_SGDP	"Hazara in Pakistan"	SAS	South_Asia	33.5	70
+SGDP	KapuSGDP	Kapu	"Kapu in India"	SAS	South_Asia	17.7	83.3
+SGDP	PunjabiSGDP	Punjabi_SGDP	"Punjabi in Pakistan"	SAS	South_Asia	31.5	74.3
+SGDP	BrahuiSGDP	Brahui_SGDP	"Brahui in Pakistan"	SAS	South_Asia	30.5	66.5
+SGDP	YadavaSGDP	Yadava	"Yadava in India"	SAS	South_Asia	17.7	83.3
+SGDP	BrahminSGDP	Brahmin	"Brahmin in India"	SAS	South_Asia	17.7	83.3
+SGDP	KusundaSGDP	Kusunda	"Kusunda in Nepal"	SAS	South_Asia	28.072453	83.373633
+SGDP	PathanSGDP	Pathan_SGDP	"Pathan in Pakistan"	SAS	South_Asia	33.5	70.5
+SGDP	MadigaSGDP	Madiga	"Madiga in India"	SAS	South_Asia	17.7	83.3
+SGDP	KalashSGDP	Kalash_SGDP	"Kalash in Pakistan"	SAS	South_Asia	36	71.5
+SGDP	BalochiSGDP	Balochi_SGDP	"Balochi in Pakistan"	SAS	South_Asia	30.5	66.5
+SGDP	KhondaDoraSGDP	Khonda_Dora	"Khonda Dora in India"	SAS	South_Asia	18.3	82.9
+SGDP	IrulaSGDP	Irula	"Irula in India"	SAS	South_Asia	13.5	80
+SGDP	RelliSGDP	Relli	"Relli in India"	SAS	South_Asia	17.7	83.3
+SGDP	BurushoSGDP	Burusho_SGDP	"Burusho in Pakistan"	SAS	South_Asia	36.5	74
+SGDP	MakraniSGDP	Makrani_SGDP	"Makrani in Pakistan"	SAS	South_Asia	26	64
+SGDP	SindhiSGDP	Sindhi_SGDP	"Sindhi in Pakistan"	SAS	South_Asia	25.5	69
+SGDP	TurkishSGDP	Turkish	"Turkish in Turkey"	WEU	West_Eurasia	38.7	35.5
+SGDP	ArmenianSGDP	Armenian	"Armenian in Armenia"	WEU	West_Eurasia	40.2	44.5
+SGDP	RussianSGDP	Russian_SGDP	"Russian in Russia"	WEU	West_Eurasia	61	40
+SGDP	GreekSGDP	Greek	"Greek in Greece"	WEU	West_Eurasia	38	23.7
+SGDP	BedouinBSGDP	Bedouin_B	"Bedouin B in Israel(Negev)"	WEU	West_Eurasia	31	35
+SGDP	AbkhasianSGDP	Abkhasian	"Abkhasian in Abkhazia or Russia"	WEU	West_Eurasia	43	41
+SGDP	BulgarianSGDP	Bulgarian	"Bulgarian in Bulgaria"	WEU	West_Eurasia	42.2	24.7
+SGDP	HungarianSGDP	Hungarian	"Hungarian in Hungary"	WEU	West_Eurasia	47.5	19.1
+SGDP	FinnishSGDP	Finnish_SGDP	"Finnish in Finland"	WEU	West_Eurasia	60.2	24.9
+SGDP	OrcadianSGDP	Orcadian_SGDP	"Orcadian in Orkney Islands"	WEU	West_Eurasia	59	-3
+SGDP	IraqiJewSGDP	Iraqi_Jew	"Iraqi Jew in Iraq"	WEU	West_Eurasia	33.3	44.4
+SGDP	DruzeSGDP	Druze_SGDP	"Druze in Israel(Carmel)"	WEU	West_Eurasia	32	35
+SGDP	NorwegianSGDP	Norwegian	"Norwegian in Norway"	WEU	West_Eurasia	60.3943	5.3258
+SGDP	AlbanianSGDP	Albanian	"Albanian in Albania"	WEU	West_Eurasia	41.3	19.8
+SGDP	EnglishSGDP	English	"English in England"	WEU	West_Eurasia	51.2	0.7
+SGDP	TuscanSGDP	Tuscan	"Tuscan in Italy(Tuscany)"	WEU	West_Eurasia	43	11
+SGDP	PolishSGDP	Polish	"Polish in Poland"	WEU	West_Eurasia	52.2	21
+SGDP	ChechenSGDP	Chechen	"Chechen in Russia"	WEU	West_Eurasia	43.3	45.7
+SGDP	GeorgianSGDP	Georgian	"Georgian in Georgia"	WEU	West_Eurasia	42.5	41.9
+SGDP	PalestinianSGDP	Palestinian_SGDP	"Palestinian in Israel(Central)"	WEU	West_Eurasia	32	35
+SGDP	TajikSGDP	Tajik	"Tajik in Tajikistan"	WEU	West_Eurasia	37.6	71.5
+SGDP	SaamiSGDP	Saami	"Saami in Finland"	WEU	West_Eurasia	69.9	27
+SGDP	AdygeiSGDP	Adygei_SGDP	"Adygei in Russia(Caucasus)"	WEU	West_Eurasia	44	39
+SGDP	CreteSGDP	Crete	"Crete in Greece"	WEU	West_Eurasia	35.341846	25.148254
+SGDP	SamaritanSGDP	Samaritan	"Samaritan in Israel"	WEU	West_Eurasia	32.2	35.3
+SGDP	NorthOssetianSGDP	North_Ossetian	"North Ossetian in Russia"	WEU	West_Eurasia	43	44.7
+SGDP	LezginSGDP	Lezgin	"Lezgin in Russia"	WEU	West_Eurasia	42.1	48.2
+SGDP	CzechSGDP	Czech	"Czech in Czechoslovakia(pre1989)"	WEU	West_Eurasia	50.1	14.4
+SGDP	BasqueSGDP	Basque_France	"Basque in France"	WEU	West_Eurasia	43	0
+SGDP	EstonianSGDP	Estonian	"Estonian in Estonia"	WEU	West_Eurasia	58.5	24.9
+SGDP	IcelandicSGDP	Icelandic	"Icelandic in Iceland"	WEU	West_Eurasia	64.1	-21.9
+SGDP	SardinianSGDP	Sardinian_SGDP	"Sardinian in Italy"	WEU	West_Eurasia	40	9
+SGDP	SpanishSGDP	Spanish	"Spanish in Spain"	WEU	West_Eurasia	39.9	-4
+SGDP	YemeniteJewSGDP	Yemenite_Jew	"Yemenite Jew in Yemen"	WEU	West_Eurasia	15.4	44.2
+SGDP	FrenchSGDP	French_SGDP	"French in France"	WEU	West_Eurasia	46	2
+SGDP	JordanianSGDP	Jordanian	"Jordanian in Jordan"	WEU	West_Eurasia	32.1	35.9
+SGDP	IranianSGDP	Iranian	"Iranian in Iran"	WEU	West_Eurasia	35.6	51.5
+SGDP	BergamoSGDP	Bergamo_SGDP	"Bergamo in Italy(Bergamo)"	WEU	West_Eurasia	46	10
+Pierron_2014	Temoro	Temoro	"Temoro in Madagascar"	AFR	Africa	-22.4	47.9
+Pierron_2014	Mikea	Mikea	"Mikea in Madagascar"	AFR	Africa	-22.2	43.3
+Pierron_2014	Vezo	Vezo	"Vezo in Madagascar"	AFR	Africa	-23.5	43.8

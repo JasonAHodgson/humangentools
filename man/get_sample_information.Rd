@@ -8,6 +8,10 @@ get_sample_information(ID, na.fill = TRUE)
 }
 \arguments{
 \item{ID}{a list of sample IDs}
+
+\item{na.fill}{Logical; if \code{TRUE} (the default), IDs not found in the
+sample information data are kept in the result with \code{NA} population/
+region. If \code{FALSE}, they are dropped instead.}
 }
 \value{
 a data frame of sample id, population, and region

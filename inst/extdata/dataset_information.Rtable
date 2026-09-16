@@ -1,0 +1,4 @@
+dataset n_pops  region  reference
+HGDP  52  worldwide "Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b"
+KGP 26  worldwide "Durbin et al. 2010. A map of human genome variation from population-scale sequencing. Nature 467(7319) 1061-1073. 10.1038/nature09534"
+Pierron_2014	3	Africa	"Pierron et al. 2014. Genome-wide evidence of Austronesian–Bantu admixture and cultural reversion in a hunter-gatherer group of Madagascar. PNAS 111(3) 936-941. 10.1073/pnas.1321860111"

@@ -1,11 +1,22 @@
 Package: humangentools
-Title: Provides tools for conducting `tidypopgen` analyses using common human SNP datasets.
+Title: Tools for Conducting 'tidypopgen' Analyses Using Common Human SNP Datasets
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     person("Jason", "Hodgson", , "jason.hodgson@aru.ac.uk", role = c("aut", "cre"))
-Description: This package provides a suite of tools to facilitate `tidypopgen` analyses with common human genomics data sets including HGDP and 1000 Genomes.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: A suite of tools to facilitate 'tidypopgen' analyses with common
+    human genomics data sets including HGDP and 1000 Genomes, and to work
+    alongside 'dplaceR' for cross-cultural context. Provides sample and
+    population metadata lookup, and SNP panel selection for the Axiom Human
+    Origins array.
+License: GPL (>= 3)
+URL: https://jasonahodgson.github.io/humangentools/, https://github.com/JasonAHodgson/humangentools
+BugReports: https://github.com/JasonAHodgson/humangentools/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr

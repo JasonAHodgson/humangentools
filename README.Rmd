@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# humangentools
+
+<!-- badges: start -->
+[![pkgdown](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://jasonahodgson.github.io/humangentools/)
+<!-- badges: end -->
+
+humangentools provides sample, population, and SNP ascertainment panel
+metadata for common human genomics reference datasets -- currently HGDP
+and 1000 Genomes -- to support [tidypopgen](https://cran.r-project.org/package=tidypopgen)
+analyses. It's designed to work alongside
+[dplaceR](https://jasonahodgson.github.io/dplaceR/) for cross-cultural
+context on the same populations.
+
+## Installation
+
+You can install the development version of humangentools from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("jasonahodgson/humangentools")
+```
+
+## Example
+
+Look up population and region information for a set of sample IDs, and
+population-level metadata for a region or dataset:
+
+```{r example}
+library(humangentools)
+
+get_sample_information(c("HGDP00001", "HGDP00003"))
+
+get_pop_info(dataset = "HGDP", region = "Central_Asia", exclude = "reference")
+```
+
+Browse the Axiom Human Origins array's ascertainment panels, and get the
+SNP RS ids for one:
+
+```{r}
+get_panel_information()
+
+head(get_axiom_snps("panel1"))
+```
+
+See `vignette("humangentools")` for more.

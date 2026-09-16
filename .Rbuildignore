@@ -1,2 +1,9 @@
-^tidypopgenTools\.Rproj$
+^humangentools\.Rproj$
 ^\.Rproj\.user$
+^perl$
+^LICENSE\.md$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$

@@ -1,0 +1,75 @@
+---
+title: "Getting started with humangentools"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with humangentools}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(humangentools)
+```
+
+humangentools bundles sample, population, and SNP ascertainment panel
+metadata for common human genomics reference datasets (currently HGDP and
+1000 Genomes), so that [tidypopgen](https://cran.r-project.org/package=tidypopgen)
+analyses of these datasets can be annotated and filtered without tracking
+down that metadata yourself each time. It's designed to work alongside
+[dplaceR](https://jasonahodgson.github.io/dplaceR/) for cross-cultural
+context on the same populations.
+
+## Sample and population metadata
+
+`get_sample_information()` looks up the population and region for one or
+more sample IDs:
+
+```{r}
+get_sample_information(c("HGDP00001", "HGDP00003"))
+```
+
+By default, an ID that isn't found is kept in the result with `NA`
+population/region (and a warning); set `na.fill = FALSE` to drop it
+instead:
+
+```{r}
+get_sample_information(c("HGDP00001", "not-a-real-id"), na.fill = FALSE)
+```
+
+`get_pop_info()` goes the other way: given a dataset, region, or population
+(or a set of sample IDs, including a `tidypopgen` `gen_tibble`), it returns
+population-level metadata -- coordinates, source dataset, and citation:
+
+```{r}
+get_pop_info(region = "Central_Asia")
+```
+
+```{r}
+get_pop_info(samples = c("HGDP00001", "HGDP00003"))
+```
+
+## SNP ascertainment panels
+
+The Axiom Human Origins array was ascertained from several distinct
+population panels, which matters for some population-genetic analyses.
+`get_panel_information()` describes the panels available:
+
+```{r}
+get_panel_information()
+```
+
+`get_axiom_snps()` returns the RS ids for one or more panels, ready to use
+as a SNP filter (e.g. before reading genotype data into a `tidypopgen`
+`gen_tibble`):
+
+```{r}
+length(get_axiom_snps("panel1"))
+length(get_axiom_snps("all"))
+```

@@ -1,0 +1,20 @@
+url: https://jasonahodgson.github.io/humangentools/
+template:
+  bootstrap: 5
+
+reference:
+- title: Sample and population metadata
+  desc: >
+    Look up population and region information for samples, and browse the
+    populations available across the bundled datasets.
+  contents:
+  - get_sample_information
+  - get_pop_info
+
+- title: SNP panels
+  desc: >
+    Browse and select SNP sets for the Axiom Human Origins array
+    ascertainment panels.
+  contents:
+  - get_panel_information
+  - get_axiom_snps

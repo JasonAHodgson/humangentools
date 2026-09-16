@@ -8,6 +8,7 @@
 #' @param include A charcter vector specifying which columns to include in the output. Default is all columns.
 #' @param exclude A character vector specifying which columns to exclude from the output. Default is no columns excluded.
 #' @return A data frame with population information.
+#' @importFrom utils read.table
 #' @export
 
 
@@ -21,6 +22,10 @@ get_pop_info <- function(
 ) {
 
   file_path <- system.file("extdata", "population_information.Rtable", package = "humangentools")
+
+  if (file_path == "") {
+    stop("Data file not found in package. Make sure it is in inst/extdata/ before building the package.")
+  }
 
   # read in the data
   pop_info <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
