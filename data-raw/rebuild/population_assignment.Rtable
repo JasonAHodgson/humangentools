@@ -1,0 +1,228 @@
+population_label	id_class	n_samples	source_dataset	pop	assignment_basis	hgt_dataset_old	reviewed
+Abkhasian	OTHER_ID	2	SGDP	AbkhasianSGDP	kgp::allmeta sgdp	NA	FALSE
+Adygei	HGDP_ID	17	HGDP	AdygeiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+African_American	KGP	74	KGP	ASW	sample membership in kgp::kgpe	KGP	FALSE
+African_American	NA_ID	38	HapMap	ASWHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Albanian	OTHER_ID	1	SGDP	AlbanianSGDP	kgp::allmeta sgdp	NA	FALSE
+Aleut	OTHER_ID	2	SGDP	AleutSGDP	kgp::allmeta sgdp	NA	FALSE
+Altaian	OTHER_ID	1	SGDP	AltaianSGDP	kgp::allmeta sgdp	NA	FALSE
+Ami	NA_ID	2	SGDP	AmiSGDP	kgp::allmeta sgdp	KGP	FALSE
+Armenian	OTHER_ID	2	SGDP	ArmenianSGDP	kgp::allmeta sgdp	NA	FALSE
+Atayal	NA_ID	1	SGDP	AtayalSGDP	kgp::allmeta sgdp	KGP	FALSE
+Australian	OTHER_ID	2	SGDP	AustralianSGDP	kgp::allmeta sgdp	NA	FALSE
+Balochi	HGDP_ID	24	HGDP	BalochiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Bantu	OTHER_ID	16	unconfirmed	BantuUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+BantuHerero	HGDP_ID	2	SGDP	BantuHereroSGDP	kgp::allmeta sgdp	HGDP	FALSE
+BantuKenya	HGDP_ID	2	SGDP	BantuKenyaSGDP	kgp::allmeta sgdp	HGDP	FALSE
+BantuTswana	HGDP_ID	2	SGDP	BantuTswanaSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Bantu_North	HGDP_ID	11	HGDP	BantuKenyaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Bantu_South	HGDP_ID	8	HGDP	BantuSouthAfricaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Barbados	HG_ID	7	unconfirmed	BarbadosUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Barbados	KGP	116	KGP	ACB	sample membership in kgp::kgpe	KGP	FALSE
+Basque	HGDP_ID	24	HGDP	BasqueHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Batwa	OTHER_ID	169	Perry_etal_unconfirmed	BatwaPER	provisional; provenance to confirm	NA	FALSE
+Bedouin	HGDP_ID	46	HGDP	BedouinHGDP	kgp::allmeta hgdp	HGDP	FALSE
+BedouinB	HGDP_ID	2	SGDP	BedouinBSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Bengali	HG_ID	13	SGDP	BengaliSGDP	kgp::allmeta sgdp	KGP	FALSE
+Bengali	KGP	131	KGP	BEB	sample membership in kgp::kgpe	KGP	FALSE
+Bergamo	HGDP_ID	13	HGDP	BergamoItalianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Betsileo	OTHER_ID	40	Rakotoarivony_etal	BetsileoRAK	stated by data owner	NA	FALSE
+Betsimisaraka	OTHER_ID	40	Rakotoarivony_etal	BetsimisarakaRAK	stated by data owner	NA	FALSE
+Biaka	HGDP_ID	2	SGDP	BiakaSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Biaka_Pygmy	HGDP_ID	23	HGDP	BiakaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Borneo	OTHER_ID	39	unconfirmed	BorneoUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Bougainville	HGDP_ID	2	SGDP	BougainvilleSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Brahmin	OTHER_ID	12	SGDP	BrahminSGDP	kgp::allmeta sgdp	NA	FALSE
+Brahui	HGDP_ID	25	HGDP	BrahuiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+British	HG_ID	16	unconfirmed	BritishUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+British	KGP	91	KGP	GBR	sample membership in kgp::kgpe	KGP	FALSE
+Bulgarian	OTHER_ID	2	SGDP	BulgarianSGDP	kgp::allmeta sgdp	NA	FALSE
+Burmese	OTHER_ID	22	SGDP	BurmeseSGDP	kgp::allmeta sgdp	NA	FALSE
+Burunge	OTHER_ID	20	unconfirmed	BurungeUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Burusho	HGDP_ID	25	HGDP	BurushoHGDP	kgp::allmeta hgdp	HGDP	FALSE
+CEPH_Europeans	KGP	179	KGP	CEU	sample membership in kgp::kgpe	KGP	FALSE
+CEPH_Europeans	NA_ID	5	HapMap	CEUHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Cambodian	HGDP_ID	10	HGDP	CambodianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Chane	OTHER_ID	1	SGDP	ChaneSGDP	kgp::allmeta sgdp	NA	FALSE
+Chechen	OTHER_ID	1	SGDP	ChechenSGDP	kgp::allmeta sgdp	NA	FALSE
+China_Japan	NA_ID	20	HapMap	JPTCHBHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+China_South	HG_ID	8	unconfirmed	China_SouthUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+China_South	KGP	163	KGP	CHS	sample membership in kgp::kgpe	KGP	FALSE
+Chinese_Denver	NA_ID	106	HapMap	CHDHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Chipewyan	OTHER_ID	2	unconfirmed	ChipewyanUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Chukchi	OTHER_ID	1	SGDP	ChukchiSGDP	kgp::allmeta sgdp	NA	FALSE
+Colombian	HG_ID	16	unconfirmed	ColombianUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Colombian	KGP	132	KGP	CLM	sample membership in kgp::kgpe	KGP	FALSE
+Cree	OTHER_ID	2	unconfirmed	CreeUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Crete	OTHER_ID	2	SGDP	CreteSGDP	kgp::allmeta sgdp	NA	FALSE
+Czech	NA_ID	1	SGDP	CzechSGDP	kgp::allmeta sgdp	KGP	FALSE
+Dai	HGDP_ID	10	HGDP	DaiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Dai	HG_ID	16	SGDP	DaiSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Dai	KGP	93	KGP	CDX	sample membership in kgp::kgpe	HGDP	FALSE
+Daur	HGDP_ID	10	HGDP	DaurHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Diego	OTHER_ID	40	Rakotoarivony_etal	DiegoRAK	stated by data owner	NA	FALSE
+Dinka	OTHER_ID	3	SGDP	DinkaSGDP	kgp::allmeta sgdp	NA	FALSE
+Druze	HGDP_ID	42	HGDP	DruzeHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Dusun	OTHER_ID	24	SGDP	DusunSGDP	kgp::allmeta sgdp	NA	FALSE
+English	KGP	2	KGP	GBR	sample membership in kgp::kgpe	KGP	FALSE
+Esan	HG_ID	24	SGDP	EsanSGDP	kgp::allmeta sgdp	KGP	FALSE
+Esan	KGP	149	KGP	ESN	sample membership in kgp::kgpe	KGP	FALSE
+Eskimo_Chaplin	OTHER_ID	1	SGDP	EskimoChaplinSGDP	kgp::allmeta sgdp	NA	FALSE
+Eskimo_Naukan	OTHER_ID	2	SGDP	EskimoNaukanSGDP	kgp::allmeta sgdp	NA	FALSE
+Eskimo_Sireniki	OTHER_ID	2	SGDP	EskimoSirenikiSGDP	kgp::allmeta sgdp	NA	FALSE
+Estonian	OTHER_ID	2	SGDP	EstonianSGDP	kgp::allmeta sgdp	NA	FALSE
+European	NA_ID	42	HapMap	CEUHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Even	OTHER_ID	3	SGDP	EvenSGDP	kgp::allmeta sgdp	NA	FALSE
+Finish	HG_ID	6	unconfirmed	FinishUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Finish	KGP	99	KGP	FIN	sample membership in kgp::kgpe	KGP	FALSE
+Finnish	KGP	3	KGP	FIN	sample membership in kgp::kgpe	KGP	FALSE
+French	HGDP_ID	28	HGDP	FrenchHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Gambian	HG_ID	2	SGDP	GambianSGDP	kgp::allmeta sgdp	KGP	FALSE
+Gambian	KGP	178	KGP	GWD	sample membership in kgp::kgpe	KGP	FALSE
+Georgian	OTHER_ID	2	SGDP	GeorgianSGDP	kgp::allmeta sgdp	NA	FALSE
+Greek	NA_ID	2	SGDP	GreekSGDP	kgp::allmeta sgdp	KGP	FALSE
+Gujarati	KGP	103	KGP	GIH	sample membership in kgp::kgpe	KGP	FALSE
+Gujarati	NA_ID	12	HapMap	GIHHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Han	HGDP_ID	44	HGDP	NEEDS_SPLIT	label spans HanHGDP + NorthernHanHGDP	HGDP	FALSE
+Han_Chinese	KGP	103	KGP	CHB	sample membership in kgp::kgpe	KGP	FALSE
+Han_Chinese	NA_ID	45	HapMap	CHBHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Hawaiian	NA_ID	1	SGDP	HawaiianSGDP	kgp::allmeta sgdp	KGP	FALSE
+Hazara	HGDP_ID	22	HGDP	HazaraHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Hezhen	HGDP_ID	9	HGDP	HezhenHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Hungarian	NA_ID	2	SGDP	HungarianSGDP	kgp::allmeta sgdp	KGP	FALSE
+Iberian	HG_ID	5	unconfirmed	IberianUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Iberian	KGP	157	KGP	IBS	sample membership in kgp::kgpe	KGP	FALSE
+Icelandic	NA_ID	2	SGDP	IcelandicSGDP	kgp::allmeta sgdp	KGP	FALSE
+Igbo	OTHER_ID	2	unconfirmed	IgboUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Igorot	OTHER_ID	35	SGDP	IgorotSGDP	kgp::allmeta sgdp	NA	FALSE
+Iranian	OTHER_ID	2	SGDP	IranianSGDP	kgp::allmeta sgdp	NA	FALSE
+Iraqi_Jew	OTHER_ID	2	SGDP	IraqiJewSGDP	kgp::allmeta sgdp	NA	FALSE
+Irula	OTHER_ID	2	SGDP	IrulaSGDP	kgp::allmeta sgdp	NA	FALSE
+Itelman	OTHER_ID	1	SGDP	ItelmanSGDP	kgp::allmeta sgdp	NA	FALSE
+Japanese	HGDP_ID	29	HGDP	JapaneseHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Japanese	KGP	104	KGP	JPT	sample membership in kgp::kgpe	HGDP	FALSE
+Japanese	NA_ID	16	HapMap	JPTHapMap	HapMap-era Coriell IDs under a HapMap population	HGDP	FALSE
+Jordanian	OTHER_ID	3	SGDP	JordanianSGDP	kgp::allmeta sgdp	NA	FALSE
+Ju_hoan_North	HGDP_ID	4	SGDP	JuhoanNorthSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Kalash	HGDP_ID	23	HGDP	KalashHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Kapu	OTHER_ID	2	SGDP	KapuSGDP	kgp::allmeta sgdp	NA	FALSE
+Karitiana	HGDP_ID	14	HGDP	KaritianaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Kashmiri_Pandit	OTHER_ID	1	unconfirmed	Kashmiri_PanditUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Kharia	OTHER_ID	1	unconfirmed	KhariaUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Khomani_San	OTHER_ID	2	SGDP	KhomaniSanSGDP	kgp::allmeta sgdp	NA	FALSE
+Khonda_Dora	OTHER_ID	1	SGDP	KhondaDoraSGDP	kgp::allmeta sgdp	NA	FALSE
+Kiga	OTHER_ID	61	Perry_etal_unconfirmed	KigaPER	provisional; provenance to confirm	NA	FALSE
+Kinh	HG_ID	2	SGDP	KinhSGDP	kgp::allmeta sgdp	KGP	FALSE
+Kinh	KGP	122	KGP	KHV	sample membership in kgp::kgpe	KGP	FALSE
+Kongo	OTHER_ID	1	unconfirmed	KongoUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Korean	NA_ID	1	SGDP	KoreanSGDP	kgp::allmeta sgdp	NA	FALSE
+Korean	OTHER_ID	1	SGDP	KoreanSGDP	kgp::allmeta sgdp	NA	FALSE
+Kurumba	OTHER_ID	1	unconfirmed	KurumbaUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Kusunda	OTHER_ID	2	SGDP	KusundaSGDP	kgp::allmeta sgdp	NA	FALSE
+Kyrgyz	OTHER_ID	2	SGDP	KyrgyzSGDP	kgp::allmeta sgdp	NA	FALSE
+Lahu	HGDP_ID	8	HGDP	LahuHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Lemande	OTHER_ID	2	unconfirmed	LemandeUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Lezgin	OTHER_ID	2	SGDP	LezginSGDP	kgp::allmeta sgdp	NA	FALSE
+Luhya	KGP	99	KGP	LWK	sample membership in kgp::kgpe	KGP	FALSE
+Luhya	NA_ID	23	HapMap	LWKHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Luo	OTHER_ID	2	SGDP	LuoSGDP	kgp::allmeta sgdp	NA	FALSE
+Maasai	NA_ID	105	HapMap	MKKHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Madiga	OTHER_ID	2	SGDP	MadigaSGDP	kgp::allmeta sgdp	NA	FALSE
+Makrani	HGDP_ID	25	HGDP	MakraniHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mala	OTHER_ID	12	unconfirmed	MalaUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Malay	OTHER_ID	25	unconfirmed	MalayUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Mandenka	HGDP_ID	22	HGDP	MandenkaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mansi	OTHER_ID	2	SGDP	MansiSGDP	kgp::allmeta sgdp	NA	FALSE
+Maori	NA_ID	1	SGDP	MaoriSGDP	kgp::allmeta sgdp	KGP	FALSE
+Masai	NA_ID	2	SGDP	MKKSGDP	kgp::allmeta sgdp (SGDP codes Maasai as MKK)	KGP	FALSE
+Maya	HGDP_ID	21	HGDP	MayaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mayan	HGDP_ID	2	SGDP	MayanSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Mbuti	HGDP_ID	4	SGDP	MbutiSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Mbuti_Pygmy	HGDP_ID	13	HGDP	MbutiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Melanesian	HGDP_ID	11	HGDP	BougainvilleHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mende	HG_ID	29	SGDP	MendeSGDP	kgp::allmeta sgdp	KGP	FALSE
+Mende	KGP	99	KGP	MSL	sample membership in kgp::kgpe	KGP	FALSE
+Merina	OTHER_ID	59	Rakotoarivony_etal	MerinaRAK	stated by data owner	NA	FALSE
+Mexican_American	KGP	97	KGP	MXL	sample membership in kgp::kgpe	KGP	FALSE
+Mexican_American	NA_ID	10	HapMap	MEXHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Mexican_LA	KGP	53	KGP	MXL	sample membership in kgp::kgpe	KGP	FALSE
+Mexican_LA	NA_ID	1	HapMap	MEXHapMap	HapMap-era Coriell IDs under a HapMap population	KGP	FALSE
+Miao	HGDP_ID	2	SGDP	MiaoSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Miaozu	HGDP_ID	10	HGDP	MiaoHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mikea	OTHER_ID	21	Rakotoarivony_etal	MikeaRAK	stated by data owner	NA	FALSE
+Mixe	OTHER_ID	3	SGDP	MixeSGDP	kgp::allmeta sgdp	NA	FALSE
+Mixtec	OTHER_ID	2	SGDP	MixtecSGDP	kgp::allmeta sgdp	NA	FALSE
+Mongola	HGDP_ID	2	SGDP	MongolaSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Mongolia	HGDP_ID	10	HGDP	MongolianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mozabite	HGDP_ID	29	HGDP	MozabiteHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Mozanbique	OTHER_ID	20	unconfirmed	MozanbiqueUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Murut	OTHER_ID	17	unconfirmed	MurutUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Nahua	OTHER_ID	2	unconfirmed	NahuaUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Naxi	HGDP_ID	9	HGDP	NaxiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+North_Ossetian	OTHER_ID	2	SGDP	NorthOssetianSGDP	kgp::allmeta sgdp	NA	FALSE
+Norwegian	OTHER_ID	1	SGDP	NorwegianSGDP	kgp::allmeta sgdp	NA	FALSE
+Onge	OTHER_ID	2	unconfirmed	OngeUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Orcadian	HGDP_ID	15	HGDP	OrcadianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Oroqen	HGDP_ID	9	HGDP	OroqenHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Palestinian	HGDP_ID	46	HGDP	PalestinianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Papuan	HGDP_ID	17	HGDP	NEEDS_SPLIT	label spans PapuanHighlandsHGDP + PapuanSepikHGDP	HGDP	FALSE
+Pathan	HGDP_ID	24	HGDP	PathanHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Peruvian	HG_ID	8	unconfirmed	PeruvianUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Peruvian	KGP	122	KGP	PEL	sample membership in kgp::kgpe	KGP	FALSE
+Piapoco	HGDP_ID	2	SGDP	PiapocoSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Piapoco_and_Curripaco	HGDP_ID	7	HGDP	ColombianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Pima	HGDP_ID	14	HGDP	PimaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Polish	OTHER_ID	1	SGDP	PolishSGDP	kgp::allmeta sgdp	NA	FALSE
+Puerto_Rican	HG_ID	11	unconfirmed	Puerto_RicanUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Puerto_Rican	KGP	139	KGP	PUR	sample membership in kgp::kgpe	KGP	FALSE
+Punjabi	HG_ID	12	SGDP	PunjabiSGDP	kgp::allmeta sgdp	KGP	FALSE
+Punjabi	KGP	146	KGP	PJL	sample membership in kgp::kgpe	KGP	FALSE
+Quechua	NA_ID	2	SGDP	QuechuaSGDP	kgp::allmeta sgdp	KGP	FALSE
+Quechua	OTHER_ID	1	SGDP	QuechuaSGDP	kgp::allmeta sgdp	KGP	FALSE
+Relli	OTHER_ID	2	SGDP	RelliSGDP	kgp::allmeta sgdp	NA	FALSE
+Russia	HGDP_ID	25	HGDP	RussianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Russian	HGDP_ID	2	SGDP	RussianSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Saami	OTHER_ID	2	SGDP	SaamiSGDP	kgp::allmeta sgdp	NA	FALSE
+Saharawi	OTHER_ID	2	SGDP	SaharawiSGDP	kgp::allmeta sgdp	NA	FALSE
+Sakalava_Tsimihety	OTHER_ID	40	Rakotoarivony_etal	Sakalava_TsimihetyRAK	stated by data owner	NA	FALSE
+Samaritan	OTHER_ID	1	SGDP	SamaritanSGDP	kgp::allmeta sgdp	NA	FALSE
+San	HGDP_ID	6	HGDP	SanHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Sardinia	HGDP_ID	28	HGDP	SardinianHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Sardinian	HGDP_ID	3	SGDP	SardinianSGDP	kgp::allmeta sgdp	HGDP	FALSE
+She	HGDP_ID	10	HGDP	SheHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Sherpa	OTHER_ID	2	unconfirmed	SherpaUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Sindhi	HGDP_ID	24	HGDP	SindhiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Somali	OTHER_ID	1	SGDP	SomaliSGDP	kgp::allmeta sgdp	NA	FALSE
+Spanish	KGP	2	KGP	IBS	sample membership in kgp::kgpe	KGP	FALSE
+Surui	HGDP_ID	8	HGDP	SuruiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Tajik	OTHER_ID	2	SGDP	TajikSGDP	kgp::allmeta sgdp	NA	FALSE
+Tamil	HG_ID	14	unconfirmed	TamilUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Tamil	KGP	114	KGP	STU	sample membership in kgp::kgpe	KGP	FALSE
+Telugu	HG_ID	11	unconfirmed	TeluguUNK	no kgp::allmeta entry and provenance not recoverable from the file	KGP	FALSE
+Telugu	KGP	107	KGP	ITU	sample membership in kgp::kgpe	KGP	FALSE
+Temoro	OTHER_ID	24	Rakotoarivony_etal	TemoroRAK	stated by data owner	NA	FALSE
+Thai	OTHER_ID	2	SGDP	ThaiSGDP	kgp::allmeta sgdp	NA	FALSE
+Tibetan	OTHER_ID	2	unconfirmed	TibetanUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Tlingit	OTHER_ID	2	SGDP	TlingitSGDP	kgp::allmeta sgdp	NA	FALSE
+Tu	HGDP_ID	10	HGDP	TuHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Tubalar	OTHER_ID	2	SGDP	TubalarSGDP	kgp::allmeta sgdp	NA	FALSE
+Tujia	HGDP_ID	10	HGDP	TujiaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Turkish	OTHER_ID	2	SGDP	TurkishSGDP	kgp::allmeta sgdp	NA	FALSE
+Tuscan	HGDP_ID	8	HGDP	TuscanHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Tuscan	KGP	107	KGP	TSI	sample membership in kgp::kgpe	HGDP	FALSE
+Tuscan	NA_ID	9	HapMap	TSIHapMap	HapMap-era Coriell IDs under a HapMap population	HGDP	FALSE
+Ulchi	OTHER_ID	2	SGDP	UlchiSGDP	kgp::allmeta sgdp	NA	FALSE
+Uygur	HGDP_ID	10	HGDP	UygurHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Vezo	OTHER_ID	24	Rakotoarivony_etal	VezoRAK	stated by data owner	NA	FALSE
+Vietnamese	OTHER_ID	22	unconfirmed	VietnameseUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Xibo	HGDP_ID	9	HGDP	XiboHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Yadava	OTHER_ID	2	SGDP	YadavaSGDP	kgp::allmeta sgdp	NA	FALSE
+Yakut	HGDP_ID	25	HGDP	YakutHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Yemeni	OTHER_ID	64	unconfirmed	YemeniUNK	no kgp::allmeta entry and provenance not recoverable from the file	NA	FALSE
+Yemenite_Jew	OTHER_ID	2	SGDP	YemeniteJewSGDP	kgp::allmeta sgdp	NA	FALSE
+Yi	HGDP_ID	2	SGDP	YiSGDP	kgp::allmeta sgdp	HGDP	FALSE
+Yizu	HGDP_ID	10	HGDP	YiHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Yoruba	HGDP_ID	22	HGDP	YorubaHGDP	kgp::allmeta hgdp	HGDP	FALSE
+Yoruba	KGP	178	KGP	YRI	sample membership in kgp::kgpe	HGDP	FALSE
+Yoruba	NA_ID	32	HapMap	YRIHapMap	HapMap-era Coriell IDs under a HapMap population	HGDP	FALSE
+Zapotec	OTHER_ID	2	SGDP	ZapotecSGDP	kgp::allmeta sgdp	NA	FALSE

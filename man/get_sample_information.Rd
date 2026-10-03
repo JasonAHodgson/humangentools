@@ -4,18 +4,32 @@
 \alias{get_sample_information}
 \title{Gets sample information for a list of sample IDs}
 \usage{
-get_sample_information(ID, na.fill = TRUE)
+get_sample_information(ID, dataset = NULL, na.fill = TRUE)
 }
 \arguments{
-\item{ID}{a list of sample IDs}
+\item{ID}{a character vector of sample IDs.}
 
-\item{na.fill}{Logical; if \code{TRUE} (the default), IDs not found in the
-sample information data are kept in the result with \code{NA} population/
-region. If \code{FALSE}, they are dropped instead.}
+\item{dataset}{An optional character vector of source datasets to restrict to
+(matched against \code{source_dataset}). Default \code{NULL} returns every dataset a
+sample appears in.}
+
+\item{na.fill}{Logical; if \code{TRUE} (the default), IDs not found in the sample
+information data are kept in the result with \code{NA} population/region. If
+\code{FALSE}, they are dropped instead.}
 }
 \value{
-a data frame of sample id, population, and region
+A data frame of sample id, canonical population code, population
+label, region and source dataset, ordered to follow \code{ID}.
 }
 \description{
-\code{get_sample_information} takes a list of sample IDs and returns population and region information for each sample
+\code{get_sample_information} takes a list of sample IDs and returns the canonical
+population code, human readable label, region and source dataset for each.
+}
+\details{
+A sample can legitimately appear more than once: the Simons Genome Diversity
+Project resequenced HGDP cell lines, so \code{HGDP01414} is present as both
+\code{BantuKenyaHGDP} and \code{BantuKenyaSGDP} -- one individual, two genotype
+datasets. The result therefore has \emph{at least} one row per input ID rather
+than exactly one. Pass \code{dataset} to restrict to a single source and recover a
+one-row-per-ID result.
 }

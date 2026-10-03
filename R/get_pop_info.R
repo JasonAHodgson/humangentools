@@ -1,25 +1,58 @@
 #' Returns a table of information about populations in a given dataset.
 #'
-#' `get_pop_info` returns a data frame containing information about populations in the specified dataset.
-#' @param samples A gen_tibble object, or a string with sample id. Default is to return all populations in the package dataset.
-#' @param region A character vector specifying regions to filter populations by. Default is NULL (no filtering).
-#' @param population A character vector specifying populations to filter by. Default is NULL (no filtering).
-#' @param dataset A string specifying the dataset to include. Default is all datasets in the package.
-#' @param include A charcter vector specifying which columns to include in the output. Default is all columns.
-#' @param exclude A character vector specifying which columns to exclude from the output. Default is no columns excluded.
+#' `get_pop_info` returns a data frame of information about populations in the
+#' package's bundled genetic datasets. Populations are keyed by `pop`, a
+#' canonical code following the convention of `kgp::allmeta`: a bare three
+#' letter code for 1000 Genomes populations (`YRI`), and `<Name><DATASET>`
+#' elsewhere (`YorubaHGDP`, `YorubaSGDP`, `YRIHapMap`). The same group sampled
+#' by two projects therefore gets two codes, which keeps genotypes from
+#' different sequencing platforms separable.
+#'
+#' Two sets of coordinates are stored for each population: `origin_lat`/
+#' `origin_lon`, the group's ethnographic homeland, and `sampling_lat`/
+#' `sampling_lon`, where the samples were actually collected. These differ for
+#' diaspora cohorts -- 1000 Genomes GIH was sampled in Houston but originates in
+#' Gujarat -- and for some populations an origin is not a point at all, in which
+#' case the origin coordinates are `NA` and `coord_note` says why. The
+#' `location` argument chooses which pair is copied to the convenience columns
+#' `lat` and `lon`.
+#'
+#' @param samples A gen_tibble object, or a character vector of sample ids.
+#'   Default is to return all populations in the package dataset.
+#' @param pop A character vector of canonical population codes to filter by.
+#'   Default is `NULL` (no filtering).
+#' @param population A character vector of human readable population labels to
+#'   filter by. A population can carry more than one label (where source
+#'   datasets named it differently), stored pipe-separated in
+#'   `population_label`; a population is kept if any of its labels match.
+#'   Default is `NULL` (no filtering).
+#' @param region A character vector specifying regions to filter populations by.
+#'   Default is NULL (no filtering).
+#' @param dataset A character vector of source datasets to include (matched
+#'   against `source_dataset`; see `dataset_information.Rtable` for the
+#'   vocabulary). Default is all datasets in the package.
+#' @param location One of `"origin"` (the default) or `"sampling"`, choosing
+#'   which coordinate pair is returned in the `lat` and `lon` columns. The
+#'   explicit `origin_*` and `sampling_*` columns are always returned as well.
+#' @param include A character vector specifying which columns to include in the
+#'   output. Default is all columns.
+#' @param exclude A character vector specifying which columns to exclude from
+#'   the output. Default is no columns excluded.
 #' @return A data frame with population information.
 #' @importFrom utils read.table
 #' @export
-
-
 get_pop_info <- function(
   samples = NULL,
-  region = NULL,
+  pop = NULL,
   population = NULL,
+  region = NULL,
   dataset = NULL,
+  location = c("origin", "sampling"),
   include = NULL,
   exclude = NULL
 ) {
+
+  location <- match.arg(location)
 
   file_path <- system.file("extdata", "population_information.Rtable", package = "humangentools")
 
@@ -27,12 +60,21 @@ get_pop_info <- function(
     stop("Data file not found in package. Make sure it is in inst/extdata/ before building the package.")
   }
 
-  # read in the data
-  pop_info <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+  pop_info <- read.table(
+    file_path, header = TRUE, sep = "\t", stringsAsFactors = FALSE,
+    na.strings = "NA", quote = "\""
+  )
+
+  # convenience aliases, so callers that just want "the" coordinates do not have
+  # to choose a column name; the explicit pairs stay in the output either way
+  pop_info$lat <- if (location == "origin") pop_info$origin_lat else pop_info$sampling_lat
+  pop_info$lon <- if (location == "origin") pop_info$origin_lon else pop_info$sampling_lon
+  front <- c("pop", "population_label", "population_desc", "source_dataset",
+             "region", "lat", "lon")
+  pop_info <- pop_info[, c(front, setdiff(names(pop_info), front)), drop = FALSE]
 
   # filter by samples if provided
   if (!is.null(samples)) {
-    # check if samples is a gen_tibble or a character vector
     if (inherits(samples, "gen_tibble")) {
       sample_ids <- unique(samples$id)
     } else if (is.character(samples)) {
@@ -40,42 +82,44 @@ get_pop_info <- function(
     } else {
       stop("samples must be a gen_tibble or a character vector of sample ids.")
     }
+    sample_pops <- humangentools::get_sample_information(
+      ID = sample_ids, dataset = dataset, na.fill = FALSE
+    )$pop
+    pop_info <- pop_info[pop_info$pop %in% unique(sample_pops), , drop = FALSE]
   }
 
-    # get populations corresponding to sample ids if sample_ids is provided
-  if (exists("sample_ids")) {
-    sample_pops <- humangentools::get_sample_information(ID = sample_ids, na.fill = FALSE)$population
-
-    # filter pop_info for these populations
-    pop_info <- pop_info[pop_info$population %in% sample_pops, ]
+  if (!is.null(pop)) {
+    pop_info <- pop_info[pop_info$pop %in% pop, , drop = FALSE]
   }
 
-  # filter by region if provided
-  if (!is.null(region)) {
-    pop_info <- pop_info[pop_info$region %in% region, ]
-  }
-
-  # filter by population if provided
+  # population_label can hold several pipe-separated labels for one population
   if (!is.null(population)) {
-    pop_info <- pop_info[pop_info$population %in% population, ]
+    keep <- vapply(
+      strsplit(pop_info$population_label, "|", fixed = TRUE),
+      function(labels) any(labels %in% population),
+      logical(1)
+    )
+    pop_info <- pop_info[keep, , drop = FALSE]
   }
 
-  # filter by dataset if provided
+  if (!is.null(region)) {
+    pop_info <- pop_info[pop_info$region %in% region, , drop = FALSE]
+  }
+
   if (!is.null(dataset)) {
-    pop_info <- pop_info[pop_info$dataset %in% dataset, ]
+    pop_info <- pop_info[pop_info$source_dataset %in% dataset, , drop = FALSE]
   }
 
-  # include only specified columns if provided
   if (!is.null(include)) {
     include <- intersect(include, colnames(pop_info))
     pop_info <- pop_info[, include, drop = FALSE]
   }
 
-  # exclude specified columns if provided
   if (!is.null(exclude)) {
     exclude <- intersect(exclude, colnames(pop_info))
     pop_info <- pop_info[, !(colnames(pop_info) %in% exclude), drop = FALSE]
   }
 
-  return(pop_info)
+  rownames(pop_info) <- NULL
+  pop_info
 }

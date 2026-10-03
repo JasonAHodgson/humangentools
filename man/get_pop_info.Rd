@@ -6,29 +6,64 @@
 \usage{
 get_pop_info(
   samples = NULL,
-  region = NULL,
+  pop = NULL,
   population = NULL,
+  region = NULL,
   dataset = NULL,
+  location = c("origin", "sampling"),
   include = NULL,
   exclude = NULL
 )
 }
 \arguments{
-\item{samples}{A gen_tibble object, or a string with sample id. Default is to return all populations in the package dataset.}
+\item{samples}{A gen_tibble object, or a character vector of sample ids.
+Default is to return all populations in the package dataset.}
 
-\item{region}{A character vector specifying regions to filter populations by. Default is NULL (no filtering).}
+\item{pop}{A character vector of canonical population codes to filter by.
+Default is \code{NULL} (no filtering).}
 
-\item{population}{A character vector specifying populations to filter by. Default is NULL (no filtering).}
+\item{population}{A character vector of human readable population labels to
+filter by. A population can carry more than one label (where source
+datasets named it differently), stored pipe-separated in
+\code{population_label}; a population is kept if any of its labels match.
+Default is \code{NULL} (no filtering).}
 
-\item{dataset}{A string specifying the dataset to include. Default is all datasets in the package.}
+\item{region}{A character vector specifying regions to filter populations by.
+Default is NULL (no filtering).}
 
-\item{include}{A charcter vector specifying which columns to include in the output. Default is all columns.}
+\item{dataset}{A character vector of source datasets to include (matched
+against \code{source_dataset}; see \code{dataset_information.Rtable} for the
+vocabulary). Default is all datasets in the package.}
 
-\item{exclude}{A character vector specifying which columns to exclude from the output. Default is no columns excluded.}
+\item{location}{One of \code{"origin"} (the default) or \code{"sampling"}, choosing
+which coordinate pair is returned in the \code{lat} and \code{lon} columns. The
+explicit \verb{origin_*} and \verb{sampling_*} columns are always returned as well.}
+
+\item{include}{A character vector specifying which columns to include in the
+output. Default is all columns.}
+
+\item{exclude}{A character vector specifying which columns to exclude from
+the output. Default is no columns excluded.}
 }
 \value{
 A data frame with population information.
 }
 \description{
-\code{get_pop_info} returns a data frame containing information about populations in the specified dataset.
+\code{get_pop_info} returns a data frame of information about populations in the
+package's bundled genetic datasets. Populations are keyed by \code{pop}, a
+canonical code following the convention of \code{kgp::allmeta}: a bare three
+letter code for 1000 Genomes populations (\code{YRI}), and \verb{<Name><DATASET>}
+elsewhere (\code{YorubaHGDP}, \code{YorubaSGDP}, \code{YRIHapMap}). The same group sampled
+by two projects therefore gets two codes, which keeps genotypes from
+different sequencing platforms separable.
+}
+\details{
+Two sets of coordinates are stored for each population: \code{origin_lat}/
+\code{origin_lon}, the group's ethnographic homeland, and \code{sampling_lat}/
+\code{sampling_lon}, where the samples were actually collected. These differ for
+diaspora cohorts -- 1000 Genomes GIH was sampled in Houston but originates in
+Gujarat -- and for some populations an origin is not a point at all, in which
+case the origin coordinates are \code{NA} and \code{coord_note} says why. The
+\code{location} argument chooses which pair is copied to the convenience columns
+\code{lat} and \code{lon}.
 }

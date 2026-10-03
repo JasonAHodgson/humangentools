@@ -1,0 +1,219 @@
+pop	population_label	population_desc	source_dataset	region	region_kgp	origin_lat	origin_lon	sampling_lat	sampling_lon	coord_note	n_samples	reference
+ACB	Barbados	African Caribbean in Barbados	KGP	Africa	Africa	NA	NA	13.1	-59.62	African Caribbean in Barbados; origin is a distribution over West/Central African source populations, not a point	116	NA
+ASW	African_American	African Ancestry in Southwest US	KGP	Africa	Africa	NA	NA	35.483	-97.5333	African ancestry in the southwestern US; origin is a distribution over West/Central African source populations, not a point	74	NA
+ASWHapMap	African_American	African Ancestry in Southwest US (HapMap)	HapMap	Africa	Africa	NA	NA	35.483	-97.5333	sampling location inherited from the same-named 1000 Genomes population (ASW); HapMap collection site assumed identical	38	NA
+AbkhasianSGDP	Abkhasian	Abkhasian in Abkhazia or Russia (SGDP)	SGDP	Europe	West_Eurasia	43	41	43	41	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+AdygeiHGDP	Adygei	Adygei in Caucasus, Russia (HGDP)	HGDP	Europe	Europe	44	39	44	39	population location from kgp::allmeta; collection in situ, exact site not recorded	17	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+AlbanianSGDP	Albanian	Albanian in Albania (SGDP)	SGDP	Europe	West_Eurasia	41.3	19.8	41.3	19.8	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+AleutSGDP	Aleut	Aleut in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	55.18	166	55.18	166	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+AltaianSGDP	Altaian	Altaian in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	51.9	86	51.9	86	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+AmiSGDP	Ami	Ami in Taiwan (SGDP)	SGDP	East_Asia	East_Asia	22.8431	121.185	22.8431	121.185	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+ArmenianSGDP	Armenian	Armenian in Armenia (SGDP)	SGDP	Europe	West_Eurasia	40.2	44.5	40.2	44.5	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+AtayalSGDP	Atayal	Atayal in Taiwan (SGDP)	SGDP	East_Asia	East_Asia	24.6117	121.296	24.6117	121.296	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+AustralianSGDP	Australian	Australian in Australia (SGDP)	SGDP	Oceania	Oceania	-13	143	-13	143	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+BEB	Bengali	Bengali in Bangladesh	KGP	South_Asia	South_Asia	23.7	90.35	23.7	90.35	sampled within the group's homeland	131	NA
+BalochiHGDP	Balochi	Balochi in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	30.5	66.5	30.5	66.5	population location from kgp::allmeta; collection in situ, exact site not recorded	24	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuHereroSGDP	BantuHerero	Bantu Herero in Botswana Or Namibia (SGDP)	SGDP	Africa	Africa	-22	19	-22	19	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuKenyaHGDP	Bantu_North	Bantu in Kenya (HGDP)	HGDP	Africa	Africa	-3	37	-3	37	population location from kgp::allmeta; collection in situ, exact site not recorded	11	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuKenyaSGDP	BantuKenya	Bantu Kenya in Kenya (SGDP)	SGDP	Africa	Africa	-3	37	-3	37	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuSouthAfricaHGDP	Bantu_South	Bantu in South Africa (HGDP)	HGDP	Africa	Africa	-25.6	24.25	-25.6	24.25	population location from kgp::allmeta; collection in situ, exact site not recorded	8	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuTswanaSGDP	BantuTswana	Bantu Tswana in Botswana Or Namibia (SGDP)	SGDP	Africa	Africa	-28	24	-28	24	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BantuUNK	Bantu	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	16	NA
+BarbadosUNK	Barbados	NA	unconfirmed	Caribbean	NA	NA	NA	NA	NA	NA	7	NA
+BasqueHGDP	Basque	Basque in France (HGDP)	HGDP	Europe	Europe	43	0	43	0	population location from kgp::allmeta; collection in situ, exact site not recorded	24	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BatwaPER	Batwa	NA	Perry_etal_unconfirmed	Africa	NA	NA	NA	NA	NA	NA	169	NA
+BedouinBSGDP	BedouinB	Bedouin B in Israel(Negev) (SGDP)	SGDP	Europe	West_Eurasia	31	35	31	35	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BedouinHGDP	Bedouin	Bedouin in Negev, Israel (HGDP)	HGDP	Mid_East	Middle_East	31	35	31	35	population location from kgp::allmeta; collection in situ, exact site not recorded	46	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BengaliSGDP	Bengali	Bengali in Bangladesh (SGDP)	SGDP	Central_Asia	South_Asia	23.7	90.4	23.7	90.4	population location from kgp::allmeta; collection in situ, exact site not recorded	13	NA
+BergamoItalianHGDP	Bergamo	Bergamo Italian in Bergamo, Italy (HGDP)	HGDP	Europe	Europe	46	10	46	10	population location from kgp::allmeta; collection in situ, exact site not recorded	13	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BetsileoRAK	Betsileo	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	40	NA
+BetsimisarakaRAK	Betsimisaraka	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	40	NA
+BiakaHGDP	Biaka_Pygmy	Biaka in Central African Republic (HGDP)	HGDP	Africa	Africa	4	17	4	17	population location from kgp::allmeta; collection in situ, exact site not recorded	23	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BiakaSGDP	Biaka	Biaka in Central African Republic (SGDP)	SGDP	Africa	Africa	4	17	4	17	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BorneoUNK	Borneo	NA	unconfirmed	East_Asia	NA	NA	NA	NA	NA	NA	39	NA
+BougainvilleHGDP	Melanesian	Bougainville in Bougainville (HGDP)	HGDP	Oceania	Oceania	-6	155	-6	155	population location from kgp::allmeta; collection in situ, exact site not recorded	11	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BougainvilleSGDP	Bougainville	Bougainville in Papua New Guinea (SGDP)	SGDP	Oceania	Oceania	-6	155	-6	155	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BrahminSGDP	Brahmin	Brahmin in India (SGDP)	SGDP	Central_Asia	South_Asia	17.7	83.3	17.7	83.3	population location from kgp::allmeta; collection in situ, exact site not recorded	12	NA
+BrahuiHGDP	Brahui	Brahui in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	30.5	66.5	30.5	66.5	population location from kgp::allmeta; collection in situ, exact site not recorded	25	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+BritishUNK	British	NA	unconfirmed	Europe	NA	NA	NA	NA	NA	NA	16	NA
+BulgarianSGDP	Bulgarian	Bulgarian in Bulgaria (SGDP)	SGDP	Europe	West_Eurasia	42.2	24.7	42.2	24.7	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+BurmeseSGDP	Burmese	Burmese in Myanmar (SGDP)	SGDP	East_Asia	East_Asia	17	96.7	17	96.7	population location from kgp::allmeta; collection in situ, exact site not recorded	22	NA
+BurungeUNK	Burunge	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	20	NA
+BurushoHGDP	Burusho	Burusho in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	36.5	74	36.5	74	population location from kgp::allmeta; collection in situ, exact site not recorded	25	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+CDX	Dai	Chinese Dai in Xishuangbanna, China	KGP	East_Asia	East_Asia	22	100.78	22	100.78	sampled within the group's homeland	93	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+CEU	CEPH_Europeans	Utah residents with Northern and Western European ancestry	KGP	Europe	Europe	NA	NA	40.767	-111.89	Utah residents of northern and western European ancestry; origin diffuse across NW Europe	179	NA
+CEUHapMap	CEPH_Europeans|European	Utah residents with Northern and Western European ancestry (HapMap)	HapMap	Europe	Europe	NA	NA	40.767	-111.89	sampling location inherited from the same-named 1000 Genomes population (CEU); HapMap collection site assumed identical	47	NA
+CHB	Han_Chinese	Han Chinese in Beijing, China	KGP	East_Asia	East_Asia	39.9167	116.383	39.9167	116.383	sampled within the group's homeland	103	NA
+CHBHapMap	Han_Chinese	Han Chinese in Beijing, China (HapMap)	HapMap	East_Asia	East_Asia	39.9167	116.383	39.9167	116.383	sampling location inherited from the same-named 1000 Genomes population (CHB); HapMap collection site assumed identical	45	NA
+CHDHapMap	Chinese_Denver	NA	HapMap	East_Asia	NA	NA	NA	NA	NA	NA	106	NA
+CHS	China_South	Southern Han Chinese, China	KGP	East_Asia	East_Asia	23.1333	113.267	23.1333	113.267	sampled within the group's homeland	163	NA
+CLM	Colombian	Colombian in Medellin, Colombia	KGP	America	America	4.58333	-74.0667	4.58333	-74.0667	sampled within the group's homeland	132	NA
+CambodianHGDP	Cambodian	Cambodian in Cambodia (HGDP)	HGDP	East_Asia	East_Asia	12	105	12	105	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+ChaneSGDP	Chane	Chane in Argentina (SGDP)	SGDP	America	America	-25	-60	-25	-60	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+ChechenSGDP	Chechen	Chechen in Russia (SGDP)	SGDP	Europe	West_Eurasia	43.3	45.7	43.3	45.7	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+China_SouthUNK	China_South	NA	unconfirmed	East_Asia	NA	NA	NA	NA	NA	NA	8	NA
+ChipewyanUNK	Chipewyan	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	2	NA
+ChukchiSGDP	Chukchi	Chukchi in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	69	169	69	169	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+ColombianHGDP	Piapoco_and_Curripaco	Colombian in Colombia (HGDP)	HGDP	America	America	3	-68	3	-68	population location from kgp::allmeta; collection in situ, exact site not recorded	7	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+ColombianUNK	Colombian	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	16	NA
+CreeUNK	Cree	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	2	NA
+CreteSGDP	Crete	Crete in Greece (SGDP)	SGDP	Europe	West_Eurasia	35.3418	25.1483	35.3418	25.1483	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+CzechSGDP	Czech	Czech in Czechoslovakia(pre1989) (SGDP)	SGDP	Europe	West_Eurasia	50.1	14.4	50.1	14.4	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+DaiHGDP	Dai	Dai in China (HGDP)	HGDP	East_Asia	East_Asia	21	100	21	100	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+DaiSGDP	Dai	Dai in China (SGDP)	SGDP	East_Asia	East_Asia	21	100	21	100	population location from kgp::allmeta; collection in situ, exact site not recorded	16	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+DaurHGDP	Daur	Daur in China (HGDP)	HGDP	East_Asia	East_Asia	48.5	124	48.5	124	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+DiegoRAK	Diego	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	40	NA
+DinkaSGDP	Dinka	Dinka in Sudan (SGDP)	SGDP	Africa	Africa	8.79444	27.4	8.79444	27.4	population location from kgp::allmeta; collection in situ, exact site not recorded	3	NA
+DruzeHGDP	Druze	Druze in Carmel, Israel (HGDP)	HGDP	Mid_East	Middle_East	32	35	32	35	population location from kgp::allmeta; collection in situ, exact site not recorded	42	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+DusunSGDP	Dusun	Dusun in Brunei (SGDP)	SGDP	Oceania	Oceania	4.7	114.7	4.7	114.7	population location from kgp::allmeta; collection in situ, exact site not recorded	24	NA
+ESN	Esan	Esan in Nigeria	KGP	Africa	Africa	9.06666	7.48333	9.06666	7.48333	sampled within the group's homeland	149	NA
+EsanSGDP	Esan	Esan in Nigeria (SGDP)	SGDP	Africa	Africa	6.5	6	6.5	6	population location from kgp::allmeta; collection in situ, exact site not recorded	24	NA
+EskimoChaplinSGDP	Eskimo_Chaplin	Eskimo Chaplin in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	64.48	172.86	64.48	172.86	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+EskimoNaukanSGDP	Eskimo_Naukan	Eskimo Naukan in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	66.02	169.71	66.02	169.71	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+EskimoSirenikiSGDP	Eskimo_Sireniki	Eskimo Sireniki in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	64.4	173.9	64.4	173.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+EstonianSGDP	Estonian	Estonian in Estonia (SGDP)	SGDP	Europe	West_Eurasia	58.5	24.9	58.5	24.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+EvenSGDP	Even	Even in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	57.53	135.88	57.53	135.88	population location from kgp::allmeta; collection in situ, exact site not recorded	3	NA
+FIN	Finish|Finnish	Finnish in Finland	KGP	Europe	Europe	60.17	24.93	60.17	24.93	sampled within the group's homeland	99	NA
+FinishUNK	Finish	NA	unconfirmed	Europe	NA	NA	NA	NA	NA	NA	6	NA
+FrenchHGDP	French	French in France (HGDP)	HGDP	Europe	Europe	46	2	46	2	population location from kgp::allmeta; collection in situ, exact site not recorded	28	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+GBR	British|English	British in England and Scotland	KGP	Europe	Europe	52.4862	-1.8904	52.4862	-1.8904	sampled within the group's homeland	91	NA
+GIH	Gujarati	Gujarati Indian in Houston, TX	KGP	South_Asia	South_Asia	22.5	71.5	29.7589	-95.3677	Gujarat, India (sampled in Houston)	103	NA
+GIHHapMap	Gujarati	Gujarati Indian in Houston, TX (HapMap)	HapMap	Central_Asia	South_Asia	29.7589	-95.3677	29.7589	-95.3677	sampling location inherited from the same-named 1000 Genomes population (GIH); HapMap collection site assumed identical	12	NA
+GWD	Gambian	Gambian in Western Division, The Gambia	KGP	Africa	Africa	13.4549	-16.579	13.4549	-16.579	sampled within the group's homeland	178	NA
+GambianSGDP	Gambian	Gambian in Gambia (SGDP)	SGDP	Africa	Africa	13.4	-16.7	13.4	-16.7	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+GeorgianSGDP	Georgian	Georgian in Georgia (SGDP)	SGDP	Europe	West_Eurasia	42.5	41.9	42.5	41.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+GreekSGDP	Greek	Greek in Greece (SGDP)	SGDP	Europe	West_Eurasia	38	23.7	38	23.7	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+HawaiianSGDP	Hawaiian	Hawaiian in USA (SGDP)	SGDP	Oceania	Oceania	21.3	-157.8	21.3	-157.8	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+HazaraHGDP	Hazara	Hazara in Pakistan (HGDP)	HGDP	East_Asia	Central_South_Asia	33.5	70	33.5	70	population location from kgp::allmeta; collection in situ, exact site not recorded	22	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+HezhenHGDP	Hezhen	Hezhen in China (HGDP)	HGDP	East_Asia	East_Asia	47.5	133.5	47.5	133.5	population location from kgp::allmeta; collection in situ, exact site not recorded	9	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+HungarianSGDP	Hungarian	Hungarian in Hungary (SGDP)	SGDP	Europe	West_Eurasia	47.5	19.1	47.5	19.1	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+IBS	Iberian|Spanish	Iberian populations in Spain	KGP	Europe	Europe	40.38	-3.72	40.38	-3.72	sampled within the group's homeland	157	NA
+ITU	Telugu	Indian Telugu in the UK	KGP	South_Asia	South_Asia	16.5	79.5	52.4862	-1.8904	Telangana/Andhra Pradesh, India (sampled in the UK)	107	NA
+IberianUNK	Iberian	NA	unconfirmed	Europe	NA	NA	NA	NA	NA	NA	5	NA
+IcelandicSGDP	Icelandic	Icelandic in Iceland (SGDP)	SGDP	Europe	West_Eurasia	64.1	-21.9	64.1	-21.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+IgboUNK	Igbo	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	2	NA
+IgorotSGDP	Igorot	Igorot in Philippines (SGDP)	SGDP	Oceania	Oceania	17.1	121	17.1	121	population location from kgp::allmeta; collection in situ, exact site not recorded	35	NA
+IranianSGDP	Iranian	Iranian in Iran (SGDP)	SGDP	Europe	West_Eurasia	35.6	51.5	35.6	51.5	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+IraqiJewSGDP	Iraqi_Jew	Iraqi Jew in Iraq (SGDP)	SGDP	Europe	West_Eurasia	33.3	44.4	33.3	44.4	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+IrulaSGDP	Irula	Irula in India (SGDP)	SGDP	Central_Asia	South_Asia	13.5	80	13.5	80	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+ItelmanSGDP	Itelman	Itelman in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	57	157	57	157	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+JPT	Japanese	Japanese in Tokyo, Japan	KGP	East_Asia	East_Asia	35.68	139.68	35.68	139.68	sampled within the group's homeland	104	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+JPTCHBHapMap	China_Japan	NA	HapMap	East_Asia	NA	NA	NA	NA	NA	NA	20	NA
+JPTHapMap	Japanese	Japanese in Tokyo, Japan (HapMap)	HapMap	East_Asia	East_Asia	35.68	139.68	35.68	139.68	sampling location inherited from the same-named 1000 Genomes population (JPT); HapMap collection site assumed identical	16	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+JapaneseHGDP	Japanese	Japanese in Japan (HGDP)	HGDP	East_Asia	East_Asia	38	138	38	138	population location from kgp::allmeta; collection in situ, exact site not recorded	29	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+JordanianSGDP	Jordanian	Jordanian in Jordan (SGDP)	SGDP	Europe	West_Eurasia	32.1	35.9	32.1	35.9	population location from kgp::allmeta; collection in situ, exact site not recorded	3	NA
+JuhoanNorthSGDP	Ju_hoan_North	Ju|'hoan North in Namibia (SGDP)	SGDP	Africa	Africa	-18.9093	21.4881	-18.9093	21.4881	population location from kgp::allmeta; collection in situ, exact site not recorded	4	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+KHV	Kinh	Kinh in Ho Chi Minh City, Vietnam	KGP	East_Asia	East_Asia	10.78	106.68	10.78	106.68	sampled within the group's homeland	122	NA
+KalashHGDP	Kalash	Kalash in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	36	71.5	36	71.5	population location from kgp::allmeta; collection in situ, exact site not recorded	23	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+KapuSGDP	Kapu	Kapu in India (SGDP)	SGDP	Central_Asia	South_Asia	17.7	83.3	17.7	83.3	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+KaritianaHGDP	Karitiana	Karitiana in Brazil (HGDP)	HGDP	America	America	-10	-63	-10	-63	population location from kgp::allmeta; collection in situ, exact site not recorded	14	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+Kashmiri_PanditUNK	Kashmiri_Pandit	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	1	NA
+KhariaUNK	Kharia	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	1	NA
+KhomaniSanSGDP	Khomani_San	Khomani San in South Africa (SGDP)	SGDP	Africa	Africa	-27	20.8	-27	20.8	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+KhondaDoraSGDP	Khonda_Dora	Khonda Dora in India (SGDP)	SGDP	Central_Asia	South_Asia	18.3	82.9	18.3	82.9	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+KigaPER	Kiga	NA	Perry_etal_unconfirmed	Africa	NA	NA	NA	NA	NA	NA	61	NA
+KinhSGDP	Kinh	Kinh in Vietnam (SGDP)	SGDP	East_Asia	East_Asia	21	105.9	21	105.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+KongoUNK	Kongo	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	1	NA
+KoreanSGDP	Korean	Korean in Korea (SGDP)	SGDP	East_Asia	East_Asia	37.6	127	37.6	127	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+KurumbaUNK	Kurumba	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	1	NA
+KusundaSGDP	Kusunda	Kusunda in Nepal (SGDP)	SGDP	Central_Asia	South_Asia	28.0725	83.3736	28.0725	83.3736	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+KyrgyzSGDP	Kyrgyz	Kyrgyz in Kyrgyzystan (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	42.9	74.6	42.9	74.6	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+LWK	Luhya	Luhya in Webuye, Kenya	KGP	Africa	Africa	-1.27	36.61	-1.27	36.61	sampled within the group's homeland	99	NA
+LWKHapMap	Luhya	Luhya in Webuye, Kenya (HapMap)	HapMap	Africa	Africa	-1.27	36.61	-1.27	36.61	sampling location inherited from the same-named 1000 Genomes population (LWK); HapMap collection site assumed identical	23	NA
+LahuHGDP	Lahu	Lahu in China (HGDP)	HGDP	East_Asia	East_Asia	22	100	22	100	population location from kgp::allmeta; collection in situ, exact site not recorded	8	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+LemandeUNK	Lemande	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	2	NA
+LezginSGDP	Lezgin	Lezgin in Russia (SGDP)	SGDP	Europe	West_Eurasia	42.1	48.2	42.1	48.2	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+LuoSGDP	Luo	Luo in Kenya (SGDP)	SGDP	Africa	Africa	-0.1	34.3	-0.1	34.3	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+MEXHapMap	Mexican_American|Mexican_LA	Mexican Ancestry in Los Angeles, California (HapMap)	HapMap	America	America	NA	NA	34.0544	-118.244	sampling location inherited from the same-named 1000 Genomes population (MXL); HapMap collection site assumed identical	10	NA
+MKKHapMap	Maasai	Masai in Kenya (HapMap)	HapMap	Africa	Africa	-1.5	35.2	-1.5	35.2	sampling location inherited from the same-named 1000 Genomes population (MKK); HapMap collection site assumed identical	105	NA
+MKKSGDP	Masai	NA	SGDP	Africa	NA	NA	NA	NA	NA	NA	2	NA
+MSL	Mende	Mende in Sierra Leone	KGP	Africa	Africa	8.48	-13.23	8.48	-13.23	sampled within the group's homeland	99	NA
+MXL	Mexican_American|Mexican_LA	Mexican Ancestry in Los Angeles, California	KGP	America	America	NA	NA	34.0544	-118.244	Mexican ancestry in Los Angeles; origin is a distribution within Mexico, not a point	97	NA
+MadigaSGDP	Madiga	Madiga in India (SGDP)	SGDP	Central_Asia	South_Asia	17.7	83.3	17.7	83.3	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+MakraniHGDP	Makrani	Makrani in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	26	64	26	64	population location from kgp::allmeta; collection in situ, exact site not recorded	25	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MalaUNK	Mala	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	12	NA
+MalayUNK	Malay	NA	unconfirmed	East_Asia	NA	NA	NA	NA	NA	NA	25	NA
+MandenkaHGDP	Mandenka	Mandenka in Senegal (HGDP)	HGDP	Africa	Africa	12	-12	12	-12	population location from kgp::allmeta; collection in situ, exact site not recorded	22	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MansiSGDP	Mansi	Mansi in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	63.725	61.775	63.725	61.775	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+MaoriSGDP	Maori	Maori in New Zealand (SGDP)	SGDP	Oceania	Oceania	-41.3	174.5	-41.3	174.5	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+MayaHGDP	Maya	Maya in Mexico (HGDP)	HGDP	America	America	19	-91	19	-91	population location from kgp::allmeta; collection in situ, exact site not recorded	21	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MayanSGDP	Mayan	Mayan in Mexico (SGDP)	SGDP	America	America	19	-91	19	-91	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MbutiHGDP	Mbuti_Pygmy	Mbuti in Democratic Republic of Congo (HGDP)	HGDP	Africa	Africa	1	29	1	29	population location from kgp::allmeta; collection in situ, exact site not recorded	13	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MbutiSGDP	Mbuti	Mbuti in Congo (SGDP)	SGDP	Africa	Africa	1	29	1	29	population location from kgp::allmeta; collection in situ, exact site not recorded	4	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MendeSGDP	Mende	Mende in Sierra Leone (SGDP)	SGDP	Africa	Africa	8.5	-13.2	8.5	-13.2	population location from kgp::allmeta; collection in situ, exact site not recorded	29	NA
+MerinaRAK	Merina	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	59	NA
+MiaoHGDP	Miaozu	Miao in China (HGDP)	HGDP	East_Asia	East_Asia	28	109	28	109	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MiaoSGDP	Miao	Miao in China (SGDP)	SGDP	East_Asia	East_Asia	28	109	28	109	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MikeaRAK	Mikea	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	21	NA
+MixeSGDP	Mixe	Mixe in Mexico (SGDP)	SGDP	America	America	16.95	-96.58	16.95	-96.58	population location from kgp::allmeta; collection in situ, exact site not recorded	3	NA
+MixtecSGDP	Mixtec	Mixtec in Mexico (SGDP)	SGDP	America	America	17	-97	17	-97	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+MongolaSGDP	Mongola	Mongola in China (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	45	111	45	111	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MongolianHGDP	Mongolia	Mongolian in China (HGDP)	HGDP	East_Asia	East_Asia	48.5	119	48.5	119	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MozabiteHGDP	Mozabite	Mozabite in Mzab, Algeria (HGDP)	HGDP	North_Africa	Middle_East	32	3	32	3	population location from kgp::allmeta; collection in situ, exact site not recorded	29	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+MozanbiqueUNK	Mozanbique	NA	unconfirmed	Africa	NA	NA	NA	NA	NA	NA	20	NA
+MurutUNK	Murut	NA	unconfirmed	East_Asia	NA	NA	NA	NA	NA	NA	17	NA
+NEEDS_SPLIT	Han|Papuan	NA	HGDP	East_Asia	NA	NA	NA	NA	NA	NA	61	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+NahuaUNK	Nahua	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	2	NA
+NaxiHGDP	Naxi	Naxi in China (HGDP)	HGDP	East_Asia	East_Asia	26	100	26	100	population location from kgp::allmeta; collection in situ, exact site not recorded	9	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+NorthOssetianSGDP	North_Ossetian	North Ossetian in Russia (SGDP)	SGDP	Europe	West_Eurasia	43	44.7	43	44.7	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+NorwegianSGDP	Norwegian	Norwegian in Norway (SGDP)	SGDP	Europe	West_Eurasia	60.3943	5.3258	60.3943	5.3258	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+OngeUNK	Onge	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	2	NA
+OrcadianHGDP	Orcadian	Orcadian in Orkney (HGDP)	HGDP	Europe	Europe	59	-3	59	-3	population location from kgp::allmeta; collection in situ, exact site not recorded	15	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+OroqenHGDP	Oroqen	Oroqen in China (HGDP)	HGDP	East_Asia	East_Asia	50.4	126.5	50.4	126.5	population location from kgp::allmeta; collection in situ, exact site not recorded	9	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+PEL	Peruvian	Peruvian in Lima, Peru	KGP	America	America	-12.04	-77.03	-12.04	-77.03	sampled within the group's homeland	122	NA
+PJL	Punjabi	Punjabi in Lahore, Pakistan	KGP	South_Asia	South_Asia	31.5546	74.3572	31.5546	74.3572	sampled within the group's homeland	146	NA
+PUR	Puerto_Rican	Puerto Rican in Puerto Rico	KGP	America	America	18.4	-66.1	18.4	-66.1	sampled within the group's homeland	139	NA
+PalestinianHGDP	Palestinian	Palestinian in Central, Israel (HGDP)	HGDP	Mid_East	Middle_East	32	35	32	35	population location from kgp::allmeta; collection in situ, exact site not recorded	46	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+PathanHGDP	Pathan	Pathan in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	33.5	70.5	33.5	70.5	population location from kgp::allmeta; collection in situ, exact site not recorded	24	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+PeruvianUNK	Peruvian	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	8	NA
+PiapocoSGDP	Piapoco	Piapoco in Colombia (SGDP)	SGDP	America	America	3	-68	3	-68	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+PimaHGDP	Pima	Pima in Mexico (HGDP)	HGDP	America	America	29	-108	29	-108	population location from kgp::allmeta; collection in situ, exact site not recorded	14	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+PolishSGDP	Polish	Polish in Poland (SGDP)	SGDP	Europe	West_Eurasia	52.2	21	52.2	21	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+Puerto_RicanUNK	Puerto_Rican	NA	unconfirmed	America	NA	NA	NA	NA	NA	NA	11	NA
+PunjabiSGDP	Punjabi	Punjabi in Pakistan (SGDP)	SGDP	Central_Asia	South_Asia	31.5	74.3	31.5	74.3	population location from kgp::allmeta; collection in situ, exact site not recorded	12	NA
+QuechuaSGDP	Quechua	Quechua in Peru (SGDP)	SGDP	America	America	-13.5	-72	-13.5	-72	population location from kgp::allmeta; collection in situ, exact site not recorded	3	NA
+RelliSGDP	Relli	Relli in India (SGDP)	SGDP	Central_Asia	South_Asia	17.7	83.3	17.7	83.3	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+RussianHGDP	Russia	Russian in Russia (HGDP)	HGDP	Europe	Europe	61	40	61	40	population location from kgp::allmeta; collection in situ, exact site not recorded	25	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+RussianSGDP	Russian	Russian in Russia (SGDP)	SGDP	Europe	West_Eurasia	61	40	61	40	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+STU	Tamil	Sri Lankan Tamil in the UK	KGP	South_Asia	South_Asia	7.5	80.8	52.4862	-1.8904	Sri Lanka (sampled in the UK)	114	NA
+SaamiSGDP	Saami	Saami in Finland (SGDP)	SGDP	Europe	West_Eurasia	69.9	27	69.9	27	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+SaharawiSGDP	Saharawi	Saharawi in Western Sahara (Morocco) (SGDP)	SGDP	Africa	Africa	27.3	-8.9	27.3	-8.9	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+Sakalava_TsimihetyRAK	Sakalava_Tsimihety	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	40	NA
+SamaritanSGDP	Samaritan	Samaritan in Israel (SGDP)	SGDP	Europe	West_Eurasia	32.2	35.3	32.2	35.3	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+SanHGDP	San	San in Namibia (HGDP)	HGDP	Africa	Africa	-21	20	-21	20	population location from kgp::allmeta; collection in situ, exact site not recorded	6	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+SardinianHGDP	Sardinia	Sardinian in Italy (HGDP)	HGDP	Europe	Europe	40	9	40	9	population location from kgp::allmeta; collection in situ, exact site not recorded	28	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+SardinianSGDP	Sardinian	Sardinian in Italy (SGDP)	SGDP	Europe	West_Eurasia	40	9	40	9	population location from kgp::allmeta; collection in situ, exact site not recorded	3	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+SheHGDP	She	She in China (HGDP)	HGDP	East_Asia	East_Asia	27	119	27	119	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+SherpaUNK	Sherpa	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	2	NA
+SindhiHGDP	Sindhi	Sindhi in Pakistan (HGDP)	HGDP	Central_Asia	Central_South_Asia	25.5	69	25.5	69	population location from kgp::allmeta; collection in situ, exact site not recorded	24	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+SomaliSGDP	Somali	Somali in Kenya (SGDP)	SGDP	Africa	Africa	5.6	48.3	5.6	48.3	population location from kgp::allmeta; collection in situ, exact site not recorded	1	NA
+SuruiHGDP	Surui	Surui in Brazil (HGDP)	HGDP	America	America	-11	-62	-11	-62	population location from kgp::allmeta; collection in situ, exact site not recorded	8	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+TSI	Tuscan	Toscani in Italy	KGP	Europe	Europe	42.1	12	42.1	12	sampled within the group's homeland	107	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+TSIHapMap	Tuscan	Toscani in Italy (HapMap)	HapMap	Europe	Europe	42.1	12	42.1	12	sampling location inherited from the same-named 1000 Genomes population (TSI); HapMap collection site assumed identical	9	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+TajikSGDP	Tajik	Tajik in Tajikistan (SGDP)	SGDP	Europe	West_Eurasia	37.6	71.5	37.6	71.5	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+TamilUNK	Tamil	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	14	NA
+TeluguUNK	Telugu	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	11	NA
+TemoroRAK	Temoro	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	24	NA
+ThaiSGDP	Thai	Thai in Thailand (SGDP)	SGDP	East_Asia	East_Asia	13.8	100.5	13.8	100.5	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+TibetanUNK	Tibetan	NA	unconfirmed	Central_Asia	NA	NA	NA	NA	NA	NA	2	NA
+TlingitSGDP	Tlingit	Tlingit in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	54.09	162.325	54.09	162.325	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+TuHGDP	Tu	Tu in China (HGDP)	HGDP	East_Asia	East_Asia	36	101	36	101	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+TubalarSGDP	Tubalar	Tubalar in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	51.1333	87	51.1333	87	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+TujiaHGDP	Tujia	Tujia in China (HGDP)	HGDP	East_Asia	East_Asia	29	109	29	109	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+TurkishSGDP	Turkish	Turkish in Turkey (SGDP)	SGDP	Europe	West_Eurasia	38.7	35.5	38.7	35.5	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+TuscanHGDP	Tuscan	Tuscan in Italy (HGDP)	HGDP	Europe	Europe	43	11	43	11	population location from kgp::allmeta; collection in situ, exact site not recorded	8	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+UlchiSGDP	Ulchi	Ulchi in Russia (SGDP)	SGDP	Central_Asia	Central_Asia_and_Siberia	52.4	140.435	52.4	140.435	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+UygurHGDP	Uygur	Uygur in China (HGDP)	HGDP	East_Asia	Central_South_Asia	44	81	44	81	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+VezoRAK	Vezo	NA	Rakotoarivony_etal	Madagascar	NA	NA	NA	NA	NA	NA	24	NA
+VietnameseUNK	Vietnamese	NA	unconfirmed	East_Asia	NA	NA	NA	NA	NA	NA	22	NA
+XiboHGDP	Xibo	Xibo in China (HGDP)	HGDP	East_Asia	East_Asia	43.5	81.5	43.5	81.5	population location from kgp::allmeta; collection in situ, exact site not recorded	9	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YRI	Yoruba	Yoruba in Ibadan, Nigeria	KGP	Africa	Africa	7.4	3.92	7.4	3.92	sampled within the group's homeland	178	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YRIHapMap	Yoruba	Yoruba in Ibadan, Nigeria (HapMap)	HapMap	Africa	Africa	7.4	3.92	7.4	3.92	sampling location inherited from the same-named 1000 Genomes population (YRI); HapMap collection site assumed identical	32	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YadavaSGDP	Yadava	Yadava in India (SGDP)	SGDP	Central_Asia	South_Asia	17.7	83.3	17.7	83.3	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+YakutHGDP	Yakut	Yakut in Siberia (HGDP)	HGDP	East_Asia	East_Asia	63	129.5	63	129.5	population location from kgp::allmeta; collection in situ, exact site not recorded	25	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YemeniUNK	Yemeni	NA	unconfirmed	Mid_East	NA	NA	NA	NA	NA	NA	64	NA
+YemeniteJewSGDP	Yemenite_Jew	Yemenite Jew in Yemen (SGDP)	SGDP	Europe	West_Eurasia	15.4	44.2	15.4	44.2	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA
+YiHGDP	Yizu	Yi in China (HGDP)	HGDP	East_Asia	East_Asia	28	103	28	103	population location from kgp::allmeta; collection in situ, exact site not recorded	10	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YiSGDP	Yi	Yi in China (SGDP)	SGDP	East_Asia	East_Asia	28	103	28	103	population location from kgp::allmeta; collection in situ, exact site not recorded	2	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+YorubaHGDP	Yoruba	Yoruba in Nigeria (HGDP)	HGDP	Africa	Africa	8	5	8	5	population location from kgp::allmeta; collection in situ, exact site not recorded	22	Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+ZapotecSGDP	Zapotec	Zapotec in Mexico (SGDP)	SGDP	America	America	16.5	-97.2	16.5	-97.2	population location from kgp::allmeta; collection in situ, exact site not recorded	2	NA

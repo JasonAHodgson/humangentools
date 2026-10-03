@@ -13,10 +13,10 @@ URL: https://jasonahodgson.github.io/humangentools/, https://github.com/JasonAHo
 BugReports: https://github.com/JasonAHodgson/humangentools/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.0

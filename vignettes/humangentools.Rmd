@@ -73,3 +73,28 @@ as a SNP filter (e.g. before reading genotype data into a `tidypopgen`
 length(get_axiom_snps("panel1"))
 length(get_axiom_snps("all"))
 ```
+
+## Linking to dplaceR societies
+
+`get_dplace_link()` returns a candidate link table joining these populations
+to societies in [dplaceR](https://jasonahodgson.github.io/dplaceR/)'s
+D-PLACE data, so genetic and cross-cultural data can be combined on a
+common `soc_id`:
+
+```{r}
+get_dplace_link(population = "Yoruba")
+```
+
+The two resources use different naming conventions with no shared ID, so
+this is a **best-effort, fuzzy candidate match**, not a guaranteed-correct
+crosswalk -- matching can be many-to-many, and a population with no
+plausible match still appears once with `soc_id = NA` (set
+`include_unmatched = TRUE` to see those). Each row's `confidence` column
+(`"high"`, `"medium"`, `"low"`, or `"none"`) reflects how much to trust the
+match: `"high"` is an exact name match, while `"medium"`/`"low"` rows are
+worth checking (e.g. against `society_region` and `geo_distance_km`)
+before relying on them for an analysis where a wrong link would matter:
+
+```{r}
+get_dplace_link(confidence = "medium")
+```

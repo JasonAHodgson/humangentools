@@ -18,3 +18,10 @@ reference:
   contents:
   - get_panel_information
   - get_axiom_snps
+
+- title: Cross-referencing with dplaceR
+  desc: >
+    Link populations in the bundled genetic datasets to societies in
+    dplaceR's D-PLACE data, for combined genetic/cross-cultural analyses.
+  contents:
+  - get_dplace_link
