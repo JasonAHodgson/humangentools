@@ -1,4 +1,5 @@
 dataset	description	genotyping	n_pops	n_samples	reference
+AADR	Allen Ancient DNA Resource v66.0, 1240K release (ancient and present-day individuals)	1240K capture, shotgun, and Human Origins array (see data_type)	3897	23089	Mallick et al. 2024. The Allen Ancient DNA Resource (AADR): a curated compendium of ancient human genomes. Sci Data 11:182. 10.1038/s41597-024-03031-7
 HGDP	Human Genome Diversity Project cell line panel	SNP array / WGS	56	952	Cann et al. 2002. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
 HapMap	International HapMap Project (phase 3 and HapMap-era Coriell panels)	SNP array	12	463	International HapMap 3 Consortium 2010. Nature 467(7311) 52-58. 10.1038/nature09298
 KGP	1000 Genomes Project (phase 3 + NYGC high-coverage expansion)	WGS	26	3202	Byrska-Bishop et al. 2022. Cell 185(18) 3426-3440. 10.1016/j.cell.2022.08.004

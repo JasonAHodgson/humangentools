@@ -8,6 +8,12 @@
 #' by two projects therefore gets two codes, which keeps genotypes from
 #' different sequencing platforms separable.
 #'
+#' Populations are also classified as present-day or ancient in the `temporal`
+#' column, and can be filtered on it. This matters because the AADR contributes
+#' several thousand ancient populations: an analysis that assumes a living
+#' population, such as anything joined to ethnographic data, wants
+#' `temporal = "modern"`.
+#'
 #' Two sets of coordinates are stored for each population: `origin_lat`/
 #' `origin_lon`, the group's ethnographic homeland, and `sampling_lat`/
 #' `sampling_lon`, where the samples were actually collected. These differ for
@@ -31,6 +37,12 @@
 #' @param dataset A character vector of source datasets to include (matched
 #'   against `source_dataset`; see `dataset_information.Rtable` for the
 #'   vocabulary). Default is all datasets in the package.
+#' @param temporal A character vector restricting populations by age: one or
+#'   both of `"modern"` (present-day) and `"ancient"`. Every population from
+#'   HGDP, 1000 Genomes, SGDP, HapMap and the individual-study datasets is
+#'   `"modern"`; AADR contributes both. Default `NULL` (no filtering), which
+#'   returns ancient populations alongside present-day ones -- pass
+#'   `temporal = "modern"` for analyses that assume a living population.
 #' @param location One of `"origin"` (the default) or `"sampling"`, choosing
 #'   which coordinate pair is returned in the `lat` and `lon` columns. The
 #'   explicit `origin_*` and `sampling_*` columns are always returned as well.
@@ -47,6 +59,7 @@ get_pop_info <- function(
   population = NULL,
   region = NULL,
   dataset = NULL,
+  temporal = NULL,
   location = c("origin", "sampling"),
   include = NULL,
   exclude = NULL
@@ -70,7 +83,7 @@ get_pop_info <- function(
   pop_info$lat <- if (location == "origin") pop_info$origin_lat else pop_info$sampling_lat
   pop_info$lon <- if (location == "origin") pop_info$origin_lon else pop_info$sampling_lon
   front <- c("pop", "population_label", "population_desc", "source_dataset",
-             "region", "lat", "lon")
+             "temporal", "region", "lat", "lon")
   pop_info <- pop_info[, c(front, setdiff(names(pop_info), front)), drop = FALSE]
 
   # filter by samples if provided
@@ -108,6 +121,15 @@ get_pop_info <- function(
 
   if (!is.null(dataset)) {
     pop_info <- pop_info[pop_info$source_dataset %in% dataset, , drop = FALSE]
+  }
+
+  if (!is.null(temporal)) {
+    bad <- setdiff(temporal, c("modern", "ancient"))
+    if (length(bad) > 0) {
+      stop("`temporal` must be one or both of \"modern\" and \"ancient\"; got: ",
+           paste(bad, collapse = ", "))
+    }
+    pop_info <- pop_info[pop_info$temporal %in% temporal, , drop = FALSE]
   }
 
   if (!is.null(include)) {
