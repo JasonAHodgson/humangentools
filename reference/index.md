@@ -20,3 +20,12 @@ ascertainment panels.
 - [`get_axiom_snps()`](https://jasonahodgson.github.io/humangentools/reference/get_axiom_snps.md)
   : Get a list of SNP RS ids from desired Axiom Human Origins
   ascertainment Panels
+
+## Cross-referencing with dplaceR
+
+Link populations in the bundled genetic datasets to societies in
+dplaceR’s D-PLACE data, for combined genetic/cross-cultural analyses.
+
+- [`get_dplace_link()`](https://jasonahodgson.github.io/humangentools/reference/get_dplace_link.md)
+  : Get candidate links between humangentools populations and dplaceR
+  societies
