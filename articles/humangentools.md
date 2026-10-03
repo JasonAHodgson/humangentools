@@ -22,9 +22,16 @@ looks up the population and region for one or more sample IDs:
 ``` r
 
 get_sample_information(c("HGDP00001", "HGDP00003"))
-#>          id        pop population       region source_dataset
-#> 1 HGDP00001 BrahuiHGDP     Brahui Central_Asia           HGDP
-#> 2 HGDP00003 BrahuiHGDP     Brahui Central_Asia           HGDP
+#>          id    source_id data_type        pop population       region
+#> 1 HGDP00001    HGDP00001      <NA> BrahuiHGDP     Brahui Central_Asia
+#> 2 HGDP00001 HGDP00001.DG        DG BrahuiAADR     Brahui         <NA>
+#> 3 HGDP00003    HGDP00003      <NA> BrahuiHGDP     Brahui Central_Asia
+#> 4 HGDP00003 HGDP00003.DG        DG BrahuiAADR     Brahui         <NA>
+#>   source_dataset temporal
+#> 1           HGDP   modern
+#> 2           AADR   modern
+#> 3           HGDP   modern
+#> 4           AADR   modern
 ```
 
 By default, an ID that isn’t found is kept in the result with `NA`
@@ -37,8 +44,12 @@ get_sample_information(c("HGDP00001", "not-a-real-id"), na.fill = FALSE)
 #> Warning in get_sample_information(c("HGDP00001", "not-a-real-id"), na.fill =
 #> FALSE): The following IDs were not found in the sample information data:
 #> not-a-real-id
-#>          id        pop population       region source_dataset
-#> 1 HGDP00001 BrahuiHGDP     Brahui Central_Asia           HGDP
+#>          id    source_id data_type        pop population       region
+#> 1 HGDP00001    HGDP00001      <NA> BrahuiHGDP     Brahui Central_Asia
+#> 2 HGDP00001 HGDP00001.DG        DG BrahuiAADR     Brahui         <NA>
+#>   source_dataset temporal
+#> 1           HGDP   modern
+#> 2           AADR   modern
 ```
 
 [`get_pop_info()`](https://jasonahodgson.github.io/humangentools/reference/get_pop_info.md)
@@ -89,86 +100,86 @@ get_pop_info(region = "Central_Asia")
 #> 37        TubalarSGDP          Tubalar                Tubalar in Russia (SGDP)
 #> 38          UlchiSGDP            Ulchi                  Ulchi in Russia (SGDP)
 #> 39         YadavaSGDP           Yadava                  Yadava in India (SGDP)
-#>    source_dataset       region     lat      lon               region_kgp
-#> 1            SGDP Central_Asia 55.1800 166.0000 Central_Asia_and_Siberia
-#> 2            SGDP Central_Asia 51.9000  86.0000 Central_Asia_and_Siberia
-#> 3            HGDP Central_Asia 30.5000  66.5000       Central_South_Asia
-#> 4            SGDP Central_Asia 23.7000  90.4000               South_Asia
-#> 5            SGDP Central_Asia 17.7000  83.3000               South_Asia
-#> 6            HGDP Central_Asia 30.5000  66.5000       Central_South_Asia
-#> 7            HGDP Central_Asia 36.5000  74.0000       Central_South_Asia
-#> 8            SGDP Central_Asia 69.0000 169.0000 Central_Asia_and_Siberia
-#> 9            SGDP Central_Asia 64.4800 172.8600 Central_Asia_and_Siberia
-#> 10           SGDP Central_Asia 66.0200 169.7100 Central_Asia_and_Siberia
-#> 11           SGDP Central_Asia 64.4000 173.9000 Central_Asia_and_Siberia
-#> 12           SGDP Central_Asia 57.5300 135.8800 Central_Asia_and_Siberia
-#> 13         HapMap Central_Asia 29.7589 -95.3677               South_Asia
-#> 14           SGDP Central_Asia 13.5000  80.0000               South_Asia
-#> 15           SGDP Central_Asia 57.0000 157.0000 Central_Asia_and_Siberia
-#> 16           HGDP Central_Asia 36.0000  71.5000       Central_South_Asia
-#> 17           SGDP Central_Asia 17.7000  83.3000               South_Asia
-#> 18    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 19    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 20           SGDP Central_Asia 18.3000  82.9000               South_Asia
-#> 21    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 22           SGDP Central_Asia 28.0725  83.3736               South_Asia
-#> 23           SGDP Central_Asia 42.9000  74.6000 Central_Asia_and_Siberia
-#> 24           SGDP Central_Asia 17.7000  83.3000               South_Asia
-#> 25           HGDP Central_Asia 26.0000  64.0000       Central_South_Asia
-#> 26    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 27           SGDP Central_Asia 63.7250  61.7750 Central_Asia_and_Siberia
-#> 28           SGDP Central_Asia 45.0000 111.0000 Central_Asia_and_Siberia
-#> 29    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 30           HGDP Central_Asia 33.5000  70.5000       Central_South_Asia
-#> 31           SGDP Central_Asia 31.5000  74.3000               South_Asia
-#> 32           SGDP Central_Asia 17.7000  83.3000               South_Asia
-#> 33    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 34           HGDP Central_Asia 25.5000  69.0000       Central_South_Asia
-#> 35    unconfirmed Central_Asia      NA       NA                     <NA>
-#> 36           SGDP Central_Asia 54.0900 162.3250 Central_Asia_and_Siberia
-#> 37           SGDP Central_Asia 51.1333  87.0000 Central_Asia_and_Siberia
-#> 38           SGDP Central_Asia 52.4000 140.4350 Central_Asia_and_Siberia
-#> 39           SGDP Central_Asia 17.7000  83.3000               South_Asia
-#>    origin_lat origin_lon sampling_lat sampling_lon
-#> 1     55.1800   166.0000      55.1800     166.0000
-#> 2     51.9000    86.0000      51.9000      86.0000
-#> 3     30.5000    66.5000      30.5000      66.5000
-#> 4     23.7000    90.4000      23.7000      90.4000
-#> 5     17.7000    83.3000      17.7000      83.3000
-#> 6     30.5000    66.5000      30.5000      66.5000
-#> 7     36.5000    74.0000      36.5000      74.0000
-#> 8     69.0000   169.0000      69.0000     169.0000
-#> 9     64.4800   172.8600      64.4800     172.8600
-#> 10    66.0200   169.7100      66.0200     169.7100
-#> 11    64.4000   173.9000      64.4000     173.9000
-#> 12    57.5300   135.8800      57.5300     135.8800
-#> 13    29.7589   -95.3677      29.7589     -95.3677
-#> 14    13.5000    80.0000      13.5000      80.0000
-#> 15    57.0000   157.0000      57.0000     157.0000
-#> 16    36.0000    71.5000      36.0000      71.5000
-#> 17    17.7000    83.3000      17.7000      83.3000
-#> 18         NA         NA           NA           NA
-#> 19         NA         NA           NA           NA
-#> 20    18.3000    82.9000      18.3000      82.9000
-#> 21         NA         NA           NA           NA
-#> 22    28.0725    83.3736      28.0725      83.3736
-#> 23    42.9000    74.6000      42.9000      74.6000
-#> 24    17.7000    83.3000      17.7000      83.3000
-#> 25    26.0000    64.0000      26.0000      64.0000
-#> 26         NA         NA           NA           NA
-#> 27    63.7250    61.7750      63.7250      61.7750
-#> 28    45.0000   111.0000      45.0000     111.0000
-#> 29         NA         NA           NA           NA
-#> 30    33.5000    70.5000      33.5000      70.5000
-#> 31    31.5000    74.3000      31.5000      74.3000
-#> 32    17.7000    83.3000      17.7000      83.3000
-#> 33         NA         NA           NA           NA
-#> 34    25.5000    69.0000      25.5000      69.0000
-#> 35         NA         NA           NA           NA
-#> 36    54.0900   162.3250      54.0900     162.3250
-#> 37    51.1333    87.0000      51.1333      87.0000
-#> 38    52.4000   140.4350      52.4000     140.4350
-#> 39    17.7000    83.3000      17.7000      83.3000
+#>    source_dataset temporal       region     lat      lon
+#> 1            SGDP   modern Central_Asia 55.1800 166.0000
+#> 2            SGDP   modern Central_Asia 51.9000  86.0000
+#> 3            HGDP   modern Central_Asia 30.5000  66.5000
+#> 4            SGDP   modern Central_Asia 23.7000  90.4000
+#> 5            SGDP   modern Central_Asia 17.7000  83.3000
+#> 6            HGDP   modern Central_Asia 30.5000  66.5000
+#> 7            HGDP   modern Central_Asia 36.5000  74.0000
+#> 8            SGDP   modern Central_Asia 69.0000 169.0000
+#> 9            SGDP   modern Central_Asia 64.4800 172.8600
+#> 10           SGDP   modern Central_Asia 66.0200 169.7100
+#> 11           SGDP   modern Central_Asia 64.4000 173.9000
+#> 12           SGDP   modern Central_Asia 57.5300 135.8800
+#> 13         HapMap   modern Central_Asia 29.7589 -95.3677
+#> 14           SGDP   modern Central_Asia 13.5000  80.0000
+#> 15           SGDP   modern Central_Asia 57.0000 157.0000
+#> 16           HGDP   modern Central_Asia 36.0000  71.5000
+#> 17           SGDP   modern Central_Asia 17.7000  83.3000
+#> 18    unconfirmed   modern Central_Asia      NA       NA
+#> 19    unconfirmed   modern Central_Asia      NA       NA
+#> 20           SGDP   modern Central_Asia 18.3000  82.9000
+#> 21    unconfirmed   modern Central_Asia      NA       NA
+#> 22           SGDP   modern Central_Asia 28.0725  83.3736
+#> 23           SGDP   modern Central_Asia 42.9000  74.6000
+#> 24           SGDP   modern Central_Asia 17.7000  83.3000
+#> 25           HGDP   modern Central_Asia 26.0000  64.0000
+#> 26    unconfirmed   modern Central_Asia      NA       NA
+#> 27           SGDP   modern Central_Asia 63.7250  61.7750
+#> 28           SGDP   modern Central_Asia 45.0000 111.0000
+#> 29    unconfirmed   modern Central_Asia      NA       NA
+#> 30           HGDP   modern Central_Asia 33.5000  70.5000
+#> 31           SGDP   modern Central_Asia 31.5000  74.3000
+#> 32           SGDP   modern Central_Asia 17.7000  83.3000
+#> 33    unconfirmed   modern Central_Asia      NA       NA
+#> 34           HGDP   modern Central_Asia 25.5000  69.0000
+#> 35    unconfirmed   modern Central_Asia      NA       NA
+#> 36           SGDP   modern Central_Asia 54.0900 162.3250
+#> 37           SGDP   modern Central_Asia 51.1333  87.0000
+#> 38           SGDP   modern Central_Asia 52.4000 140.4350
+#> 39           SGDP   modern Central_Asia 17.7000  83.3000
+#>                  region_kgp origin_lat origin_lon sampling_lat sampling_lon
+#> 1  Central_Asia_and_Siberia    55.1800   166.0000      55.1800     166.0000
+#> 2  Central_Asia_and_Siberia    51.9000    86.0000      51.9000      86.0000
+#> 3        Central_South_Asia    30.5000    66.5000      30.5000      66.5000
+#> 4                South_Asia    23.7000    90.4000      23.7000      90.4000
+#> 5                South_Asia    17.7000    83.3000      17.7000      83.3000
+#> 6        Central_South_Asia    30.5000    66.5000      30.5000      66.5000
+#> 7        Central_South_Asia    36.5000    74.0000      36.5000      74.0000
+#> 8  Central_Asia_and_Siberia    69.0000   169.0000      69.0000     169.0000
+#> 9  Central_Asia_and_Siberia    64.4800   172.8600      64.4800     172.8600
+#> 10 Central_Asia_and_Siberia    66.0200   169.7100      66.0200     169.7100
+#> 11 Central_Asia_and_Siberia    64.4000   173.9000      64.4000     173.9000
+#> 12 Central_Asia_and_Siberia    57.5300   135.8800      57.5300     135.8800
+#> 13               South_Asia    29.7589   -95.3677      29.7589     -95.3677
+#> 14               South_Asia    13.5000    80.0000      13.5000      80.0000
+#> 15 Central_Asia_and_Siberia    57.0000   157.0000      57.0000     157.0000
+#> 16       Central_South_Asia    36.0000    71.5000      36.0000      71.5000
+#> 17               South_Asia    17.7000    83.3000      17.7000      83.3000
+#> 18                     <NA>         NA         NA           NA           NA
+#> 19                     <NA>         NA         NA           NA           NA
+#> 20               South_Asia    18.3000    82.9000      18.3000      82.9000
+#> 21                     <NA>         NA         NA           NA           NA
+#> 22               South_Asia    28.0725    83.3736      28.0725      83.3736
+#> 23 Central_Asia_and_Siberia    42.9000    74.6000      42.9000      74.6000
+#> 24               South_Asia    17.7000    83.3000      17.7000      83.3000
+#> 25       Central_South_Asia    26.0000    64.0000      26.0000      64.0000
+#> 26                     <NA>         NA         NA           NA           NA
+#> 27 Central_Asia_and_Siberia    63.7250    61.7750      63.7250      61.7750
+#> 28 Central_Asia_and_Siberia    45.0000   111.0000      45.0000     111.0000
+#> 29                     <NA>         NA         NA           NA           NA
+#> 30       Central_South_Asia    33.5000    70.5000      33.5000      70.5000
+#> 31               South_Asia    31.5000    74.3000      31.5000      74.3000
+#> 32               South_Asia    17.7000    83.3000      17.7000      83.3000
+#> 33                     <NA>         NA         NA           NA           NA
+#> 34       Central_South_Asia    25.5000    69.0000      25.5000      69.0000
+#> 35                     <NA>         NA         NA           NA           NA
+#> 36 Central_Asia_and_Siberia    54.0900   162.3250      54.0900     162.3250
+#> 37 Central_Asia_and_Siberia    51.1333    87.0000      51.1333      87.0000
+#> 38 Central_Asia_and_Siberia    52.4000   140.4350      52.4000     140.4350
+#> 39               South_Asia    17.7000    83.3000      17.7000      83.3000
 #>                                                                                                                 coord_note
 #> 1                                       population location from kgp::allmeta; collection in situ, exact site not recorded
 #> 2                                       population location from kgp::allmeta; collection in situ, exact site not recorded
@@ -294,18 +305,24 @@ get_pop_info(region = "Central_Asia")
 ``` r
 
 get_pop_info(samples = c("HGDP00001", "HGDP00003"))
-#>          pop population_label           population_desc source_dataset
-#> 1 BrahuiHGDP           Brahui Brahui in Pakistan (HGDP)           HGDP
-#>         region  lat  lon         region_kgp origin_lat origin_lon sampling_lat
-#> 1 Central_Asia 30.5 66.5 Central_South_Asia       30.5       66.5         30.5
-#>   sampling_lon
-#> 1         66.5
+#>          pop population_label           population_desc source_dataset temporal
+#> 1 BrahuiHGDP           Brahui Brahui in Pakistan (HGDP)           HGDP   modern
+#> 2 BrahuiAADR           Brahui         Brahui (Pakistan)           AADR   modern
+#>         region     lat  lon         region_kgp origin_lat origin_lon
+#> 1 Central_Asia 30.5000 66.5 Central_South_Asia    30.5000       66.5
+#> 2         <NA> 30.4987 66.5               <NA>    30.4987       66.5
+#>   sampling_lat sampling_lon
+#> 1      30.5000         66.5
+#> 2      30.4987         66.5
 #>                                                                           coord_note
 #> 1 population location from kgp::allmeta; collection in situ, exact site not recorded
+#> 2     population location from the AADR .anno (median over individuals in the group)
 #>   n_samples
 #> 1        25
-#>                                                                                                              reference
-#> 1 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+#> 2        28
+#>                                                                                                                                                reference
+#> 1                                   Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b
+#> 2 Mallick et al. 2024. The Allen Ancient DNA Resource (AADR): a curated compendium of ancient human genomes. Sci Data 11:182. 10.1038/s41597-024-03031-7
 ```
 
 ## SNP ascertainment panels
@@ -364,10 +381,10 @@ get_dplace_link(population = "Yoruba")
 #> 1 West Tropical Africa        fuzzy         0.9             110     medium
 #> 2 West Tropical Africa        fuzzy         0.9             110     medium
 #> 3 West Tropical Africa        fuzzy         0.9             110     medium
-#>   n_marriage_vars_coded reviewed
-#> 1                    10    FALSE
-#> 2                    10    FALSE
-#> 3                    10    FALSE
+#>   n_marriage_vars_coded reviewed review_note
+#> 1                    10     TRUE        <NA>
+#> 2                    10     TRUE        <NA>
+#> 3                    10     TRUE        <NA>
 ```
 
 The two resources use different naming conventions with no shared ID, so
@@ -384,211 +401,130 @@ analysis where a wrong link would matter:
 ``` r
 
 get_dplace_link(confidence = "medium")
-#>                     pop population_label         source_dataset        soc_id
-#> 1        BantuKenyaHGDP      Bantu_North                   HGDP  CCMCbant1295
-#> 2  BantuSouthAfricaHGDP      Bantu_South                   HGDP  CCMCbant1295
-#> 3             BiakaHGDP      Biaka_Pygmy                   HGDP           B63
-#> 4             BiakaHGDP      Biaka_Pygmy                   HGDP          Ai23
-#> 5              DaurHGDP             Daur                   HGDP           Eb4
-#> 6               HanHGDP              Han                   HGDP CARNEIRO4_005
-#> 7     HanHGDPunresolved              Han                   HGDP CARNEIRO4_005
-#> 8              MayaHGDP             Maya                   HGDP  CCMCyuca1254
-#> 9              MayaHGDP             Maya                   HGDP           Sa6
-#> 10      NorthernHanHGDP              Han                   HGDP CARNEIRO4_005
-#> 11           OroqenHGDP           Oroqen                   HGDP           B23
-#> 12          RussianHGDP           Russia                   HGDP  CCMCruss1264
-#> 13          RussianHGDP           Russia                   HGDP  CCMCruss1263
-#> 14        SardinianHGDP         Sardinia                   HGDP  CCMCsard1257
-#> 15           YorubaHGDP           Yoruba                   HGDP           Af6
-#> 16         JPTCHBHapMap      China_Japan                 HapMap CARNEIRO4_005
-#> 17            MEXHapMap Mexican_American                 HapMap  CCMCamer1254
-#> 18            MEXHapMap Mexican_American                 HapMap           Ii1
-#> 19            YRIHapMap           Yoruba                 HapMap           Af6
-#> 20                  CHS      China_South                    KGP CARNEIRO4_005
-#> 21                  FIN           Finish                    KGP  CCMCfinn1318
-#> 22                  MXL Mexican_American                    KGP  CCMCamer1254
-#> 23                  MXL Mexican_American                    KGP           Ii1
-#> 24                  YRI           Yoruba                    KGP           Af6
-#> 25              CHSIGSR      China_South               KGP_IGSR CARNEIRO4_005
-#> 26              FINIGSR           Finish               KGP_IGSR  CCMCfinn1318
-#> 27             BatwaPER            Batwa Perry_etal_unconfirmed          Ah34
-#> 28             DiegoRAK            Diego     Rakotoarivony_etal          Ad30
-#> 29         ArmenianSGDP         Armenian                   SGDP  CCMCnucl1235
-#> 30         ArmenianSGDP         Armenian                   SGDP          Ci10
-#> 31         ArmenianSGDP         Armenian                   SGDP        SCCS56
-#> 32            BiakaSGDP            Biaka                   SGDP           B63
-#> 33            BiakaSGDP            Biaka                   SGDP          Ai23
-#> 34            DusunSGDP            Dusun                   SGDP           Ib5
-#> 35             EvenSGDP             Even                   SGDP          ec16
-#> 36            GreekSGDP            Greek                   SGDP  CCMCmode1248
-#> 37            GreekSGDP            Greek                   SGDP           Ce7
-#> 38          IranianSGDP          Iranian                   SGDP           Ea9
-#> 39          IranianSGDP          Iranian                   SGDP           Ef3
-#> 40         IraqiJewSGDP        Iraqi_Jew                   SGDP           Ca4
-#> 41          ItelmanSGDP          Itelman                   SGDP          ec13
-#> 42        JordanianSGDP        Jordanian                   SGDP           Cj6
-#> 43      JuhoanNorthSGDP    Ju_hoan_North                   SGDP  CCMCjuho1239
-#> 44       KhomaniSanSGDP      Khomani_San                   SGDP           B77
-#> 45       KhondaDoraSGDP      Khonda_Dora                   SGDP          Eg12
-#> 46           MadigaSGDP           Madiga                   SGDP           Eg3
-#> 47           MadigaSGDP           Madiga                   SGDP        SCCS60
-#> 48    NorthOssetianSGDP   North_Ossetian                   SGDP           Ci6
-#> 49          QuechuaSGDP          Quechua                   SGDP  CCMCayac1239
-#> 50          QuechuaSGDP          Quechua                   SGDP  CCMCcusc1236
-#> 51          QuechuaSGDP          Quechua                   SGDP  CCMCecua1248
-#> 52          QuechuaSGDP          Quechua                   SGDP  CCMCsout2991
-#> 53           SomaliSGDP           Somali                   SGDP          Ca10
-#> 54           SomaliSGDP           Somali                   SGDP           Ca2
-#> 55           SomaliSGDP           Somali                   SGDP        SCCS36
-#> 56            UlchiSGDP            Ulchi                   SGDP          ec18
-#> 57      YemeniteJewSGDP     Yemenite_Jew                   SGDP           Cj9
-#> 58             BantuUNK            Bantu            unconfirmed  CCMCbant1295
-#> 59             KongoUNK            Kongo            unconfirmed  CCMCmong1338
-#> 60             KongoUNK            Kongo            unconfirmed          Ad44
-#> 61             KongoUNK            Kongo            unconfirmed          Ae24
-#> 62             KongoUNK            Kongo            unconfirmed          Ai35
-#> 63             KongoUNK            Kongo            unconfirmed           Ca1
-#> 64             KongoUNK            Kongo            unconfirmed          Ac25
-#> 65             KongoUNK            Kongo            unconfirmed        SCCS35
-#> 66             MalayUNK            Malay            unconfirmed  CCMCjamb1236
-#> 67             MalayUNK            Malay            unconfirmed           Ej8
-#> 68           TibetanUNK          Tibetan            unconfirmed           Ee4
+#>                  pop population_label         source_dataset        soc_id
+#> 1           DaurHGDP             Daur                   HGDP           Eb4
+#> 2            HanHGDP              Han                   HGDP CARNEIRO4_005
+#> 3  HanHGDPunresolved              Han                   HGDP CARNEIRO4_005
+#> 4           MayaHGDP             Maya                   HGDP  CCMCyuca1254
+#> 5           MayaHGDP             Maya                   HGDP           Sa6
+#> 6    NorthernHanHGDP              Han                   HGDP CARNEIRO4_005
+#> 7         OroqenHGDP           Oroqen                   HGDP           B23
+#> 8        RussianHGDP           Russia                   HGDP  CCMCruss1263
+#> 9      SardinianHGDP         Sardinia                   HGDP  CCMCsard1257
+#> 10        YorubaHGDP           Yoruba                   HGDP           Af6
+#> 11         YRIHapMap           Yoruba                 HapMap           Af6
+#> 12               CHS      China_South                    KGP CARNEIRO4_005
+#> 13               FIN           Finish                    KGP  CCMCfinn1318
+#> 14               YRI           Yoruba                    KGP           Af6
+#> 15           CHSIGSR      China_South               KGP_IGSR CARNEIRO4_005
+#> 16           FINIGSR           Finish               KGP_IGSR  CCMCfinn1318
+#> 17          BatwaPER            Batwa Perry_etal_unconfirmed          Ah34
+#> 18      ArmenianSGDP         Armenian                   SGDP  CCMCnucl1235
+#> 19      ArmenianSGDP         Armenian                   SGDP          Ci10
+#> 20      ArmenianSGDP         Armenian                   SGDP        SCCS56
+#> 21         BiakaSGDP            Biaka                   SGDP          Ai23
+#> 22         GreekSGDP            Greek                   SGDP  CCMCmode1248
+#> 23         GreekSGDP            Greek                   SGDP           Ce7
+#> 24       IranianSGDP          Iranian                   SGDP           Ea9
+#> 25       ItelmanSGDP          Itelman                   SGDP          ec13
+#> 26     JordanianSGDP        Jordanian                   SGDP           Cj6
+#> 27   JuhoanNorthSGDP    Ju_hoan_North                   SGDP  CCMCjuho1239
+#> 28    KhomaniSanSGDP      Khomani_San                   SGDP           B77
+#> 29    KhondaDoraSGDP      Khonda_Dora                   SGDP          Eg12
+#> 30 NorthOssetianSGDP   North_Ossetian                   SGDP           Ci6
+#> 31       QuechuaSGDP          Quechua                   SGDP  CCMCayac1239
+#> 32       QuechuaSGDP          Quechua                   SGDP  CCMCcusc1236
+#> 33       QuechuaSGDP          Quechua                   SGDP  CCMCecua1248
+#> 34       QuechuaSGDP          Quechua                   SGDP  CCMCsout2991
+#> 35        SomaliSGDP           Somali                   SGDP          Ca10
+#> 36        SomaliSGDP           Somali                   SGDP           Ca2
+#> 37        SomaliSGDP           Somali                   SGDP        SCCS36
+#> 38         UlchiSGDP            Ulchi                   SGDP          ec18
+#> 39          MalayUNK            Malay            unconfirmed  CCMCjamb1236
+#> 40          MalayUNK            Malay            unconfirmed           Ej8
+#> 41        TibetanUNK          Tibetan            unconfirmed           Ee4
 #>              society_name               society_region match_method match_score
-#> 1     Bantu A-B10-B20-B30 West-Central Tropical Africa        fuzzy       0.900
-#> 2     Bantu A-B10-B20-B30 West-Central Tropical Africa        fuzzy       0.900
-#> 3                    Baka West-Central Tropical Africa        fuzzy       0.800
-#> 4                   Bwaka West-Central Tropical Africa        fuzzy       0.800
-#> 5                   Dagur                        China        fuzzy       0.800
+#> 1                   Dagur                        China        fuzzy       0.800
+#> 2     China (Han Dynasty)                        China        fuzzy       0.900
+#> 3     China (Han Dynasty)                        China        fuzzy       0.900
+#> 4            Yucatec Maya                       Mexico        fuzzy       0.900
+#> 5            Yucatec Maya                       Mexico        fuzzy       0.900
 #> 6     China (Han Dynasty)                        China        fuzzy       0.900
-#> 7     China (Han Dynasty)                        China        fuzzy       0.900
-#> 8            Yucatec Maya                       Mexico        fuzzy       0.900
-#> 9            Yucatec Maya                       Mexico        fuzzy       0.900
-#> 10    China (Han Dynasty)                        China        fuzzy       0.900
-#> 11                Orogens                        China        fuzzy       0.714
-#> 12          Russia Buriat                      Siberia        fuzzy       0.900
-#> 13                Russian               Eastern Europe        fuzzy       0.857
-#> 14              Sardinian          Southwestern Europe        fuzzy       0.889
-#> 15             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
-#> 16    China (Han Dynasty)                        China        fuzzy       0.900
-#> 17 Latin American Spanish          Southwestern Europe        fuzzy       0.900
-#> 18       American Samoans         Southwestern Pacific        fuzzy       0.900
-#> 19             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
-#> 20    China (Han Dynasty)                        China        fuzzy       0.900
-#> 21                Finnish              Northern Europe        fuzzy       0.857
-#> 22 Latin American Spanish          Southwestern Europe        fuzzy       0.900
-#> 23       American Samoans         Southwestern Pacific        fuzzy       0.900
-#> 24             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
-#> 25    China (Han Dynasty)                        China        fuzzy       0.900
-#> 26                Finnish              Northern Europe        fuzzy       0.857
-#> 27                   Bata         West Tropical Africa        fuzzy       0.800
-#> 28                   Digo         East Tropical Africa        fuzzy       0.800
-#> 29       Eastern Armenian                     Caucasus        fuzzy       0.900
-#> 30              Armenians                     Caucasus        fuzzy       0.900
-#> 31              Armenians                     Caucasus        fuzzy       0.900
-#> 32                   Baka West-Central Tropical Africa        fuzzy       0.800
-#> 33                  Bwaka West-Central Tropical Africa        fuzzy       0.800
-#> 34          Kadazan-Dusun                      Malesia        fuzzy       0.900
-#> 35                  Evenk                      Siberia        fuzzy       0.800
-#> 36           Modern Greek          Southeastern Europe        fuzzy       0.900
-#> 37                 Greeks          Southeastern Europe        fuzzy       0.900
-#> 38               Iranians                 Western Asia        fuzzy       0.900
-#> 39           Indo-Iranian          Indian Subcontinent        fuzzy       0.900
-#> 40                  Iraqw         East Tropical Africa        fuzzy       0.800
-#> 41                Itelmen             Russian Far East        fuzzy       0.857
-#> 42             Jordanians                 Western Asia        fuzzy       0.900
-#> 43       South-Eastern Ju              Southern Africa        fuzzy       0.900
-#> 44         /'Auni-Khomani              Southern Africa        fuzzy       0.900
-#> 45                  Khond          Indian Subcontinent        fuzzy       0.833
-#> 46                  Madia          Indian Subcontinent        fuzzy       0.833
-#> 47                  Madia          Indian Subcontinent        fuzzy       0.833
-#> 48              Ossetians                     Caucasus        fuzzy       0.900
-#> 49       Ayacucho Quechua        Western South America        fuzzy       0.900
-#> 50          Cusco Quechua        Western South America        fuzzy       0.900
-#> 51   Ecuadorian Quechua A        Western South America        fuzzy       0.900
-#> 52 South Bolivian Quechua        Western South America        fuzzy       0.900
-#> 53           Somali (Esa)    Northeast Tropical Africa        fuzzy       0.900
-#> 54    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900
-#> 55    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900
-#> 56                   Ulch             Russian Far East        fuzzy       0.800
-#> 57                 Yemeni            Arabian Peninsula        fuzzy       0.750
-#> 58    Bantu A-B10-B20-B30 West-Central Tropical Africa        fuzzy       0.900
-#> 59                  Mongo West-Central Tropical Africa        fuzzy       0.800
-#> 60                  Konjo         East Tropical Africa        fuzzy       0.800
-#> 61                  Mongo West-Central Tropical Africa        fuzzy       0.800
-#> 62                  Bongo    Northeast Tropical Africa        fuzzy       0.800
-#> 63                  Konso    Northeast Tropical Africa        fuzzy       0.800
-#> 64                  Songo West-Central Tropical Africa        fuzzy       0.800
-#> 65                  Konso    Northeast Tropical Africa        fuzzy       0.800
-#> 66            Jambi Malay                      Malesia        fuzzy       0.900
-#> 67                 Malays                      Malesia        fuzzy       0.900
-#> 68       Central Tibetans                        China        fuzzy       0.900
-#>    geo_distance_km confidence n_marriage_vars_coded reviewed
-#> 1              782     medium                     0    FALSE
-#> 2             3988     medium                     0    FALSE
-#> 3              259     medium                     0    FALSE
-#> 4              248     medium                    10    FALSE
-#> 5               92     medium                    10    FALSE
-#> 6              518     medium                     0    FALSE
-#> 7              518     medium                     0    FALSE
-#> 8              216     medium                     0    FALSE
-#> 9              153     medium                    10    FALSE
-#> 10             518     medium                     0    FALSE
-#> 11             320     medium                     0    FALSE
-#> 12            4047     medium                     0    FALSE
-#> 13             598     medium                     0    FALSE
-#> 14              26     medium                     0    FALSE
-#> 15             110     medium                    10    FALSE
-#> 16              NA     medium                     0    FALSE
-#> 17              NA     medium                     0    FALSE
-#> 18              NA     medium                    10    FALSE
-#> 19             110     medium                    10    FALSE
-#> 20              NA     medium                     0    FALSE
-#> 21              NA     medium                     0    FALSE
-#> 22              NA     medium                     0    FALSE
-#> 23              NA     medium                    10    FALSE
-#> 24             110     medium                    10    FALSE
-#> 25              NA     medium                     0    FALSE
-#> 26              NA     medium                     0    FALSE
-#> 27              NA     medium                     9    FALSE
-#> 28              NA     medium                    10    FALSE
-#> 29             151     medium                     0    FALSE
-#> 30             151     medium                    10    FALSE
-#> 31             193     medium                     0    FALSE
-#> 32             259     medium                     0    FALSE
-#> 33             248     medium                    10    FALSE
-#> 34             293     medium                    10    FALSE
-#> 35            1493     medium                    10    FALSE
-#> 36              64     medium                     0    FALSE
-#> 37             127     medium                    10    FALSE
-#> 38              67     medium                    10    FALSE
-#> 39            2280     medium                    10    FALSE
-#> 40            4264     medium                     5    FALSE
-#> 41             373     medium                    10    FALSE
-#> 42              10     medium                    10    FALSE
-#> 43             110     medium                     0    FALSE
-#> 44             105     medium                     0    FALSE
-#> 45             101     medium                    10    FALSE
-#> 46             283     medium                    10    FALSE
-#> 47             330     medium                     0    FALSE
-#> 48              53     medium                    10    FALSE
-#> 49             254     medium                     0    FALSE
-#> 50              70     medium                     0    FALSE
-#> 51            1561     medium                     0    FALSE
-#> 52            1021     medium                     0    FALSE
-#> 53             762     medium                    10    FALSE
-#> 54             269     medium                    10    FALSE
-#> 55             395     medium                     0    FALSE
-#> 56             409     medium                    10    FALSE
-#> 57              97     medium                     5    FALSE
-#> 58              NA     medium                     0    FALSE
-#> 59            1059     medium                     0    FALSE
-#> 60            2060     medium                     6    FALSE
-#> 61            1146     medium                     6    FALSE
-#> 62            1970     medium                    10    FALSE
-#> 63            2821     medium                    10    FALSE
-#> 64            1082     medium                    10    FALSE
-#> 65            2867     medium                     0    FALSE
-#> 66              NA     medium                     0    FALSE
-#> 67              NA     medium                    10    FALSE
-#> 68             660     medium                    10    FALSE
+#> 7                 Orogens                        China        fuzzy       0.714
+#> 8                 Russian               Eastern Europe        fuzzy       0.857
+#> 9               Sardinian          Southwestern Europe        fuzzy       0.889
+#> 10             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
+#> 11             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
+#> 12    China (Han Dynasty)                        China        fuzzy       0.900
+#> 13                Finnish              Northern Europe        fuzzy       0.857
+#> 14             Oyo Yoruba         West Tropical Africa        fuzzy       0.900
+#> 15    China (Han Dynasty)                        China        fuzzy       0.900
+#> 16                Finnish              Northern Europe        fuzzy       0.857
+#> 17                   Bata         West Tropical Africa        fuzzy       0.800
+#> 18       Eastern Armenian                     Caucasus        fuzzy       0.900
+#> 19              Armenians                     Caucasus        fuzzy       0.900
+#> 20              Armenians                     Caucasus        fuzzy       0.900
+#> 21                  Bwaka West-Central Tropical Africa        fuzzy       0.800
+#> 22           Modern Greek          Southeastern Europe        fuzzy       0.900
+#> 23                 Greeks          Southeastern Europe        fuzzy       0.900
+#> 24               Iranians                 Western Asia        fuzzy       0.900
+#> 25                Itelmen             Russian Far East        fuzzy       0.857
+#> 26             Jordanians                 Western Asia        fuzzy       0.900
+#> 27       South-Eastern Ju              Southern Africa        fuzzy       0.900
+#> 28         /'Auni-Khomani              Southern Africa        fuzzy       0.900
+#> 29                  Khond          Indian Subcontinent        fuzzy       0.833
+#> 30              Ossetians                     Caucasus        fuzzy       0.900
+#> 31       Ayacucho Quechua        Western South America        fuzzy       0.900
+#> 32          Cusco Quechua        Western South America        fuzzy       0.900
+#> 33   Ecuadorian Quechua A        Western South America        fuzzy       0.900
+#> 34 South Bolivian Quechua        Western South America        fuzzy       0.900
+#> 35           Somali (Esa)    Northeast Tropical Africa        fuzzy       0.900
+#> 36    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900
+#> 37    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900
+#> 38                   Ulch             Russian Far East        fuzzy       0.800
+#> 39            Jambi Malay                      Malesia        fuzzy       0.900
+#> 40                 Malays                      Malesia        fuzzy       0.900
+#> 41       Central Tibetans                        China        fuzzy       0.900
+#>    geo_distance_km confidence n_marriage_vars_coded reviewed review_note
+#> 1               92     medium                    10     TRUE        <NA>
+#> 2              518     medium                     0     TRUE        <NA>
+#> 3              518     medium                     0     TRUE        <NA>
+#> 4              216     medium                     0     TRUE        <NA>
+#> 5              153     medium                    10     TRUE        <NA>
+#> 6              518     medium                     0     TRUE        <NA>
+#> 7              320     medium                     0     TRUE        <NA>
+#> 8              598     medium                     0     TRUE        <NA>
+#> 9               26     medium                     0     TRUE        <NA>
+#> 10             110     medium                    10     TRUE        <NA>
+#> 11             110     medium                    10     TRUE        <NA>
+#> 12              NA     medium                     0     TRUE        <NA>
+#> 13              NA     medium                     0     TRUE        <NA>
+#> 14             110     medium                    10     TRUE        <NA>
+#> 15              NA     medium                     0     TRUE        <NA>
+#> 16              NA     medium                     0     TRUE        <NA>
+#> 17              NA     medium                     9     TRUE        <NA>
+#> 18             151     medium                     0     TRUE        <NA>
+#> 19             151     medium                    10     TRUE        <NA>
+#> 20             193     medium                     0     TRUE        <NA>
+#> 21             248     medium                    10     TRUE        <NA>
+#> 22              64     medium                     0     TRUE        <NA>
+#> 23             127     medium                    10     TRUE        <NA>
+#> 24              67     medium                    10     TRUE        <NA>
+#> 25             373     medium                    10     TRUE        <NA>
+#> 26              10     medium                    10     TRUE        <NA>
+#> 27             110     medium                     0     TRUE        <NA>
+#> 28             105     medium                     0     TRUE        <NA>
+#> 29             101     medium                    10     TRUE        <NA>
+#> 30              53     medium                    10     TRUE        <NA>
+#> 31             254     medium                     0     TRUE        <NA>
+#> 32              70     medium                     0     TRUE        <NA>
+#> 33            1561     medium                     0     TRUE        <NA>
+#> 34            1021     medium                     0     TRUE        <NA>
+#> 35             762     medium                    10     TRUE        <NA>
+#> 36             269     medium                    10     TRUE        <NA>
+#> 37             395     medium                     0     TRUE        <NA>
+#> 38             409     medium                    10     TRUE        <NA>
+#> 39              NA     medium                     0     TRUE        <NA>
+#> 40              NA     medium                    10     TRUE        <NA>
+#> 41             660     medium                    10     TRUE        <NA>
 ```
