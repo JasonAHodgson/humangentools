@@ -7,7 +7,7 @@ dataset for each.
 ## Usage
 
 ``` r
-get_sample_information(ID, dataset = NULL, na.fill = TRUE)
+get_sample_information(ID, dataset = NULL, temporal = NULL, na.fill = TRUE)
 ```
 
 ## Arguments
@@ -22,6 +22,12 @@ get_sample_information(ID, dataset = NULL, na.fill = TRUE)
   (matched against `source_dataset`). Default `NULL` returns every
   dataset a sample appears in.
 
+- temporal:
+
+  A character vector restricting samples by the age of their population:
+  one or both of `"modern"` and `"ancient"`. Default `NULL` (no
+  filtering).
+
 - na.fill:
 
   Logical; if `TRUE` (the default), IDs not found in the sample
@@ -34,6 +40,13 @@ A data frame of sample id, canonical population code, population label,
 region and source dataset, ordered to follow `ID`.
 
 ## Details
+
+`id` identifies the individual and is shared across datasets, so it
+joins; `source_id` is the contributing dataset's own key, and
+`data_type` records the AADR library type (.AG, .SG, .DG and so on),
+`NA` elsewhere. One AADR individual sequenced by two methods yields two
+rows with the same `id` and different `source_id`, so rows are unique on
+`(source_id, pop)` rather than on `(id, pop)`.
 
 A sample can legitimately appear more than once: the Simons Genome
 Diversity Project resequenced HGDP cell lines, so `HGDP01414` is present

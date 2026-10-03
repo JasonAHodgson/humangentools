@@ -17,6 +17,7 @@ get_pop_info(
   population = NULL,
   region = NULL,
   dataset = NULL,
+  temporal = NULL,
   location = c("origin", "sampling"),
   include = NULL,
   exclude = NULL
@@ -54,6 +55,15 @@ get_pop_info(
   `source_dataset`; see `dataset_information.Rtable` for the
   vocabulary). Default is all datasets in the package.
 
+- temporal:
+
+  A character vector restricting populations by age: one or both of
+  `"modern"` (present-day) and `"ancient"`. Every population from HGDP,
+  1000 Genomes, SGDP, HapMap and the individual-study datasets is
+  `"modern"`; AADR contributes both. Default `NULL` (no filtering),
+  which returns ancient populations alongside present-day ones – pass
+  `temporal = "modern"` for analyses that assume a living population.
+
 - location:
 
   One of `"origin"` (the default) or `"sampling"`, choosing which
@@ -76,6 +86,12 @@ get_pop_info(
 A data frame with population information.
 
 ## Details
+
+Populations are also classified as present-day or ancient in the
+`temporal` column, and can be filtered on it. This matters because the
+AADR contributes several thousand ancient populations: an analysis that
+assumes a living population, such as anything joined to ethnographic
+data, wants `temporal = "modern"`.
 
 Two sets of coordinates are stored for each population: `origin_lat`/
 `origin_lon`, the group's ethnographic homeland, and `sampling_lat`/

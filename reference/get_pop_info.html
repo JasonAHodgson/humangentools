@@ -64,6 +64,7 @@ different sequencing platforms separable.</p>
 <span>  population <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  region <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  dataset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  temporal <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  location <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"origin"</span>, <span class="st">"sampling"</span><span class="op">)</span>,</span>
 <span>  include <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  exclude <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -103,6 +104,15 @@ against <code>source_dataset</code>; see <code>dataset_information.Rtable</code>
 vocabulary). Default is all datasets in the package.</p></dd>
 
 
+<dt id="arg-temporal">temporal<a class="anchor" aria-label="anchor" href="#arg-temporal"></a></dt>
+<dd><p>A character vector restricting populations by age: one or
+both of <code>"modern"</code> (present-day) and <code>"ancient"</code>. Every population from
+HGDP, 1000 Genomes, SGDP, HapMap and the individual-study datasets is
+<code>"modern"</code>; AADR contributes both. Default <code>NULL</code> (no filtering), which
+returns ancient populations alongside present-day ones – pass
+<code>temporal = "modern"</code> for analyses that assume a living population.</p></dd>
+
+
 <dt id="arg-location">location<a class="anchor" aria-label="anchor" href="#arg-location"></a></dt>
 <dd><p>One of <code>"origin"</code> (the default) or <code>"sampling"</code>, choosing
 which coordinate pair is returned in the <code>lat</code> and <code>lon</code> columns. The
@@ -125,7 +135,12 @@ the output. Default is no columns excluded.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Two sets of coordinates are stored for each population: <code>origin_lat</code>/
+    <p>Populations are also classified as present-day or ancient in the <code>temporal</code>
+column, and can be filtered on it. This matters because the AADR contributes
+several thousand ancient populations: an analysis that assumes a living
+population, such as anything joined to ethnographic data, wants
+<code>temporal = "modern"</code>.</p>
+<p>Two sets of coordinates are stored for each population: <code>origin_lat</code>/
 <code>origin_lon</code>, the group's ethnographic homeland, and <code>sampling_lat</code>/
 <code>sampling_lon</code>, where the samples were actually collected. These differ for
 diaspora cohorts – 1000 Genomes GIH was sampled in Houston but originates in

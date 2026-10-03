@@ -43,7 +43,7 @@ population code, human readable label, region and source dataset for each.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_sample_information</span><span class="op">(</span><span class="va">ID</span>, dataset <span class="op">=</span> <span class="cn">NULL</span>, na.fill <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_sample_information</span><span class="op">(</span><span class="va">ID</span>, dataset <span class="op">=</span> <span class="cn">NULL</span>, temporal <span class="op">=</span> <span class="cn">NULL</span>, na.fill <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -60,6 +60,12 @@ population code, human readable label, region and source dataset for each.</p>
 sample appears in.</p></dd>
 
 
+<dt id="arg-temporal">temporal<a class="anchor" aria-label="anchor" href="#arg-temporal"></a></dt>
+<dd><p>A character vector restricting samples by the age of their
+population: one or both of <code>"modern"</code> and <code>"ancient"</code>. Default <code>NULL</code> (no
+filtering).</p></dd>
+
+
 <dt id="arg-na-fill">na.fill<a class="anchor" aria-label="anchor" href="#arg-na-fill"></a></dt>
 <dd><p>Logical; if <code>TRUE</code> (the default), IDs not found in the sample
 information data are kept in the result with <code>NA</code> population/region. If
@@ -73,7 +79,13 @@ label, region and source dataset, ordered to follow <code>ID</code>.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>A sample can legitimately appear more than once: the Simons Genome Diversity
+    <p><code>id</code> identifies the individual and is shared across datasets, so it joins;
+<code>source_id</code> is the contributing dataset's own key, and <code>data_type</code> records the
+AADR library type (.AG, .SG, .DG and so on), <code>NA</code> elsewhere. One AADR
+individual sequenced by two methods yields two rows with the same <code>id</code> and
+different <code>source_id</code>, so rows are unique on <code>(source_id, pop)</code> rather than on
+<code>(id, pop)</code>.</p>
+<p>A sample can legitimately appear more than once: the Simons Genome Diversity
 Project resequenced HGDP cell lines, so <code>HGDP01414</code> is present as both
 <code>BantuKenyaHGDP</code> and <code>BantuKenyaSGDP</code> – one individual, two genotype
 datasets. The result therefore has <em>at least</em> one row per input ID rather
