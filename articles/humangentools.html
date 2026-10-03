@@ -62,34 +62,89 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jasonahodgson.github.io/humangentools/">humangentools</a></span><span class="op">)</span></span></code></pre></div>
-<p>humangentools bundles sample, population, and SNP ascertainment panel
-metadata for common human genomics reference datasets (currently HGDP
-and 1000 Genomes), so that <a href="https://cran.r-project.org/package=tidypopgen" class="external-link">tidypopgen</a>
-analyses of these datasets can be annotated and filtered without
-tracking down that metadata yourself each time. It’s designed to work
-alongside <a href="https://jasonahodgson.github.io/dplaceR/" class="external-link">dplaceR</a>
-for cross-cultural context on the same populations.</p>
+<p>humangentools bundles sample, population and SNP ascertainment panel
+metadata for widely used human genomics reference datasets, so that <a href="https://cran.r-project.org/package=tidypopgen" class="external-link">tidypopgen</a>
+analyses can be annotated and filtered without tracking that metadata
+down each time. It is built to work alongside <a href="https://jasonahodgson.github.io/dplaceR/" class="external-link">dplaceR</a> for
+cross-cultural context on the same populations.</p>
 <div class="section level2">
-<h2 id="sample-and-population-metadata">Sample and population metadata<a class="anchor" aria-label="anchor" href="#sample-and-population-metadata"></a>
+<h2 id="populations-are-keyed-by-a-canonical-code">Populations are keyed by a canonical code<a class="anchor" aria-label="anchor" href="#populations-are-keyed-by-a-canonical-code"></a>
 </h2>
-<p><code><a href="../reference/get_sample_information.html">get_sample_information()</a></code> looks up the population and
-region for one or more sample IDs:</p>
+<p>The central idea is the <code>pop</code> code. The same human group
+is often genotyped by several projects, and those genotypes are
+<strong>not interchangeable</strong>: they come from different arrays or
+sequencing platforms, with different ascertainment and different error
+profiles. So each (group, dataset) pair gets its own code, following the
+convention of <code>kgp::allmeta</code> — a bare three-letter code for
+1000 Genomes populations, and <code>&lt;Name&gt;&lt;DATASET&gt;</code>
+elsewhere.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_sample_information.html">get_sample_information</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HGDP00001"</span>, <span class="st">"HGDP00003"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>population <span class="op">=</span> <span class="st">"Yoruba"</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"source_dataset"</span>, <span class="st">"n_samples"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;          pop source_dataset n_samples</span></span>
+<span><span class="co">#&gt; 1        YRI            KGP       178</span></span>
+<span><span class="co">#&gt; 2  YRIHapMap         HapMap        32</span></span>
+<span><span class="co">#&gt; 3 YorubaHGDP           HGDP        22</span></span>
+<span><span class="co">#&gt; 4 YorubaAADR           AADR        24</span></span></code></pre></div>
+<p>Four codes, four genotype datasets, one ethnic group. Pooling them
+under a single label would mix array and sequence data, and any
+resulting difference in heterozygosity or call rate would look like
+biology.</p>
+<p>The datasets available:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_dataset_info.html">get_dataset_info</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dataset"</span>, <span class="st">"n_pops"</span>, <span class="st">"n_samples"</span>, <span class="st">"genotyping"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;                  dataset n_pops n_samples</span></span>
+<span><span class="co">#&gt; 1                   AADR   3897     23089</span></span>
+<span><span class="co">#&gt; 2                   HGDP     56       952</span></span>
+<span><span class="co">#&gt; 3                 HapMap     12       463</span></span>
+<span><span class="co">#&gt; 4                    KGP     26      3202</span></span>
+<span><span class="co">#&gt; 5               KGP_IGSR     10       102</span></span>
+<span><span class="co">#&gt; 6 Perry_etal_unconfirmed      2       230</span></span>
+<span><span class="co">#&gt; 7     Rakotoarivony_etal      8       288</span></span>
+<span><span class="co">#&gt; 8                   SGDP     88       339</span></span>
+<span><span class="co">#&gt; 9            unconfirmed     21       255</span></span>
+<span><span class="co">#&gt;                                                        genotyping</span></span>
+<span><span class="co">#&gt; 1 1240K capture, shotgun, and Human Origins array (see data_type)</span></span>
+<span><span class="co">#&gt; 2                                                 SNP array / WGS</span></span>
+<span><span class="co">#&gt; 3                                                       SNP array</span></span>
+<span><span class="co">#&gt; 4                                                             WGS</span></span>
+<span><span class="co">#&gt; 5                                  varies by IGSR data collection</span></span>
+<span><span class="co">#&gt; 6                                                            &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 7                                                       SNP array</span></span>
+<span><span class="co">#&gt; 8                                                             WGS</span></span>
+<span><span class="co">#&gt; 9                                                            &lt;NA&gt;</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="sample-metadata">Sample metadata<a class="anchor" aria-label="anchor" href="#sample-metadata"></a>
+</h2>
+<p><code><a href="../reference/get_sample_information.html">get_sample_information()</a></code> looks up the canonical code,
+population label, region and source dataset for one or more sample
+IDs:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_sample_information.html">get_sample_information</a></span><span class="op">(</span><span class="st">"HGDP00001"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;          id    source_id data_type        pop population       region</span></span>
 <span><span class="co">#&gt; 1 HGDP00001    HGDP00001      &lt;NA&gt; BrahuiHGDP     Brahui Central_Asia</span></span>
 <span><span class="co">#&gt; 2 HGDP00001 HGDP00001.DG        DG BrahuiAADR     Brahui         &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3 HGDP00003    HGDP00003      &lt;NA&gt; BrahuiHGDP     Brahui Central_Asia</span></span>
-<span><span class="co">#&gt; 4 HGDP00003 HGDP00003.DG        DG BrahuiAADR     Brahui         &lt;NA&gt;</span></span>
 <span><span class="co">#&gt;   source_dataset temporal</span></span>
 <span><span class="co">#&gt; 1           HGDP   modern</span></span>
-<span><span class="co">#&gt; 2           AADR   modern</span></span>
-<span><span class="co">#&gt; 3           HGDP   modern</span></span>
-<span><span class="co">#&gt; 4           AADR   modern</span></span></code></pre></div>
-<p>By default, an ID that isn’t found is kept in the result with
-<code>NA</code> population/region (and a warning); set
-<code>na.fill = FALSE</code> to drop it instead:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; 2           AADR   modern</span></span></code></pre></div>
+<p>Two rows for one sample, because the AADR regenotyped this individual
+on the 1240K panel. <code>id</code> identifies the person and joins
+across datasets; <code>source_id</code> is the contributing dataset’s
+own key; <code>data_type</code> records the AADR library type. Rows are
+unique on <code>(source_id, pop)</code>, not on
+<code>(id, pop)</code>.</p>
+<p><strong>If you are attaching metadata to a <code>gen_tibble</code>,
+pass <code>dataset</code></strong> — otherwise you get more rows than
+samples and any column-wise assignment silently misaligns:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_sample_information.html">get_sample_information</a></span><span class="op">(</span><span class="st">"HGDP00001"</span>, dataset <span class="op">=</span> <span class="st">"HGDP"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;          id source_id data_type        pop population       region</span></span>
+<span><span class="co">#&gt; 1 HGDP00001 HGDP00001      &lt;NA&gt; BrahuiHGDP     Brahui Central_Asia</span></span>
+<span><span class="co">#&gt;   source_dataset temporal</span></span>
+<span><span class="co">#&gt; 1           HGDP   modern</span></span></code></pre></div>
+<p>An ID that is not found is kept with <code>NA</code> fields and a
+warning; <code>na.fill = FALSE</code> drops it instead:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/get_sample_information.html">get_sample_information</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HGDP00001"</span>, <span class="st">"not-a-real-id"</span><span class="op">)</span>, na.fill <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in get_sample_information(c("HGDP00001", "not-a-real-id"), na.fill =</span></span>
 <span><span class="co">#&gt; FALSE): The following IDs were not found in the sample information data:</span></span>
@@ -100,281 +155,88 @@ region for one or more sample IDs:</p>
 <span><span class="co">#&gt;   source_dataset temporal</span></span>
 <span><span class="co">#&gt; 1           HGDP   modern</span></span>
 <span><span class="co">#&gt; 2           AADR   modern</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="population-metadata">Population metadata<a class="anchor" aria-label="anchor" href="#population-metadata"></a>
+</h2>
 <p><code><a href="../reference/get_pop_info.html">get_pop_info()</a></code> goes the other way: given a dataset,
-region, or population (or a set of sample IDs, including a
-<code>tidypopgen</code> <code>gen_tibble</code>), it returns
-population-level metadata – coordinates, source dataset, and
-citation:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>region <span class="op">=</span> <span class="st">"Central_Asia"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                   pop population_label                         population_desc</span></span>
-<span><span class="co">#&gt; 1           AleutSGDP            Aleut                  Aleut in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 2         AltaianSGDP          Altaian                Altaian in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 3         BalochiHGDP          Balochi              Balochi in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 4         BengaliSGDP          Bengali            Bengali in Bangladesh (SGDP)</span></span>
-<span><span class="co">#&gt; 5         BrahminSGDP          Brahmin                 Brahmin in India (SGDP)</span></span>
-<span><span class="co">#&gt; 6          BrahuiHGDP           Brahui               Brahui in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 7         BurushoHGDP          Burusho              Burusho in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 8         ChukchiSGDP          Chukchi                Chukchi in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 9   EskimoChaplinSGDP   Eskimo_Chaplin         Eskimo Chaplin in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 10   EskimoNaukanSGDP    Eskimo_Naukan          Eskimo Naukan in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 11 EskimoSirenikiSGDP  Eskimo_Sireniki        Eskimo Sireniki in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 12           EvenSGDP             Even                   Even in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 13          GIHHapMap         Gujarati Gujarati Indian in Houston, TX (HapMap)</span></span>
-<span><span class="co">#&gt; 14          IrulaSGDP            Irula                   Irula in India (SGDP)</span></span>
-<span><span class="co">#&gt; 15        ItelmanSGDP          Itelman                Itelman in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 16         KalashHGDP           Kalash               Kalash in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 17           KapuSGDP             Kapu                    Kapu in India (SGDP)</span></span>
-<span><span class="co">#&gt; 18 Kashmiri_PanditUNK  Kashmiri_Pandit                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 19          KhariaUNK           Kharia                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 20     KhondaDoraSGDP      Khonda_Dora             Khonda Dora in India (SGDP)</span></span>
-<span><span class="co">#&gt; 21         KurumbaUNK          Kurumba                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 22        KusundaSGDP          Kusunda                 Kusunda in Nepal (SGDP)</span></span>
-<span><span class="co">#&gt; 23         KyrgyzSGDP           Kyrgyz            Kyrgyz in Kyrgyzystan (SGDP)</span></span>
-<span><span class="co">#&gt; 24         MadigaSGDP           Madiga                  Madiga in India (SGDP)</span></span>
-<span><span class="co">#&gt; 25        MakraniHGDP          Makrani              Makrani in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 26            MalaUNK             Mala                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 27          MansiSGDP            Mansi                  Mansi in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 28        MongolaSGDP          Mongola                 Mongola in China (SGDP)</span></span>
-<span><span class="co">#&gt; 29            OngeUNK             Onge                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 30         PathanHGDP           Pathan               Pathan in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 31        PunjabiSGDP          Punjabi              Punjabi in Pakistan (SGDP)</span></span>
-<span><span class="co">#&gt; 32          RelliSGDP            Relli                   Relli in India (SGDP)</span></span>
-<span><span class="co">#&gt; 33          SherpaUNK           Sherpa                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 34         SindhiHGDP           Sindhi               Sindhi in Pakistan (HGDP)</span></span>
-<span><span class="co">#&gt; 35         TibetanUNK          Tibetan                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 36        TlingitSGDP          Tlingit                Tlingit in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 37        TubalarSGDP          Tubalar                Tubalar in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 38          UlchiSGDP            Ulchi                  Ulchi in Russia (SGDP)</span></span>
-<span><span class="co">#&gt; 39         YadavaSGDP           Yadava                  Yadava in India (SGDP)</span></span>
-<span><span class="co">#&gt;    source_dataset temporal       region     lat      lon</span></span>
-<span><span class="co">#&gt; 1            SGDP   modern Central_Asia 55.1800 166.0000</span></span>
-<span><span class="co">#&gt; 2            SGDP   modern Central_Asia 51.9000  86.0000</span></span>
-<span><span class="co">#&gt; 3            HGDP   modern Central_Asia 30.5000  66.5000</span></span>
-<span><span class="co">#&gt; 4            SGDP   modern Central_Asia 23.7000  90.4000</span></span>
-<span><span class="co">#&gt; 5            SGDP   modern Central_Asia 17.7000  83.3000</span></span>
-<span><span class="co">#&gt; 6            HGDP   modern Central_Asia 30.5000  66.5000</span></span>
-<span><span class="co">#&gt; 7            HGDP   modern Central_Asia 36.5000  74.0000</span></span>
-<span><span class="co">#&gt; 8            SGDP   modern Central_Asia 69.0000 169.0000</span></span>
-<span><span class="co">#&gt; 9            SGDP   modern Central_Asia 64.4800 172.8600</span></span>
-<span><span class="co">#&gt; 10           SGDP   modern Central_Asia 66.0200 169.7100</span></span>
-<span><span class="co">#&gt; 11           SGDP   modern Central_Asia 64.4000 173.9000</span></span>
-<span><span class="co">#&gt; 12           SGDP   modern Central_Asia 57.5300 135.8800</span></span>
-<span><span class="co">#&gt; 13         HapMap   modern Central_Asia 29.7589 -95.3677</span></span>
-<span><span class="co">#&gt; 14           SGDP   modern Central_Asia 13.5000  80.0000</span></span>
-<span><span class="co">#&gt; 15           SGDP   modern Central_Asia 57.0000 157.0000</span></span>
-<span><span class="co">#&gt; 16           HGDP   modern Central_Asia 36.0000  71.5000</span></span>
-<span><span class="co">#&gt; 17           SGDP   modern Central_Asia 17.7000  83.3000</span></span>
-<span><span class="co">#&gt; 18    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 19    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 20           SGDP   modern Central_Asia 18.3000  82.9000</span></span>
-<span><span class="co">#&gt; 21    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 22           SGDP   modern Central_Asia 28.0725  83.3736</span></span>
-<span><span class="co">#&gt; 23           SGDP   modern Central_Asia 42.9000  74.6000</span></span>
-<span><span class="co">#&gt; 24           SGDP   modern Central_Asia 17.7000  83.3000</span></span>
-<span><span class="co">#&gt; 25           HGDP   modern Central_Asia 26.0000  64.0000</span></span>
-<span><span class="co">#&gt; 26    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 27           SGDP   modern Central_Asia 63.7250  61.7750</span></span>
-<span><span class="co">#&gt; 28           SGDP   modern Central_Asia 45.0000 111.0000</span></span>
-<span><span class="co">#&gt; 29    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 30           HGDP   modern Central_Asia 33.5000  70.5000</span></span>
-<span><span class="co">#&gt; 31           SGDP   modern Central_Asia 31.5000  74.3000</span></span>
-<span><span class="co">#&gt; 32           SGDP   modern Central_Asia 17.7000  83.3000</span></span>
-<span><span class="co">#&gt; 33    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 34           HGDP   modern Central_Asia 25.5000  69.0000</span></span>
-<span><span class="co">#&gt; 35    unconfirmed   modern Central_Asia      NA       NA</span></span>
-<span><span class="co">#&gt; 36           SGDP   modern Central_Asia 54.0900 162.3250</span></span>
-<span><span class="co">#&gt; 37           SGDP   modern Central_Asia 51.1333  87.0000</span></span>
-<span><span class="co">#&gt; 38           SGDP   modern Central_Asia 52.4000 140.4350</span></span>
-<span><span class="co">#&gt; 39           SGDP   modern Central_Asia 17.7000  83.3000</span></span>
-<span><span class="co">#&gt;                  region_kgp origin_lat origin_lon sampling_lat sampling_lon</span></span>
-<span><span class="co">#&gt; 1  Central_Asia_and_Siberia    55.1800   166.0000      55.1800     166.0000</span></span>
-<span><span class="co">#&gt; 2  Central_Asia_and_Siberia    51.9000    86.0000      51.9000      86.0000</span></span>
-<span><span class="co">#&gt; 3        Central_South_Asia    30.5000    66.5000      30.5000      66.5000</span></span>
-<span><span class="co">#&gt; 4                South_Asia    23.7000    90.4000      23.7000      90.4000</span></span>
-<span><span class="co">#&gt; 5                South_Asia    17.7000    83.3000      17.7000      83.3000</span></span>
-<span><span class="co">#&gt; 6        Central_South_Asia    30.5000    66.5000      30.5000      66.5000</span></span>
-<span><span class="co">#&gt; 7        Central_South_Asia    36.5000    74.0000      36.5000      74.0000</span></span>
-<span><span class="co">#&gt; 8  Central_Asia_and_Siberia    69.0000   169.0000      69.0000     169.0000</span></span>
-<span><span class="co">#&gt; 9  Central_Asia_and_Siberia    64.4800   172.8600      64.4800     172.8600</span></span>
-<span><span class="co">#&gt; 10 Central_Asia_and_Siberia    66.0200   169.7100      66.0200     169.7100</span></span>
-<span><span class="co">#&gt; 11 Central_Asia_and_Siberia    64.4000   173.9000      64.4000     173.9000</span></span>
-<span><span class="co">#&gt; 12 Central_Asia_and_Siberia    57.5300   135.8800      57.5300     135.8800</span></span>
-<span><span class="co">#&gt; 13               South_Asia    29.7589   -95.3677      29.7589     -95.3677</span></span>
-<span><span class="co">#&gt; 14               South_Asia    13.5000    80.0000      13.5000      80.0000</span></span>
-<span><span class="co">#&gt; 15 Central_Asia_and_Siberia    57.0000   157.0000      57.0000     157.0000</span></span>
-<span><span class="co">#&gt; 16       Central_South_Asia    36.0000    71.5000      36.0000      71.5000</span></span>
-<span><span class="co">#&gt; 17               South_Asia    17.7000    83.3000      17.7000      83.3000</span></span>
-<span><span class="co">#&gt; 18                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 19                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 20               South_Asia    18.3000    82.9000      18.3000      82.9000</span></span>
-<span><span class="co">#&gt; 21                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 22               South_Asia    28.0725    83.3736      28.0725      83.3736</span></span>
-<span><span class="co">#&gt; 23 Central_Asia_and_Siberia    42.9000    74.6000      42.9000      74.6000</span></span>
-<span><span class="co">#&gt; 24               South_Asia    17.7000    83.3000      17.7000      83.3000</span></span>
-<span><span class="co">#&gt; 25       Central_South_Asia    26.0000    64.0000      26.0000      64.0000</span></span>
-<span><span class="co">#&gt; 26                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 27 Central_Asia_and_Siberia    63.7250    61.7750      63.7250      61.7750</span></span>
-<span><span class="co">#&gt; 28 Central_Asia_and_Siberia    45.0000   111.0000      45.0000     111.0000</span></span>
-<span><span class="co">#&gt; 29                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 30       Central_South_Asia    33.5000    70.5000      33.5000      70.5000</span></span>
-<span><span class="co">#&gt; 31               South_Asia    31.5000    74.3000      31.5000      74.3000</span></span>
-<span><span class="co">#&gt; 32               South_Asia    17.7000    83.3000      17.7000      83.3000</span></span>
-<span><span class="co">#&gt; 33                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 34       Central_South_Asia    25.5000    69.0000      25.5000      69.0000</span></span>
-<span><span class="co">#&gt; 35                     &lt;NA&gt;         NA         NA           NA           NA</span></span>
-<span><span class="co">#&gt; 36 Central_Asia_and_Siberia    54.0900   162.3250      54.0900     162.3250</span></span>
-<span><span class="co">#&gt; 37 Central_Asia_and_Siberia    51.1333    87.0000      51.1333      87.0000</span></span>
-<span><span class="co">#&gt; 38 Central_Asia_and_Siberia    52.4000   140.4350      52.4000     140.4350</span></span>
-<span><span class="co">#&gt; 39               South_Asia    17.7000    83.3000      17.7000      83.3000</span></span>
-<span><span class="co">#&gt;                                                                                                                 coord_note</span></span>
-<span><span class="co">#&gt; 1                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 2                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 3                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 4                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 5                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 6                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 7                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 8                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 9                                       population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 10                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 11                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 12                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 13 sampling location inherited from the same-named 1000 Genomes population (GIH); HapMap collection site assumed identical</span></span>
-<span><span class="co">#&gt; 14                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 15                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 16                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 17                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 18                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 19                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 20                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 21                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 22                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 23                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 24                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 25                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 26                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 27                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 28                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 29                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 30                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 31                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 32                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 33                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 34                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 35                                                                                                                    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 36                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 37                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 38                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 39                                      population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt;    n_samples</span></span>
-<span><span class="co">#&gt; 1          2</span></span>
-<span><span class="co">#&gt; 2          1</span></span>
-<span><span class="co">#&gt; 3         24</span></span>
-<span><span class="co">#&gt; 4         13</span></span>
-<span><span class="co">#&gt; 5         12</span></span>
-<span><span class="co">#&gt; 6         25</span></span>
-<span><span class="co">#&gt; 7         25</span></span>
-<span><span class="co">#&gt; 8          1</span></span>
-<span><span class="co">#&gt; 9          1</span></span>
-<span><span class="co">#&gt; 10         2</span></span>
-<span><span class="co">#&gt; 11         2</span></span>
-<span><span class="co">#&gt; 12         3</span></span>
-<span><span class="co">#&gt; 13        12</span></span>
-<span><span class="co">#&gt; 14         2</span></span>
-<span><span class="co">#&gt; 15         1</span></span>
-<span><span class="co">#&gt; 16        23</span></span>
-<span><span class="co">#&gt; 17         2</span></span>
-<span><span class="co">#&gt; 18         1</span></span>
-<span><span class="co">#&gt; 19         1</span></span>
-<span><span class="co">#&gt; 20         1</span></span>
-<span><span class="co">#&gt; 21         1</span></span>
-<span><span class="co">#&gt; 22         2</span></span>
-<span><span class="co">#&gt; 23         2</span></span>
-<span><span class="co">#&gt; 24         2</span></span>
-<span><span class="co">#&gt; 25        25</span></span>
-<span><span class="co">#&gt; 26        12</span></span>
-<span><span class="co">#&gt; 27         2</span></span>
-<span><span class="co">#&gt; 28         2</span></span>
-<span><span class="co">#&gt; 29         2</span></span>
-<span><span class="co">#&gt; 30        24</span></span>
-<span><span class="co">#&gt; 31        12</span></span>
-<span><span class="co">#&gt; 32         2</span></span>
-<span><span class="co">#&gt; 33         2</span></span>
-<span><span class="co">#&gt; 34        24</span></span>
-<span><span class="co">#&gt; 35         2</span></span>
-<span><span class="co">#&gt; 36         2</span></span>
-<span><span class="co">#&gt; 37         2</span></span>
-<span><span class="co">#&gt; 38         2</span></span>
-<span><span class="co">#&gt; 39         2</span></span>
-<span><span class="co">#&gt;                                                                                                               reference</span></span>
-<span><span class="co">#&gt; 1                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 2                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3  Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 4                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 5                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 6  Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 7  Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 8                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 9                                                                                                                  &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 10                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 11                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 12                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 13                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 14                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 15                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 16 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 17                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 18                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 19                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 20                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 21                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 22                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 23                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 24                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 25 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 26                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 27                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 28 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 29                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 30 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 31                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 32                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 33                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 34 Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 35                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 36                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 37                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 38                                                                                                                 &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 39                                                                                                                 &lt;NA&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HGDP00001"</span>, <span class="st">"HGDP00003"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;          pop population_label           population_desc source_dataset temporal</span></span>
-<span><span class="co">#&gt; 1 BrahuiHGDP           Brahui Brahui in Pakistan (HGDP)           HGDP   modern</span></span>
-<span><span class="co">#&gt; 2 BrahuiAADR           Brahui         Brahui (Pakistan)           AADR   modern</span></span>
-<span><span class="co">#&gt;         region     lat  lon         region_kgp origin_lat origin_lon</span></span>
-<span><span class="co">#&gt; 1 Central_Asia 30.5000 66.5 Central_South_Asia    30.5000       66.5</span></span>
-<span><span class="co">#&gt; 2         &lt;NA&gt; 30.4987 66.5               &lt;NA&gt;    30.4987       66.5</span></span>
-<span><span class="co">#&gt;   sampling_lat sampling_lon</span></span>
-<span><span class="co">#&gt; 1      30.5000         66.5</span></span>
-<span><span class="co">#&gt; 2      30.4987         66.5</span></span>
-<span><span class="co">#&gt;                                                                           coord_note</span></span>
-<span><span class="co">#&gt; 1 population location from kgp::allmeta; collection in situ, exact site not recorded</span></span>
-<span><span class="co">#&gt; 2     population location from the AADR .anno (median over individuals in the group)</span></span>
-<span><span class="co">#&gt;   n_samples</span></span>
-<span><span class="co">#&gt; 1        25</span></span>
-<span><span class="co">#&gt; 2        28</span></span>
-<span><span class="co">#&gt;                                                                                                                                                reference</span></span>
-<span><span class="co">#&gt; 1                                   Cann et al. 2002. A Human Genome Diversity Cell Line Panel. Science 296(5566) 261-262. 10.1126/science.296.5566.261b</span></span>
-<span><span class="co">#&gt; 2 Mallick et al. 2024. The Allen Ancient DNA Resource (AADR): a curated compendium of ancient human genomes. Sci Data 11:182. 10.1038/s41597-024-03031-7</span></span></code></pre></div>
+region, population or set of sample IDs (including a
+<code>gen_tibble</code>), it returns population-level metadata.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>dataset <span class="op">=</span> <span class="st">"HGDP"</span>, region <span class="op">=</span> <span class="st">"Central_Asia"</span>,</span>
+<span>             include <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"population_label"</span>, <span class="st">"temporal"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;           pop population_label temporal  lat  lon</span></span>
+<span><span class="co">#&gt; 1 BalochiHGDP          Balochi   modern 30.5 66.5</span></span>
+<span><span class="co">#&gt; 2  BrahuiHGDP           Brahui   modern 30.5 66.5</span></span>
+<span><span class="co">#&gt; 3 BurushoHGDP          Burusho   modern 36.5 74.0</span></span>
+<span><span class="co">#&gt; 4  KalashHGDP           Kalash   modern 36.0 71.5</span></span>
+<span><span class="co">#&gt; 5 MakraniHGDP          Makrani   modern 26.0 64.0</span></span>
+<span><span class="co">#&gt; 6  PathanHGDP           Pathan   modern 33.5 70.5</span></span>
+<span><span class="co">#&gt; 7  SindhiHGDP           Sindhi   modern 25.5 69.0</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="ancient-and-present-day-populations">Ancient and present-day populations<a class="anchor" aria-label="anchor" href="#ancient-and-present-day-populations"></a>
+</h3>
+<p>The AADR contributes several thousand <strong>ancient</strong>
+populations alongside present-day ones. Anything joined to ethnographic
+data wants present-day populations only, so <code>temporal</code> is a
+filter:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">temporal</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ancient  modern </span></span>
+<span><span class="co">#&gt;    3643     477</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>temporal <span class="op">=</span> <span class="st">"ancient"</span>, dataset <span class="op">=</span> <span class="st">"AADR"</span>,</span>
+<span>             include <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"population_desc"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span><span class="op">)</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="op">]</span></span>
+<span><span class="co">#&gt;                                      pop</span></span>
+<span><span class="co">#&gt; 1      Afghanistan_DarraiKurCave_MBAAADR</span></span>
+<span><span class="co">#&gt; 2            Albania_Barc_Medieval-oAADR</span></span>
+<span><span class="co">#&gt; 3          Albania_Barc_PostMedievalAADR</span></span>
+<span><span class="co">#&gt; 4 Albania_Barc_PostMedieval-oTurkishAADR</span></span>
+<span><span class="co">#&gt; 5       Albania_Bardhoc_PostMedievalAADR</span></span>
+<span><span class="co">#&gt;                                population_desc     lat     lon</span></span>
+<span><span class="co">#&gt; 1  Afghanistan_DarraiKurCave_MBA (Afghanistan) 36.7833 70.0000</span></span>
+<span><span class="co">#&gt; 2            Albania_Barc_Medieval-o (Albania) 40.6253 20.8011</span></span>
+<span><span class="co">#&gt; 3          Albania_Barc_PostMedieval (Albania) 40.6253 20.8011</span></span>
+<span><span class="co">#&gt; 4 Albania_Barc_PostMedieval-oTurkish (Albania) 40.6253 20.8011</span></span>
+<span><span class="co">#&gt; 5       Albania_Bardhoc_PostMedieval (Albania) 42.1200 20.5181</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="two-sets-of-coordinates">Two sets of coordinates<a class="anchor" aria-label="anchor" href="#two-sets-of-coordinates"></a>
+</h3>
+<p>Where a group was sampled is not always where it comes from. Both are
+stored, and <code>location</code> chooses which pair lands in the
+convenience columns <code>lat</code> and <code>lon</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>pop <span class="op">=</span> <span class="st">"GIH"</span>, location <span class="op">=</span> <span class="st">"origin"</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;   pop  lat  lon</span></span>
+<span><span class="co">#&gt; 1 GIH 22.5 71.5</span></span>
+<span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>pop <span class="op">=</span> <span class="st">"GIH"</span>, location <span class="op">=</span> <span class="st">"sampling"</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;   pop     lat      lon</span></span>
+<span><span class="co">#&gt; 1 GIH 29.7589 -95.3677</span></span></code></pre></div>
+<p>GIH is Gujarati Indians sampled in Houston. For some populations an
+origin is not a point at all — African Caribbean in Barbados originates
+in a distribution over West and Central African source populations — and
+those carry <code>NA</code> origin coordinates with the reason in
+<code>coord_note</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_pop_info.html">get_pop_info</a></span><span class="op">(</span>pop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ACB"</span>, <span class="st">"ASW"</span><span class="op">)</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"origin_lat"</span>, <span class="st">"coord_note"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;   pop origin_lat</span></span>
+<span><span class="co">#&gt; 1 ACB         NA</span></span>
+<span><span class="co">#&gt; 2 ASW         NA</span></span>
+<span><span class="co">#&gt;                                                                                                                    coord_note</span></span>
+<span><span class="co">#&gt; 1           African Caribbean in Barbados; origin is a distribution over West/Central African source populations, not a point</span></span>
+<span><span class="co">#&gt; 2 African ancestry in the southwestern US; origin is a distribution over West/Central African source populations, not a point</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="snp-ascertainment-panels">SNP ascertainment panels<a class="anchor" aria-label="anchor" href="#snp-ascertainment-panels"></a>
 </h2>
-<p>The Axiom Human Origins array was ascertained from several distinct
-population panels, which matters for some population-genetic analyses.
-<code><a href="../reference/get_panel_information.html">get_panel_information()</a></code> describes the panels available:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<p>The Axiom Human Origins array was ascertained from thirteen distinct
+panels, each discovered by sequencing one individual. Which panel a SNP
+came from governs how its allele frequencies behave across populations,
+so it matters for any comparison of diversity between groups.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/get_panel_information.html">get_panel_information</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      panel    population        sample   SNPs</span></span>
 <span><span class="co">#&gt; 1   panel1        French     HGDP00521 111970</span></span>
@@ -391,176 +253,65 @@ population panels, which matters for some population-genetic analyses.
 <span><span class="co">#&gt; 12 panel12       Papuan2     HGDP00551  12117</span></span>
 <span><span class="co">#&gt; 13 panel13  Denisova-San Den-HGDP01029 151435</span></span></code></pre></div>
 <p><code><a href="../reference/get_axiom_snps.html">get_axiom_snps()</a></code> returns the RS ids for one or more
-panels, ready to use as a SNP filter (e.g. before reading genotype data
-into a <code>tidypopgen</code> <code>gen_tibble</code>):</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="st">"panel1"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 101567</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="st">"all"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 478620</span></span></code></pre></div>
+panels:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="st">"panel4"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 146606</span></span></code></pre></div>
+<p>Panels are <strong>not</strong> mutually exclusive. Panel 4 is the
+San panel, ascertained as heterozygous sites in HGDP01029, but only
+about 43% of its SNPs are unique to it: the rest were also heterozygous
+in other ascertainment individuals, which is a different and
+frequency-biased discovery process. For a single ascertainment history,
+subtract every other panel:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">san</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="st">"panel4"</span><span class="op">)</span>, <span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"panel"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="fl">5</span><span class="op">:</span><span class="fl">13</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>panel4 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_axiom_snps.html">get_axiom_snps</a></span><span class="op">(</span><span class="st">"panel4"</span><span class="op">)</span><span class="op">)</span>, exclusive <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">san</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    panel4 exclusive </span></span>
+<span><span class="co">#&gt;    146606     62431</span></span></code></pre></div>
+<p>Note that panel 13 is subtracted along with the others. It is
+labelled <code>Denisova-San</code> and its ascertainment sample is
+<code>Den-HGDP01029</code>, so although the San genome is involved, the
+discovery criterion contrasts it with Denisova — a second process rather
+than more of the same one. Check <code><a href="../reference/get_panel_information.html">get_panel_information()</a></code>
+before assuming two panels share an ascertainment history.</p>
 </div>
 <div class="section level2">
 <h2 id="linking-to-dplacer-societies">Linking to dplaceR societies<a class="anchor" aria-label="anchor" href="#linking-to-dplacer-societies"></a>
 </h2>
-<p><code><a href="../reference/get_dplace_link.html">get_dplace_link()</a></code> returns a candidate link table joining
-these populations to societies in <a href="https://jasonahodgson.github.io/dplaceR/" class="external-link">dplaceR</a>’s D-PLACE
-data, so genetic and cross-cultural data can be combined on a common
-<code>soc_id</code>:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_dplace_link.html">get_dplace_link</a></span><span class="op">(</span>population <span class="op">=</span> <span class="st">"Yoruba"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;          pop population_label source_dataset soc_id society_name</span></span>
-<span><span class="co">#&gt; 1 YorubaHGDP           Yoruba           HGDP    Af6   Oyo Yoruba</span></span>
-<span><span class="co">#&gt; 2  YRIHapMap           Yoruba         HapMap    Af6   Oyo Yoruba</span></span>
-<span><span class="co">#&gt; 3        YRI           Yoruba            KGP    Af6   Oyo Yoruba</span></span>
-<span><span class="co">#&gt;         society_region match_method match_score geo_distance_km confidence</span></span>
-<span><span class="co">#&gt; 1 West Tropical Africa        fuzzy         0.9             110     medium</span></span>
-<span><span class="co">#&gt; 2 West Tropical Africa        fuzzy         0.9             110     medium</span></span>
-<span><span class="co">#&gt; 3 West Tropical Africa        fuzzy         0.9             110     medium</span></span>
-<span><span class="co">#&gt;   n_marriage_vars_coded reviewed review_note</span></span>
-<span><span class="co">#&gt; 1                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 2                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3                    10     TRUE        &lt;NA&gt;</span></span></code></pre></div>
-<p>The two resources use different naming conventions with no shared ID,
-so this is a <strong>best-effort, fuzzy candidate match</strong>, not a
-guaranteed-correct crosswalk – matching can be many-to-many, and a
-population with no plausible match still appears once with
-<code>soc_id = NA</code> (set <code>include_unmatched = TRUE</code> to
-see those). Each row’s <code>confidence</code> column
-(<code>"high"</code>, <code>"medium"</code>, <code>"low"</code>, or
-<code>"none"</code>) reflects how much to trust the match:
-<code>"high"</code> is an exact name match, while
-<code>"medium"</code>/<code>"low"</code> rows are worth checking
-(e.g. against <code>society_region</code> and
-<code>geo_distance_km</code>) before relying on them for an analysis
-where a wrong link would matter:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_dplace_link.html">get_dplace_link</a></span><span class="op">(</span>confidence <span class="op">=</span> <span class="st">"medium"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                  pop population_label         source_dataset        soc_id</span></span>
-<span><span class="co">#&gt; 1           DaurHGDP             Daur                   HGDP           Eb4</span></span>
-<span><span class="co">#&gt; 2            HanHGDP              Han                   HGDP CARNEIRO4_005</span></span>
-<span><span class="co">#&gt; 3  HanHGDPunresolved              Han                   HGDP CARNEIRO4_005</span></span>
-<span><span class="co">#&gt; 4           MayaHGDP             Maya                   HGDP  CCMCyuca1254</span></span>
-<span><span class="co">#&gt; 5           MayaHGDP             Maya                   HGDP           Sa6</span></span>
-<span><span class="co">#&gt; 6    NorthernHanHGDP              Han                   HGDP CARNEIRO4_005</span></span>
-<span><span class="co">#&gt; 7         OroqenHGDP           Oroqen                   HGDP           B23</span></span>
-<span><span class="co">#&gt; 8        RussianHGDP           Russia                   HGDP  CCMCruss1263</span></span>
-<span><span class="co">#&gt; 9      SardinianHGDP         Sardinia                   HGDP  CCMCsard1257</span></span>
-<span><span class="co">#&gt; 10        YorubaHGDP           Yoruba                   HGDP           Af6</span></span>
-<span><span class="co">#&gt; 11         YRIHapMap           Yoruba                 HapMap           Af6</span></span>
-<span><span class="co">#&gt; 12               CHS      China_South                    KGP CARNEIRO4_005</span></span>
-<span><span class="co">#&gt; 13               FIN           Finish                    KGP  CCMCfinn1318</span></span>
-<span><span class="co">#&gt; 14               YRI           Yoruba                    KGP           Af6</span></span>
-<span><span class="co">#&gt; 15           CHSIGSR      China_South               KGP_IGSR CARNEIRO4_005</span></span>
-<span><span class="co">#&gt; 16           FINIGSR           Finish               KGP_IGSR  CCMCfinn1318</span></span>
-<span><span class="co">#&gt; 17          BatwaPER            Batwa Perry_etal_unconfirmed          Ah34</span></span>
-<span><span class="co">#&gt; 18      ArmenianSGDP         Armenian                   SGDP  CCMCnucl1235</span></span>
-<span><span class="co">#&gt; 19      ArmenianSGDP         Armenian                   SGDP          Ci10</span></span>
-<span><span class="co">#&gt; 20      ArmenianSGDP         Armenian                   SGDP        SCCS56</span></span>
-<span><span class="co">#&gt; 21         BiakaSGDP            Biaka                   SGDP          Ai23</span></span>
-<span><span class="co">#&gt; 22         GreekSGDP            Greek                   SGDP  CCMCmode1248</span></span>
-<span><span class="co">#&gt; 23         GreekSGDP            Greek                   SGDP           Ce7</span></span>
-<span><span class="co">#&gt; 24       IranianSGDP          Iranian                   SGDP           Ea9</span></span>
-<span><span class="co">#&gt; 25       ItelmanSGDP          Itelman                   SGDP          ec13</span></span>
-<span><span class="co">#&gt; 26     JordanianSGDP        Jordanian                   SGDP           Cj6</span></span>
-<span><span class="co">#&gt; 27   JuhoanNorthSGDP    Ju_hoan_North                   SGDP  CCMCjuho1239</span></span>
-<span><span class="co">#&gt; 28    KhomaniSanSGDP      Khomani_San                   SGDP           B77</span></span>
-<span><span class="co">#&gt; 29    KhondaDoraSGDP      Khonda_Dora                   SGDP          Eg12</span></span>
-<span><span class="co">#&gt; 30 NorthOssetianSGDP   North_Ossetian                   SGDP           Ci6</span></span>
-<span><span class="co">#&gt; 31       QuechuaSGDP          Quechua                   SGDP  CCMCayac1239</span></span>
-<span><span class="co">#&gt; 32       QuechuaSGDP          Quechua                   SGDP  CCMCcusc1236</span></span>
-<span><span class="co">#&gt; 33       QuechuaSGDP          Quechua                   SGDP  CCMCecua1248</span></span>
-<span><span class="co">#&gt; 34       QuechuaSGDP          Quechua                   SGDP  CCMCsout2991</span></span>
-<span><span class="co">#&gt; 35        SomaliSGDP           Somali                   SGDP          Ca10</span></span>
-<span><span class="co">#&gt; 36        SomaliSGDP           Somali                   SGDP           Ca2</span></span>
-<span><span class="co">#&gt; 37        SomaliSGDP           Somali                   SGDP        SCCS36</span></span>
-<span><span class="co">#&gt; 38         UlchiSGDP            Ulchi                   SGDP          ec18</span></span>
-<span><span class="co">#&gt; 39          MalayUNK            Malay            unconfirmed  CCMCjamb1236</span></span>
-<span><span class="co">#&gt; 40          MalayUNK            Malay            unconfirmed           Ej8</span></span>
-<span><span class="co">#&gt; 41        TibetanUNK          Tibetan            unconfirmed           Ee4</span></span>
-<span><span class="co">#&gt;              society_name               society_region match_method match_score</span></span>
-<span><span class="co">#&gt; 1                   Dagur                        China        fuzzy       0.800</span></span>
-<span><span class="co">#&gt; 2     China (Han Dynasty)                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 3     China (Han Dynasty)                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 4            Yucatec Maya                       Mexico        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 5            Yucatec Maya                       Mexico        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 6     China (Han Dynasty)                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 7                 Orogens                        China        fuzzy       0.714</span></span>
-<span><span class="co">#&gt; 8                 Russian               Eastern Europe        fuzzy       0.857</span></span>
-<span><span class="co">#&gt; 9               Sardinian          Southwestern Europe        fuzzy       0.889</span></span>
-<span><span class="co">#&gt; 10             Oyo Yoruba         West Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 11             Oyo Yoruba         West Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 12    China (Han Dynasty)                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 13                Finnish              Northern Europe        fuzzy       0.857</span></span>
-<span><span class="co">#&gt; 14             Oyo Yoruba         West Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 15    China (Han Dynasty)                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 16                Finnish              Northern Europe        fuzzy       0.857</span></span>
-<span><span class="co">#&gt; 17                   Bata         West Tropical Africa        fuzzy       0.800</span></span>
-<span><span class="co">#&gt; 18       Eastern Armenian                     Caucasus        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 19              Armenians                     Caucasus        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 20              Armenians                     Caucasus        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 21                  Bwaka West-Central Tropical Africa        fuzzy       0.800</span></span>
-<span><span class="co">#&gt; 22           Modern Greek          Southeastern Europe        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 23                 Greeks          Southeastern Europe        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 24               Iranians                 Western Asia        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 25                Itelmen             Russian Far East        fuzzy       0.857</span></span>
-<span><span class="co">#&gt; 26             Jordanians                 Western Asia        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 27       South-Eastern Ju              Southern Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 28         /'Auni-Khomani              Southern Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 29                  Khond          Indian Subcontinent        fuzzy       0.833</span></span>
-<span><span class="co">#&gt; 30              Ossetians                     Caucasus        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 31       Ayacucho Quechua        Western South America        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 32          Cusco Quechua        Western South America        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 33   Ecuadorian Quechua A        Western South America        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 34 South Bolivian Quechua        Western South America        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 35           Somali (Esa)    Northeast Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 36    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 37    Somali (Dolbahanta)    Northeast Tropical Africa        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 38                   Ulch             Russian Far East        fuzzy       0.800</span></span>
-<span><span class="co">#&gt; 39            Jambi Malay                      Malesia        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 40                 Malays                      Malesia        fuzzy       0.900</span></span>
-<span><span class="co">#&gt; 41       Central Tibetans                        China        fuzzy       0.900</span></span>
-<span><span class="co">#&gt;    geo_distance_km confidence n_marriage_vars_coded reviewed review_note</span></span>
-<span><span class="co">#&gt; 1               92     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 2              518     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3              518     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 4              216     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 5              153     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 6              518     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 7              320     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 8              598     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 9               26     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 10             110     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 11             110     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 12              NA     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 13              NA     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 14             110     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 15              NA     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 16              NA     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 17              NA     medium                     9     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 18             151     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 19             151     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 20             193     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 21             248     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 22              64     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 23             127     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 24              67     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 25             373     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 26              10     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 27             110     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 28             105     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 29             101     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 30              53     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 31             254     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 32              70     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 33            1561     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 34            1021     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 35             762     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 36             269     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 37             395     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 38             409     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 39              NA     medium                     0     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 40              NA     medium                    10     TRUE        &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 41             660     medium                    10     TRUE        &lt;NA&gt;</span></span></code></pre></div>
+<p><code><a href="../reference/get_dplace_link.html">get_dplace_link()</a></code> returns the crosswalk joining these
+populations to societies in <a href="https://jasonahodgson.github.io/dplaceR/" class="external-link">dplaceR</a>’s D-PLACE
+data, on a common <code>soc_id</code>:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_dplace_link.html">get_dplace_link</a></span><span class="op">(</span>population <span class="op">=</span> <span class="st">"Yoruba"</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"soc_id"</span>, <span class="st">"society_name"</span>,</span>
+<span>                                           <span class="st">"confidence"</span>, <span class="st">"n_marriage_vars_coded"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;          pop soc_id society_name confidence n_marriage_vars_coded</span></span>
+<span><span class="co">#&gt; 1 YorubaHGDP    Af6   Oyo Yoruba     medium                    10</span></span>
+<span><span class="co">#&gt; 2  YRIHapMap    Af6   Oyo Yoruba     medium                    10</span></span>
+<span><span class="co">#&gt; 3        YRI    Af6   Oyo Yoruba     medium                    10</span></span></code></pre></div>
+<p>Every code carrying the label gets the same society, because a
+society link is a property of the population and not of the sequencing
+project.</p>
+<p>The table has been reviewed by hand: <code>reviewed</code> is
+<code>TRUE</code> on confirmed rows, and rejected candidates have been
+removed rather than left to be re-examined. A population with no society
+still appears, with <code>soc_id = NA</code>, so the crosswalk records a
+checked dead end rather than an absence —
+<code>include_unmatched = TRUE</code> shows those.</p>
+<p><code>n_marriage_vars_coded</code> counts how many of ten
+Ethnographic Atlas marriage and descent variables (EA009, EA012, EA015,
+EA018, EA020, EA023–EA026, EA043) have a genuine coded observation for
+the linked society, missing-data sentinels excluded. A link can be
+ethnographically correct and still analytically useless if the society
+has no coded variables, so filter on it:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">usable</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_dplace_link.html">get_dplace_link</a></span><span class="op">(</span>min_marriage_vars <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>rows <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">usable</span><span class="op">)</span>,</span>
+<span>  populations <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">usable</span><span class="op">$</span><span class="va">pop</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  societies <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">usable</span><span class="op">$</span><span class="va">soc_id</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;        rows populations   societies </span></span>
+<span><span class="co">#&gt;          67          65          54</span></span></code></pre></div>
+<p>That count, rather than any SNP total, is usually what limits a study
+combining these resources.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

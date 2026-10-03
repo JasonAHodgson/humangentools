@@ -33,9 +33,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="sample-and-population-metadata">Sample and population metadata<a class="anchor" aria-label="anchor" href="#sample-and-population-metadata"></a></h2>
+      <h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a></h2>
 
-      <div class="section-desc"><p>Look up population and region information for samples, and browse the populations available across the bundled datasets.</p></div>
+      <div class="section-desc"><p>The bundled genotype datasets, and the vocabulary used by every <code>source_dataset</code> column and <code>dataset</code> argument in the package.</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -44,21 +44,37 @@
 
       <dl><dt>
 
-          <code><a href="get_sample_information.html">get_sample_information()</a></code>
+          <code><a href="get_dataset_info.html">get_dataset_info()</a></code>
 
         </dt>
-        <dd>Gets sample information for a list of sample IDs</dd>
+        <dd>Describes the genotype datasets bundled in humangentools</dd>
+      </dl></div><div class="section level2">
+      <h2 id="sample-and-population-metadata">Sample and population metadata<a class="anchor" aria-label="anchor" href="#sample-and-population-metadata"></a></h2>
 
-        <dt>
+      <div class="section-desc"><p>Look up populations and samples by canonical code, label, region, source dataset or age. Populations are keyed by a code that carries the genotype dataset, so a group genotyped by several projects stays separable, and coordinates are recorded separately for a group’s origin and its sampling location.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
 
           <code><a href="get_pop_info.html">get_pop_info()</a></code>
 
         </dt>
         <dd>Returns a table of information about populations in a given dataset.</dd>
+
+        <dt>
+
+          <code><a href="get_sample_information.html">get_sample_information()</a></code>
+
+        </dt>
+        <dd>Gets sample information for a list of sample IDs</dd>
       </dl></div><div class="section level2">
       <h2 id="snp-panels">SNP panels<a class="anchor" aria-label="anchor" href="#snp-panels"></a></h2>
 
-      <div class="section-desc"><p>Browse and select SNP sets for the Axiom Human Origins array ascertainment panels.</p></div>
+      <div class="section-desc"><p>Browse and select SNP sets for the Axiom Human Origins array ascertainment panels. Panel membership is not exclusive, which matters for any comparison of diversity between populations.</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -81,7 +97,7 @@
       </dl></div><div class="section level2">
       <h2 id="cross-referencing-with-dplacer">Cross-referencing with dplaceR<a class="anchor" aria-label="anchor" href="#cross-referencing-with-dplacer"></a></h2>
 
-      <div class="section-desc"><p>Link populations in the bundled genetic datasets to societies in dplaceR’s D-PLACE data, for combined genetic/cross-cultural analyses.</p></div>
+      <div class="section-desc"><p>The hand-reviewed crosswalk linking populations to societies in dplaceR’s D-PLACE data, for combined genetic and cross-cultural analyses.</p></div>
 
       <dl></dl></div><div class="section level2">
 
