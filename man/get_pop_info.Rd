@@ -10,6 +10,7 @@ get_pop_info(
   population = NULL,
   region = NULL,
   dataset = NULL,
+  temporal = NULL,
   location = c("origin", "sampling"),
   include = NULL,
   exclude = NULL
@@ -35,6 +36,13 @@ Default is NULL (no filtering).}
 against \code{source_dataset}; see \code{dataset_information.Rtable} for the
 vocabulary). Default is all datasets in the package.}
 
+\item{temporal}{A character vector restricting populations by age: one or
+both of \code{"modern"} (present-day) and \code{"ancient"}. Every population from
+HGDP, 1000 Genomes, SGDP, HapMap and the individual-study datasets is
+\code{"modern"}; AADR contributes both. Default \code{NULL} (no filtering), which
+returns ancient populations alongside present-day ones -- pass
+\code{temporal = "modern"} for analyses that assume a living population.}
+
 \item{location}{One of \code{"origin"} (the default) or \code{"sampling"}, choosing
 which coordinate pair is returned in the \code{lat} and \code{lon} columns. The
 explicit \verb{origin_*} and \verb{sampling_*} columns are always returned as well.}
@@ -58,6 +66,12 @@ by two projects therefore gets two codes, which keeps genotypes from
 different sequencing platforms separable.
 }
 \details{
+Populations are also classified as present-day or ancient in the \code{temporal}
+column, and can be filtered on it. This matters because the AADR contributes
+several thousand ancient populations: an analysis that assumes a living
+population, such as anything joined to ethnographic data, wants
+\code{temporal = "modern"}.
+
 Two sets of coordinates are stored for each population: \code{origin_lat}/
 \code{origin_lon}, the group's ethnographic homeland, and \code{sampling_lat}/
 \code{sampling_lon}, where the samples were actually collected. These differ for
