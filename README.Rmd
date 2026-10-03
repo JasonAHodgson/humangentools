@@ -18,43 +18,60 @@ knitr::opts_chunk$set(
 [![pkgdown](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://jasonahodgson.github.io/humangentools/)
 <!-- badges: end -->
 
-humangentools provides sample, population, and SNP ascertainment panel
-metadata for common human genomics reference datasets -- currently HGDP
-and 1000 Genomes -- to support [tidypopgen](https://cran.r-project.org/package=tidypopgen)
-analyses. It's designed to work alongside
-[dplaceR](https://jasonahodgson.github.io/dplaceR/) for cross-cultural
-context on the same populations.
+humangentools provides sample, population and SNP ascertainment panel metadata for
+widely used human genomics reference datasets, to support
+[tidypopgen](https://cran.r-project.org/package=tidypopgen) analyses. It is built
+to work alongside [dplaceR](https://jasonahodgson.github.io/dplaceR/) for
+cross-cultural context on the same populations.
+
+Datasets covered: HGDP, 1000 Genomes, SGDP, HapMap, the AADR (ancient and
+present-day), and several individual-study collections.
 
 ## Installation
 
-You can install the development version of humangentools from
-[GitHub](https://github.com/) with:
-
-``` r
+```r
 # install.packages("remotes")
 remotes::install_github("jasonahodgson/humangentools")
 ```
 
-## Example
+## The canonical population code
 
-Look up population and region information for a set of sample IDs, and
-population-level metadata for a region or dataset:
+The same group is often genotyped by several projects, and those genotypes are not
+interchangeable — different platforms, different ascertainment. So each
+(group, dataset) pair gets its own `pop` code:
 
 ```{r example}
 library(humangentools)
 
-get_sample_information(c("HGDP00001", "HGDP00003"))
-
-get_pop_info(dataset = "HGDP", region = "Central_Asia", exclude = "reference")
+get_pop_info(population = "Yoruba")[, c("pop", "source_dataset", "n_samples")]
 ```
 
-Browse the Axiom Human Origins array's ascertainment panels, and get the
-SNP RS ids for one:
+Sample lookup returns one row per (sample, dataset), so pass `dataset` when you
+need exactly one row per sample:
+
+```{r}
+get_sample_information("HGDP00001", dataset = "HGDP")
+```
+
+Populations are classified as present-day or ancient, and filterable:
+
+```{r}
+table(get_pop_info()$temporal)
+```
+
+## SNP ascertainment panels
 
 ```{r}
 get_panel_information()
 
-head(get_axiom_snps("panel1"))
+length(get_axiom_snps("panel4"))
+```
+
+## Linking to D-PLACE societies
+
+```{r}
+get_dplace_link(population = "Yoruba")[, c("pop", "soc_id", "society_name",
+                                           "n_marriage_vars_coded")]
 ```
 
 See `vignette("humangentools")` for more.
