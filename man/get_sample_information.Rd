@@ -19,7 +19,12 @@ filtering).}
 
 \item{na.fill}{Logical; if \code{TRUE} (the default), IDs not found in the sample
 information data are kept in the result with \code{NA} population/region. If
-\code{FALSE}, they are dropped instead.}
+\code{FALSE}, they are dropped instead.
+The \code{population} column is the label of the sample's population, looked up
+from \code{pop}, not a per-sample value: every sample sharing a \code{pop} carries the
+same label, so counting samples by \verb{(pop, population)} cannot split one
+population in two. Where source datasets named the same group differently,
+the other names are in \code{population_alt} of \code{\link[=get_pop_info]{get_pop_info()}}.}
 }
 \value{
 A data frame of sample id, canonical population code, population

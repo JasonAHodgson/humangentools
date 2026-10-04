@@ -24,10 +24,11 @@ Default is to return all populations in the package dataset.}
 Default is \code{NULL} (no filtering).}
 
 \item{population}{A character vector of human readable population labels to
-filter by. A population can carry more than one label (where source
-datasets named it differently), stored pipe-separated in
-\code{population_label}; a population is kept if any of its labels match.
-Default is \code{NULL} (no filtering).}
+filter by. Each population has exactly one \code{population_label}; where source
+datasets named the same group differently, the other names are kept
+pipe-separated in \code{population_alt} (\code{GBR} is labelled \code{British} with
+\code{English} as an alternative). Matching considers both columns, so either
+name finds the population. Default is \code{NULL} (no filtering).}
 
 \item{region}{A character vector specifying regions to filter populations by.
 Default is NULL (no filtering).}
