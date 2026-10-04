@@ -69,7 +69,12 @@ filtering).</p></dd>
 <dt id="arg-na-fill">na.fill<a class="anchor" aria-label="anchor" href="#arg-na-fill"></a></dt>
 <dd><p>Logical; if <code>TRUE</code> (the default), IDs not found in the sample
 information data are kept in the result with <code>NA</code> population/region. If
-<code>FALSE</code>, they are dropped instead.</p></dd>
+<code>FALSE</code>, they are dropped instead.
+The <code>population</code> column is the label of the sample's population, looked up
+from <code>pop</code>, not a per-sample value: every sample sharing a <code>pop</code> carries the
+same label, so counting samples by <code>(pop, population)</code> cannot split one
+population in two. Where source datasets named the same group differently,
+the other names are in <code>population_alt</code> of <code><a href="get_pop_info.html">get_pop_info()</a></code>.</p></dd>
 
 </dl></div>
     <div class="section level2">

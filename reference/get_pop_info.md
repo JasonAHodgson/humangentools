@@ -38,11 +38,12 @@ get_pop_info(
 
 - population:
 
-  A character vector of human readable population labels to filter by. A
-  population can carry more than one label (where source datasets named
-  it differently), stored pipe-separated in `population_label`; a
-  population is kept if any of its labels match. Default is `NULL` (no
-  filtering).
+  A character vector of human readable population labels to filter by.
+  Each population has exactly one `population_label`; where source
+  datasets named the same group differently, the other names are kept
+  pipe-separated in `population_alt` (`GBR` is labelled `British` with
+  `English` as an alternative). Matching considers both columns, so
+  either name finds the population. Default is `NULL` (no filtering).
 
 - region:
 

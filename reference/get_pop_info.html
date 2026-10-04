@@ -87,10 +87,11 @@ Default is <code>NULL</code> (no filtering).</p></dd>
 
 <dt id="arg-population">population<a class="anchor" aria-label="anchor" href="#arg-population"></a></dt>
 <dd><p>A character vector of human readable population labels to
-filter by. A population can carry more than one label (where source
-datasets named it differently), stored pipe-separated in
-<code>population_label</code>; a population is kept if any of its labels match.
-Default is <code>NULL</code> (no filtering).</p></dd>
+filter by. Each population has exactly one <code>population_label</code>; where source
+datasets named the same group differently, the other names are kept
+pipe-separated in <code>population_alt</code> (<code>GBR</code> is labelled <code>British</code> with
+<code>English</code> as an alternative). Matching considers both columns, so either
+name finds the population. Default is <code>NULL</code> (no filtering).</p></dd>
 
 
 <dt id="arg-region">region<a class="anchor" aria-label="anchor" href="#arg-region"></a></dt>

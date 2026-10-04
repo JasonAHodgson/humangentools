@@ -32,7 +32,13 @@ get_sample_information(ID, dataset = NULL, temporal = NULL, na.fill = TRUE)
 
   Logical; if `TRUE` (the default), IDs not found in the sample
   information data are kept in the result with `NA` population/region.
-  If `FALSE`, they are dropped instead.
+  If `FALSE`, they are dropped instead. The `population` column is the
+  label of the sample's population, looked up from `pop`, not a
+  per-sample value: every sample sharing a `pop` carries the same label,
+  so counting samples by `(pop, population)` cannot split one population
+  in two. Where source datasets named the same group differently, the
+  other names are in `population_alt` of
+  [`get_pop_info()`](https://jasonahodgson.github.io/humangentools/reference/get_pop_info.md).
 
 ## Value
 
