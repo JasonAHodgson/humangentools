@@ -63,6 +63,10 @@ for r in S: bypop[(r["pop"],r["source_dataset"])].append(r)
 old={ (p["pop"],p["source_dataset"]):p for p in P }
 KGP_DIASPORA={"ASW","ACB","CEU","MXL"}
 newP=[]
+# population_label may come out pipe-joined here where one canonical code drew
+# samples carrying different source labels. That is the full set of names for the
+# population, which is what we want; normalise_population_labels.py, run at the
+# end of the chain, picks the primary and moves the rest to population_alt.
 for (code,ds),mem in sorted(bypop.items()):
     if (code,ds) in old:
         p=dict(old[(code,ds)]); p["n_samples"]=len(mem)

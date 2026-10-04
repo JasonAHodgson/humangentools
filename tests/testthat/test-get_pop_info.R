@@ -72,3 +72,29 @@ test_that("get_pop_info includes/excludes columns as requested", {
   out <- get_pop_info(exclude = c("reference"))
   expect_false("reference" %in% names(out))
 })
+
+test_that("every population carries exactly one label", {
+  out <- get_pop_info()
+  expect_false(any(grepl("|", out$population_label, fixed = TRUE)))
+  expect_false(anyDuplicated(out$pop) > 0)
+})
+
+test_that("alternative labels are kept and are matchable", {
+  gbr <- get_pop_info(pop = "GBR")
+  expect_equal(gbr$population_label, "British")
+  expect_equal(gbr$population_alt, "English")
+
+  # either name finds the population
+  expect_equal(get_pop_info(population = "British")$pop, "GBR")
+  expect_equal(get_pop_info(population = "English")$pop, "GBR")
+})
+
+test_that("a sample's label agrees with its population's label", {
+  ids <- c("HG00126", "HG00096", "NA20502", "HG00171", "NA19648")
+  info <- get_sample_information(ids)
+  pops <- get_pop_info(pop = unique(info$pop))
+  expect_equal(
+    info$population,
+    pops$population_label[match(info$pop, pops$pop)]
+  )
+})

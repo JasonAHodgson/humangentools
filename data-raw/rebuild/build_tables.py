@@ -1,4 +1,9 @@
-"""Rebuild humangentools population/sample/dataset tables on canonical kgp::allmeta codes.
+"""
+Rebuild humangentools population/sample/dataset tables on canonical kgp::allmeta codes.
+
+Run normalise_population_labels.py at the end of the chain (after add_aadr.py
+and apply_review.py): it reduces each population to a single population_label
+and moves the alternative names to population_alt.
 
 All judgements are explicit in the maps below. Anything not resolvable is marked
 source_dataset = "unconfirmed" rather than guessed.
@@ -89,14 +94,19 @@ for s in hs:
     srows.append(dict(id=s["id"],pop=code,population=s["population"],
                       region=s["region"],source_dataset=ds))
 # two source labels can map to the same canonical code (e.g. Mexican_American and
-# Mexican_LA both -> MXL); after remapping those are true duplicate rows, so collapse
-# them, keeping the contributing labels pipe-joined in `population`
+# Mexican_LA both -> MXL); after remapping those are true duplicate rows, so
+# collapse them. The surviving row keeps the label it already had: joining the
+# two labels here would write a combined label onto just the samples that
+# arrived under both names, splitting the population when samples are counted.
+# The alternative names are recovered per population below, not per sample, and
+# normalise_population_labels.py puts them in population_alt.
 bykey=collections.OrderedDict()
+alt_labels=collections.defaultdict(set)   # pop -> every source label seen
 for r in srows:
     k=(r["id"],r["pop"])
     if k in bykey:
-        labs=set(bykey[k]["population"].split("|"))|{r["population"]}
-        bykey[k]["population"]="|".join(sorted(labs))
+        alt_labels[r["pop"]].add(r["population"])
+        alt_labels[r["pop"]].add(bykey[k]["population"])
     else: bykey[k]=r
 n_collapsed=len(srows)-len(bykey)
 srows=list(bykey.values())
@@ -111,7 +121,7 @@ bypop=collections.defaultdict(list)
 for r in srows: bypop[(r["pop"],r["source_dataset"])].append(r)
 prows=[]
 for (code,ds),mem in sorted(bypop.items()):
-    labels=sorted({l for m in mem for l in m["population"].split("|")})
+    labels=sorted({m["population"] for m in mem} | alt_labels.get(code,set()))
     a=amby.get(code)
     desc=str(a.population) if a is not None else "NA"
     reg_kgp=str(a.region).replace(" ","_") if a is not None else "NA"

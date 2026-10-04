@@ -28,10 +28,11 @@
 #' @param pop A character vector of canonical population codes to filter by.
 #'   Default is `NULL` (no filtering).
 #' @param population A character vector of human readable population labels to
-#'   filter by. A population can carry more than one label (where source
-#'   datasets named it differently), stored pipe-separated in
-#'   `population_label`; a population is kept if any of its labels match.
-#'   Default is `NULL` (no filtering).
+#'   filter by. Each population has exactly one `population_label`; where source
+#'   datasets named the same group differently, the other names are kept
+#'   pipe-separated in `population_alt` (`GBR` is labelled `British` with
+#'   `English` as an alternative). Matching considers both columns, so either
+#'   name finds the population. Default is `NULL` (no filtering).
 #' @param region A character vector specifying regions to filter populations by.
 #'   Default is NULL (no filtering).
 #' @param dataset A character vector of source datasets to include (matched
@@ -82,8 +83,8 @@ get_pop_info <- function(
   # to choose a column name; the explicit pairs stay in the output either way
   pop_info$lat <- if (location == "origin") pop_info$origin_lat else pop_info$sampling_lat
   pop_info$lon <- if (location == "origin") pop_info$origin_lon else pop_info$sampling_lon
-  front <- c("pop", "population_label", "population_desc", "source_dataset",
-             "temporal", "region", "lat", "lon")
+  front <- c("pop", "population_label", "population_alt", "population_desc",
+             "source_dataset", "temporal", "region", "lat", "lon")
   pop_info <- pop_info[, c(front, setdiff(names(pop_info), front)), drop = FALSE]
 
   # filter by samples if provided
@@ -105,13 +106,14 @@ get_pop_info <- function(
     pop_info <- pop_info[pop_info$pop %in% pop, , drop = FALSE]
   }
 
-  # population_label can hold several pipe-separated labels for one population
+  # `population_label` is single-valued; any other name the source datasets used
+  # for the same group lives in `population_alt`, pipe-separated. Both are
+  # matched, so a caller can pass either name.
   if (!is.null(population)) {
-    keep <- vapply(
-      strsplit(pop_info$population_label, "|", fixed = TRUE),
-      function(labels) any(labels %in% population),
-      logical(1)
-    )
+    alt <- strsplit(ifelse(is.na(pop_info$population_alt), "",
+                           pop_info$population_alt), "|", fixed = TRUE)
+    keep <- pop_info$population_label %in% population |
+      vapply(alt, function(labels) any(labels %in% population), logical(1))
     pop_info <- pop_info[keep, , drop = FALSE]
   }
 

@@ -27,6 +27,12 @@
 #' @param na.fill Logical; if `TRUE` (the default), IDs not found in the sample
 #'   information data are kept in the result with `NA` population/region. If
 #'   `FALSE`, they are dropped instead.
+#' The `population` column is the label of the sample's population, looked up
+#' from `pop`, not a per-sample value: every sample sharing a `pop` carries the
+#' same label, so counting samples by `(pop, population)` cannot split one
+#' population in two. Where source datasets named the same group differently,
+#' the other names are in `population_alt` of [get_pop_info()].
+#'
 #' @return A data frame of sample id, canonical population code, population
 #'   label, region and source dataset, ordered to follow `ID`.
 #' @importFrom utils read.table

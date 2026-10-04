@@ -67,13 +67,13 @@ CHS	China_South	KGP	CARNEIRO4_005	China (Han Dynasty)	China	fuzzy	0.9	NA	medium	
 CLM	Colombian	KGP	NA	NA	NA	unmatched	NA	NA	none	NA	TRUE	NA
 ESN	Esan	KGP	NA	NA	NA	unmatched	NA	NA	none	NA	TRUE	NA
 FIN	Finnish	KGP	CCMCfinn1318	Finnish	Northern Europe	exact	1	508	high	0	TRUE	NA
-FIN	Finish	KGP	CCMCfinn1318	Finnish	Northern Europe	fuzzy	0.857	NA	medium	0	TRUE	NA
-GBR	English	KGP	CCMCstan1293	English	Northern Europe	exact	1	231	high	0	TRUE	NA
+FIN	Finnish	KGP	CCMCfinn1318	Finnish	Northern Europe	fuzzy	0.857	NA	medium	0	TRUE	NA
+GBR	British	KGP	CCMCstan1293	English	Northern Europe	exact	1	231	high	0	TRUE	NA
 GBR	British	KGP	NA	NA	NA	unmatched	NA	NA	none	NA	TRUE	NA
 GIH	Gujarati	KGP	CCMCguja1252	Gujarati	Indian Subcontinent	exact	1	14025	high	0	TRUE	NA
 GIH	Gujarati	KGP	Ef9	Gujarati	Indian Subcontinent	exact	1	14445	high	10	TRUE	NA
 GWD	Gambian	KGP	NA	NA	NA	unmatched	NA	NA	none	NA	TRUE	NA
-IBS	Spanish	KGP	CCMCstan1288	Spanish	Southwestern Europe	exact	1	252	high	0	TRUE	NA
+IBS	Iberian	KGP	CCMCstan1288	Spanish	Southwestern Europe	exact	1	252	high	0	TRUE	NA
 IBS	Iberian	KGP	NA	NA	NA	unmatched	NA	NA	none	NA	TRUE	NA
 ITU	Telugu	KGP	CCMCtelu1262	Telugu	Indian Subcontinent	exact	1	NA	high	0	TRUE	NA
 ITU	Telugu	KGP	Eg10	Telugu	Indian Subcontinent	exact	1	NA	high	10	TRUE	NA

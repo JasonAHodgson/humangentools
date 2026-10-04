@@ -46,3 +46,14 @@ test_that("get_sample_information IDs all resolve to a known population", {
   out <- get_sample_information(c("HG00096", "NA18525", "HGDP00001"))
   expect_true(all(out$pop %in% get_pop_info()$pop))
 })
+
+test_that("one population code never carries two labels", {
+  # `population` is a property of `pop`, not of the sample: a group that two
+  # source datasets named differently (GBR as British and as English) must not
+  # split into two populations when samples are counted.
+  ids <- c("HG00126", "HG00127", "HG00096", "HG00171", "HG00174", "NA19648")
+  info <- get_sample_information(ids, dataset = "KGP")
+  by_pop <- tapply(info$population, info$pop, function(x) length(unique(x)))
+  expect_true(all(by_pop == 1))
+  expect_false(any(grepl("|", info$population, fixed = TRUE)))
+})
