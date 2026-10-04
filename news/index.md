@@ -1,5 +1,17 @@
 # Changelog
 
+## humangentools (development version)
+
+- `population_label` now holds exactly one label per population. Where
+  source datasets named the same group differently, the other names
+  moved to a new `population_alt` column; `get_pop_info(population = )`
+  matches either. The `population` column of
+  [`get_sample_information()`](https://jasonahodgson.github.io/humangentools/reference/get_sample_information.md)
+  is now looked up from `pop` rather than stored per sample, so a
+  population can no longer split in two when samples are counted by
+  `(pop, population)` – six populations did, including `GBR` (`British`
+  and `British|English`) and `MXL`.
+
 ## humangentools 0.0.0.9000
 
 - Initial functions for sample/population metadata lookup
