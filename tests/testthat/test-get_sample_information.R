@@ -12,11 +12,15 @@ test_that("get_sample_information preserves input order", {
 })
 
 test_that("get_sample_information can return several rows for one sample", {
-  # HGDP01414 was genotyped by HGDP and resequenced by SGDP
+  # HGDP01414 was genotyped by HGDP, resequenced by SGDP, and regenotyped on
+  # the 1240K panel for the AADR: one individual, three genotype datasets.
   out <- get_sample_information("HGDP01414")
   expect_true(nrow(out) > 1)
-  expect_setequal(out$source_dataset, c("HGDP", "SGDP"))
+  expect_setequal(out$source_dataset, c("HGDP", "SGDP", "AADR"))
   expect_equal(length(unique(out$pop)), nrow(out))
+
+  # and the dataset argument still narrows it to one
+  expect_equal(nrow(get_sample_information("HGDP01414", dataset = "SGDP")), 1)
 })
 
 test_that("get_sample_information dataset argument gives one row per sample", {

@@ -84,9 +84,12 @@ test_that("alternative labels are kept and are matchable", {
   expect_equal(gbr$population_label, "British")
   expect_equal(gbr$population_alt, "English")
 
-  # either name finds the population
-  expect_equal(get_pop_info(population = "British")$pop, "GBR")
-  expect_equal(get_pop_info(population = "English")$pop, "GBR")
+  # Either name finds the population. Both labels are also used by other
+  # datasets' populations (GBRIGSR, EnglishAADR), so this is membership, not
+  # equality; the KGP population is the one being asserted on.
+  expect_equal(get_pop_info(population = "British", dataset = "KGP")$pop, "GBR")
+  expect_equal(get_pop_info(population = "English", dataset = "KGP")$pop, "GBR")
+  expect_true("GBR" %in% get_pop_info(population = "English")$pop)
 })
 
 test_that("a sample's label agrees with its population's label", {

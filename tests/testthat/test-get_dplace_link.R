@@ -19,7 +19,12 @@ test_that("get_dplace_link filters by pop, dataset and confidence", {
 
   out <- get_dplace_link(confidence = "high")
   expect_true(all(out$confidence == "high"))
-  expect_true(all(out$match_method == "exact"))
+  # High confidence means a reviewer accepted the link, not that the names
+  # matched character for character: a hand-made match (Mozabite -> Cc4, where
+  # Mozabite and Mzab are synonyms) is as good as an exact one.
+  expect_true(all(out$match_method %in% c("exact", "manual")))
+  expect_true(all(out$reviewed))
+  expect_false(any(is.na(out$soc_id)))
 })
 
 test_that("get_dplace_link can include unmatched populations", {
