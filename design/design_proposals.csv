@@ -1,0 +1,13 @@
+function,purpose,priority,effort,blocked_on,capability_area
+get_sample_overlap,"Identify individuals present in more than one source dataset, so a merge does not double-count them",1,low,ready,merge feasibility
+get_dataset_ascertainment,"Machine-readable ascertainment, genotype representation, build and manifest status per dataset",2,low,"blocked: needs inst/extdata/dataset_ascertainment.Rtable (9 rows, drafted in design_proposals.md section 4.1)",merge feasibility
+find_pops_near,"Great-circle radius query over origin or sampling coordinates, reporting populations it cannot place",3,low,ready,coverage mapping
+summarise_coverage,"Tabulate populations and samples by region, dataset and temporal, with explicit unplaced and unassigned counts",4,low-medium,ready,coverage mapping
+get_sample_qc,"Per-individual AADR marker completeness, contamination, assessment verdict and date BP",5,medium,blocked: needs inst/extdata/sample_qc.Rtable rebuilt from data-raw/v66.p1_1240K.aadr.PUB.anno (source already in repo),merge feasibility
+get_coverage_gaps,"For a set of target locations, classify each as covered, ancient_only, thin, unplaced_nearby or gap",6,medium,ready,coverage mapping
+get_panel_overlap,Pairwise rs-id overlap between the 13 Axiom Human Origins ascertainment panels; also fixes the '---' sentinel defect,7,low,ready,SNP overlap
+get_marker_overlap,"Cross-dataset marker intersection on position or rs id, with build, strand, ascertainment and representation caveats",8,high,blocked: needs per-dataset marker manifests (chrom/pos/alleles/rsid/build) - section 4.3.2,SNP overlap
+assess_merge,"Pairwise merge verdict combining marker overlap, duplicate individuals, ascertainment and representation",9,high,partial: ships today returning insufficient_information with useful reasons; completes with get_marker_overlap,merge feasibility
+get_pop_language,"Glottolog language, family and subgroup crosswalk per population, with confidence tiers",10,medium,"blocked: no linguistic data exists in the package - needs inst/extdata/population_language.Rtable, section 4.2.3",ethnolinguistic coverage
+check_design,"Statistic-specific design checks: ascertainment symmetry, representation homogeneity, batch confound, duplicates",11,high,blocked: needs get_dataset_ascertainment and get_marker_overlap,merge feasibility
+suggest_merge_sets,"Rank candidate dataset combinations against a stated research question, with exposed score components",12,high,"blocked: needs get_sample_qc, get_marker_overlap, assess_merge",cross-cutting
