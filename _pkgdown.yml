@@ -21,6 +21,16 @@ reference:
   - get_pop_info
   - get_sample_information
 
+- title: Study design and merge feasibility
+  desc: >
+    Checks to run before combining datasets. The same individual is often
+    present in more than one source dataset -- the AADR re-releases 1000
+    Genomes and HGDP individuals as comparative data -- so a naive merge counts
+    those people twice. These functions make that visible beforehand; they do
+    not make two differently ascertained datasets comparable.
+  contents:
+  - get_sample_overlap
+
 - title: SNP panels
   desc: >
     Browse and select SNP sets for the Axiom Human Origins array ascertainment

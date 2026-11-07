@@ -1,5 +1,16 @@
 # humangentools (development version)
 
+* New `get_sample_overlap()` reports individuals present in more than one
+  source dataset, so cross-dataset duplication is visible before a merge
+  rather than after it. 3,471 of 24,579 individuals in the holdings are
+  duplicated, 2,514 of them between the AADR and 1000 Genomes. `dataset`
+  restricts the candidate pool before overlap is computed, so it answers "what
+  do these two datasets share"; `n_source_ids` separately surfaces
+  within-dataset library duplication (AADR `.AG`/`.SG`) without letting it
+  inflate `n_datasets`. Matching is on the exact `id` string, so the counts --
+  the AADR against SGDP figure in particular -- are lower bounds until the AADR
+  `Individual ID` column reaches `sample_information.Rtable`.
+
 * `population_label` now holds exactly one label per population. Where source
   datasets named the same group differently, the other names moved to a new
   `population_alt` column; `get_pop_info(population = )` matches either. The
